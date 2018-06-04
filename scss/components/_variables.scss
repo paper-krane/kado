@@ -1,0 +1,96 @@
+// Index
+// ============================================================ //
+
+// 1) Globals
+//      - Grid
+//      - Columns
+// 2) Fonts
+
+
+// 1) Globals
+// ============================================================ //
+
+    // Media Queries
+    $mobile-screen: 599px !default;
+    $mobile-landscape-screen-up: 600px !default;
+    $tablet-landscape-screen-up: 992px !default;
+    $desktop-screen-up: 1280px !default;
+    $desktop-large-screen-up: 1600px !default;
+
+    $s-and-down: "only screen and (max-width : #{$mobile-screen})" !default;
+    $m-and-up: "only screen and (min-width : #{$mobile-landscape-screen-up})" !default;
+    $l-and-up: "only screen and (min-width : #{$tablet-landscape-screen-up})" !default;
+    $xl-and-up: "only screen and (min-width : #{$desktop-screen-up})" !default;
+    $xxl-and-up: "only screen and (min-width : #{$desktop-large-screen-up})" !default;
+
+
+    // Columns
+    $num-cols: 12 !default;
+    $gutter-size: 1rem !default;
+    $element-top-margin: $gutter-size/3 !default;
+    $element-bottom-margin: ($gutter-size*2)/3 !default;
+
+    // Transitions
+    $transition-speed: all 0.4s ease;
+    $transition-speed-fast: all 0.2s ease;
+
+
+// 2) Fonts
+// ============================================================ //
+
+    // Font family
+    $font-stack: "Roboto", Ubuntu, "Helvetica Neue", sans-serif !default;
+    $font-color: #333;
+
+    // Heading Styles
+    $h1-fontsize-mobile: 2.5rem !default;
+    $h2-fontsize-mobile: 1.75rem !default;
+    $h3-fontsize-mobile: 1.5rem !default;
+    $h4-fontsize-mobile: 1.25rem !default;
+    $h5-fontsize-mobile: 1.2rem !default;
+    $h6-fontsize-mobile: 1rem !default;
+    $h1-fontsize: 5rem !default;
+    $h2-fontsize: 3.5rem !default;
+    $h3-fontsize: 2.5rem !default;
+    $h4-fontsize: 2rem !default;
+    $h5-fontsize: 1.75rem !default;
+    $h6-fontsize: 1.25rem !default;
+
+    // Heading Accents
+    $heading-accent-mobile: .875rem !default;
+    $heading-accent: 1.5rem !default;
+
+
+// 3) Colors
+// ============================================================ //
+
+    // Default color scheme
+    $primary-color: #0070c9 !default;
+    $secondary-color: #42a1ec !default;
+    $primary-gradient: linear-gradient(#{$secondary-color}, #{$primary-color}) !default;
+
+    // Quick colors
+    $white: #FFFFFF;
+    $black: #000000;
+
+
+// 4) Buttons
+// ============================================================ //
+
+    $btn-height: 36px !default;
+    $btn-padding: 0 16px !default;
+    $btn-large-padding: 0 24px !default;
+    $btn-small-padding: 0 8px !default;
+    $btn-radius: 4px;
+
+
+// 5) Forms
+// ============================================================ //
+
+    // Form colors
+    $label-color: #8a8a8a;
+    $form-element-bg: rgba(255,255,255,.8);
+    $form-border-color: #d6d6d6;
+
+    // Form Styles
+    $form-border-radius: 4px;

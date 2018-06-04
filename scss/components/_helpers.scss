@@ -1,0 +1,238 @@
+// CSS utlity classes / helpers
+// ============================================================ //
+
+// Text alignment utilities
+// ============================================================ //
+.text-right, .text-right-s {
+    text-align: right;
+}
+.text-left, .text-left-s {
+    text-align: left;
+}
+.text-center, .text-center-s {
+    text-align: center;
+}
+@media #{$m-and-up} {
+    .text-right-m {
+        text-align: right;
+    }
+    .text-left-m {
+        text-align: left;
+    }
+    .text-center-m {
+        text-align: center;
+    }
+}
+@media #{$l-and-up} {
+    .text-right-l {
+        text-align: right;
+    }
+    .text-left-l {
+        text-align: left;
+    }
+    .text-center-l {
+        text-align: center;
+    }
+}
+@media #{$xl-and-up} {
+    .text-right-xl {
+        text-align: right;
+    }
+    .text-left-xl {
+        text-align: left;
+    }
+    .text-center-xl {
+        text-align: center;
+    }
+}
+@media #{$xxl-and-up} {
+    .text-right-xxl {
+        text-align: right;
+    }
+    .text-left-xxl {
+        text-align: left;
+    }
+    .text-center-xxl {
+        text-align: center;
+    }
+}
+
+// Text size
+.text-small {
+    font-size: .75em;
+}
+.text-large {
+    font-size: 1.25em;
+}
+
+
+// Display helpers
+// ============================================================ //
+.block {
+    display: block;
+}
+.inline-block {
+    display: inline-block;
+}
+.inline {
+    display: inline;
+}
+
+
+// Padding helpers
+// ============================================================ //
+
+$i: 1;
+@while $i <= 5 {
+    $percentage: unquote((100 / ($num-cols / $i)) + "%");
+    .p-#{$i}-s {padding: #{$i}rem;}
+    .pt-#{$i}-s {padding-top: #{$i}rem;}
+    .pr-#{$i}-s {padding-right: #{$i}rem;}
+    .pb-#{$i}-s {padding-bottom: #{$i}rem;}
+    .pl-#{$i}-s {padding-left: #{$i}rem;}
+    $i: $i + 1;
+}
+@media #{$m-and-up} {
+    $i: 1;
+    @while $i <= 10 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .p-#{$i}-m {padding: #{$i}rem;}
+        .pt-#{$i}-m {padding-top: #{$i}rem;}
+        .pr-#{$i}-m {padding-right: #{$i}rem;}
+        .pb-#{$i}-m {padding-bottom: #{$i}rem;}
+        .pl-#{$i}-m {padding-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+@media #{$l-and-up} {
+    $i: 1;
+    @while $i <= 10 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .p-#{$i}-l {padding: #{$i}rem;}
+        .pt-#{$i}-l {padding-top: #{$i}rem;}
+        .pr-#{$i}-l {padding-right: #{$i}rem;}
+        .pb-#{$i}-l {padding-bottom: #{$i}rem;}
+        .pl-#{$i}-l {padding-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    $i: 1;
+    @while $i <= 10 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .p-#{$i}-xl {padding: #{$i}rem;}
+        .pt-#{$i}-xl {padding-top: #{$i}rem;}
+        .pr-#{$i}-xl {padding-right: #{$i}rem;}
+        .pb-#{$i}-xl {padding-bottom: #{$i}rem;}
+        .pl-#{$i}-xl {padding-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+@media #{$xxl-and-up} {
+    $i: 1;
+    @while $i <= 10 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .p-#{$i}-xxl {padding: #{$i}rem;}
+        .pt-#{$i}-xxl {padding-top: #{$i}rem;}
+        .pr-#{$i}-xxl {padding-right: #{$i}rem;}
+        .pb-#{$i}-xxl {padding-bottom: #{$i}rem;}
+        .pl-#{$i}-xxl {padding-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+
+// Margin helpers
+// ============================================================ //
+
+.ml-auto-s {margin-left: auto;}
+.mr-auto-s {margin-right: auto;}
+$i: 1;
+@while $i <= 5 {
+    $percentage: unquote((100 / ($num-cols / $i)) + "%");
+    .m-#{$i}-s {margin: #{$i}rem;}
+    .mt-#{$i}-s {margin-top: #{$i}rem;}
+    .mr-#{$i}-s {margin-right: #{$i}rem;}
+    .mb-#{$i}-s {margin-bottom: #{$i}rem;}
+    .ml-#{$i}-s {margin-left: #{$i}rem;}
+    $i: $i + 1;
+}
+@media #{$m-and-up} {
+    .ml-auto-m {margin-left: auto;}
+    .mr-auto-m {margin-right: auto;}
+    $i: 1;
+    @while $i <= 5 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .m-#{$i}-m {margin: #{$i}rem;}
+        .mt-#{$i}-m {margin-top: #{$i}rem;}
+        .mr-#{$i}-m {margin-right: #{$i}rem;}
+        .mb-#{$i}-m {margin-bottom: #{$i}rem;}
+        .ml-#{$i}-m {margin-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+@media #{$l-and-up} {
+    .ml-auto-l {margin-left: auto;}
+    .mr-auto-l {margin-right: auto;}
+    $i: 1;
+    @while $i <= 5 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .m-#{$i}-l {margin: #{$i}rem;}
+        .mt-#{$i}-l {margin-top: #{$i}rem;}
+        .mr-#{$i}-l {margin-right: #{$i}rem;}
+        .mb-#{$i}-l {margin-bottom: #{$i}rem;}
+        .ml-#{$i}-l {margin-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .ml-auto-xl {margin-left: auto;}
+    .mr-auto-xl {margin-right: auto;}
+    $i: 1;
+    @while $i <= 5 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .m-#{$i}-xl {margin: #{$i}rem;}
+        .mt-#{$i}-xl {margin-top: #{$i}rem;}
+        .mr-#{$i}-xl {margin-right: #{$i}rem;}
+        .mb-#{$i}-xl {margin-bottom: #{$i}rem;}
+        .ml-#{$i}-xl {margin-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+@media #{$xxl-and-up} {
+    .ml-auto-xxl {margin-left: auto;}
+    .mr-auto-xxl {margin-right: auto;}
+    $i: 1;
+    @while $i <= 5 {
+        $percentage: unquote((100 / ($num-cols / $i)) + "%");
+        .m-#{$i}-xxl {margin: #{$i}rem;}
+        .mt-#{$i}-xxl {margin-top: #{$i}rem;}
+        .mr-#{$i}-xxl {margin-right: #{$i}rem;}
+        .mb-#{$i}-xxl {margin-bottom: #{$i}rem;}
+        .ml-#{$i}-xxl {margin-left: #{$i}rem;}
+        $i: $i + 1;
+    }
+}
+
+
+// Shadow
+// ============================================================ //
+.depth-1, .hover-depth-1:hover {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.depth-2, .hover-depth-2:hover {
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+.depth-3, .hover-depth-3:hover {
+  -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.depth-4, .hover-depth-4:hover {
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+}
+.depth-5, .hover-depth-5:hover {
+  -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}

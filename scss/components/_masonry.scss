@@ -1,0 +1,121 @@
+// Please note that the Masonry type layout is only support by the following browsers:
+//      - ie 11 +
+//      - Edge +
+//      - Firefox 59 +
+//      - Chrome 49 +
+//      - Safari 11 +
+//      - iOS 10.3 +
+
+// Also understand that this method of gridlayouts (while cool looking) does not display the work in order from left to margin-right
+// This layout is a quick method to easily display work for galleries, blog articles (unless you need them displayed in order by date)
+// For optimum usage, I have decided to limit the columns to a maximum of 4. Above 5 columns can cause irregular rendering across browsers. 
+
+@mixin column-width-prop {
+    -webkit-column-width: auto;
+    -moz-column-width: auto;
+    column-width: auto;
+}
+
+.row {
+    &.masonry {
+        -moz-column-gap: $gutter-size;
+        -webkit-column-gap: $gutter-size;
+        column-gap: $gutter-size;
+        -webkit-column-break-inside: avoid;
+        -webkit-backface-visibility: hidden;
+        $i: 1;
+        @while $i <= 4 {
+            &.s-grid-count-#{$i} {
+                -moz-column-count: #{$i};
+                -webkit-column-count: #{$i};
+                column-count: #{$i};
+                @include column-width-prop;
+            }
+            $i: $i + 1;
+        }
+        .col {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0;
+            margin-bottom: $gutter-size;
+            min-height: initial;
+            float: none;
+        }
+    }
+}
+
+
+@media #{$m-and-up} {
+
+    .row {
+        &.masonry {
+            $i: 1;
+            @while $i <= 4 {
+                &.m-grid-count-#{$i} {
+                    -moz-column-count: #{$i};
+                    -webkit-column-count: #{$i};
+                    column-count: #{$i};
+                    @include column-width-prop;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+
+}
+
+@media #{$l-and-up} {
+
+    .row {
+        &.masonry {
+            $i: 1;
+            @while $i <= 4 {
+                &.l-grid-count-#{$i} {
+                    -moz-column-count: #{$i};
+                    -webkit-column-count: #{$i};
+                    column-count: #{$i};
+                    @include column-width-prop;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+
+}
+@media #{$xl-and-up} {
+
+    .row {
+        &.masonry {
+            $i: 1;
+            @while $i <= 4 {
+                &.xl-grid-count-#{$i} {
+                    -moz-column-count: #{$i};
+                    -webkit-column-count: #{$i};
+                    column-count: #{$i};
+                    @include column-width-prop;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+
+}
+@media #{$xxl-and-up} {
+
+    .row {
+        &.masonry {
+            $i: 1;
+            @while $i <= 4 {
+                &.xxl-rid-count-#{$i} {
+                    -moz-column-count: #{$i};
+                    -webkit-column-count: #{$i};
+                    column-count: #{$i};
+                    @include column-width-prop;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+
+}

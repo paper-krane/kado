@@ -1,0 +1,48 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        //display: flex;
+    }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-stack;
+}
+
+
+// Links
+a, a:visited, a:focus {
+    color: $primary-color;
+    -webkit-tap-highlight-color: transparent;
+    transition: $transition-speed;
+    -webkit-transition: $transition-speed;
+}
+a:hover {
+    color: $secondary-color;
+}
+
+
+//  Blockquote
+blockquote {
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid $primary-color;
+}
+
+
+// Images
+img.responsive-img,
+video.responsive-vid {
+  max-width: 100%;
+  height: auto;
+}

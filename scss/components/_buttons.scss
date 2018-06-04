@@ -1,0 +1,60 @@
+.btn, .btn:visited, .btn:focus {
+    font-size: inherit;
+    font-family: inherit;
+    height: $btn-height;
+    line-height: $btn-height - 2;
+    background-color: $primary-color;
+    background: $primary-gradient;
+    background: -webkit-#{$primary-gradient};
+    border: 1px solid $primary-color;
+    border-radius: $btn-radius;
+    color: $white;
+    padding: $btn-padding;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: $transition-speed;
+    -webkit-transition: $transition-speed;
+    &.disabled,
+    &:disabled,
+    &[disabled] {
+        opacity: .3;
+        cursor: not-allowed;
+        &:hover {
+            opacity: .3;
+            cursor: not-allowed;
+        }
+    }
+    &.btn-large {
+        height: $btn-height + 18;
+        line-height: $btn-height + 16;
+        padding: $btn-large-padding;
+    }
+    &.btn-small {
+        font-size: .875rem;
+        height: $btn-height - 10;
+        line-height: $btn-height - 12;
+        padding: $btn-small-padding;
+    }
+    &.full-width {
+        display: block;
+        width: 100%;
+    }
+    &.btn-outline {
+        background-color: transparent;
+        background: transparent;
+        color: $primary-color;
+    }
+}
+.btn:hover {
+    color: $white;
+    opacity: .85;
+}
+.btn.btn-outline:hover {
+    color: $primary-color;
+}
