@@ -93,10 +93,23 @@ select::-ms-expand {
         left: 25px;
     }
 }
-.no-js .form-element label, .ie11 .form-element label {
-    top: 8px !important;
-    font-size: 10px !important;
-    color: $label-color;
+.no-js, .ie11 {
+    .form-element input[type=text]+label,
+    .form-element input[type=email]+label,
+    .form-element input[type=password]+label,
+    .form-element input[type=url]+label,
+    .form-element input[type=number]+label,
+    .form-element input[type=date]+label,
+    .form-element input[type=datetime]+label,
+    .form-element input[type=datetime-local]+label,
+    .form-element input[type=number]+label,
+    .form-element input[type=time]+label,
+    .form-element input[type=tel]+label,
+    .form-element textarea+label,
+    .form-element select+label {
+        top: 8px !important;
+        font-size: 10px !important;
+    }
 }
 
 // Active states
@@ -177,7 +190,7 @@ select::-ms-expand {
 }
 .no-js, .ie11 {
     .form-element textarea {
-        resize: vertical;
+        resize: vertical !important;
     }
 }
 

@@ -2158,10 +2158,33 @@ select::-ms-expand {
 .col .form-element select + label {
   left: 25px; }
 
-.no-js .form-element label, .ie11 .form-element label {
+.no-js .form-element input[type=text] + label,
+.no-js .form-element input[type=email] + label,
+.no-js .form-element input[type=password] + label,
+.no-js .form-element input[type=url] + label,
+.no-js .form-element input[type=number] + label,
+.no-js .form-element input[type=date] + label,
+.no-js .form-element input[type=datetime] + label,
+.no-js .form-element input[type=datetime-local] + label,
+.no-js .form-element input[type=number] + label,
+.no-js .form-element input[type=time] + label,
+.no-js .form-element input[type=tel] + label,
+.no-js .form-element textarea + label,
+.no-js .form-element select + label, .ie11 .form-element input[type=text] + label,
+.ie11 .form-element input[type=email] + label,
+.ie11 .form-element input[type=password] + label,
+.ie11 .form-element input[type=url] + label,
+.ie11 .form-element input[type=number] + label,
+.ie11 .form-element input[type=date] + label,
+.ie11 .form-element input[type=datetime] + label,
+.ie11 .form-element input[type=datetime-local] + label,
+.ie11 .form-element input[type=number] + label,
+.ie11 .form-element input[type=time] + label,
+.ie11 .form-element input[type=tel] + label,
+.ie11 .form-element textarea + label,
+.ie11 .form-element select + label {
   top: 8px !important;
-  font-size: 10px !important;
-  color: #8a8a8a; }
+  font-size: 10px !important; }
 
 .form-element input[type=text]:focus,
 .form-element input[type=email]:focus,
@@ -2235,7 +2258,7 @@ select::-ms-expand {
   resize: none; }
 
 .no-js .form-element textarea, .ie11 .form-element textarea {
-  resize: vertical; }
+  resize: vertical !important; }
 
 .origamiCheckbox, .origamiRadio {
   position: relative;
