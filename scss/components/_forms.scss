@@ -93,7 +93,7 @@ select::-ms-expand {
         left: 25px;
     }
 }
-.no-js .form-element label {
+.no-js .form-element label, .ie11 .form-element label {
     top: 8px;
     font-size: 12px;
     color: $label-color;
@@ -175,7 +175,7 @@ select::-ms-expand {
     min-width: 100%;
     resize: none;
 }
-.no-js {
+.no-js, .ie11 {
     .form-element textarea {
         resize: vertical;
     }
@@ -411,29 +411,33 @@ input[type=range]::-ms-track {
     color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-    background: #ac51b5;
-    border: 0px solid #000101;
-    border-radius: 50px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: $primary-color;
+    background: $primary-gradient;
+    background: -webkit-#{$primary-gradient};
+    border: 0px solid #000;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000;
 }
 input[type=range]::-ms-fill-upper {
-    background: #ac51b5;
-    border: 0px solid #000101;
-    border-radius: 50px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: $primary-color;
+    background: $primary-gradient;
+    background: -webkit-#{$primary-gradient};
+    border: 0px solid #000;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000;
 }
 input[type=range]::-ms-thumb {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    border: 0px solid #000000;
-    height: 20px;
-    width: 39px;
-    border-radius: 7px;
-    background: #65001c;
+    border: 1px solid $form-border-color;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: $white;
     cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower {
-    background: #ac51b5;
+    background: $white;
 }
 input[type=range]:focus::-ms-fill-upper {
-    background: #ac51b5;
+    background: $white;
 }

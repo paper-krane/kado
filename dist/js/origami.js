@@ -36,6 +36,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return _self;
         },
         init: function init(options) {
+            var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+            if (isIE11) {
+                document.querySelector('html').classList.add('ie11');
+                return;
+            }
             return _self || new FormElements(options);
         }
     };
