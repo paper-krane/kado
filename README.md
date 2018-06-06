@@ -15,15 +15,19 @@
 It's rather easy. Start by cloning or [downloading](https://github.com/benjamin-farnham/origami/archive/master.zip) directly and include the origami.min.css file along with the origami.min.js file (with the script preferably before the closing body tag) in your HTML.
 
 ```html
-<html lang="en" class="no-js">
+<html lang="en" class="no-js"><!-- no-js class allows a small javascript check -->
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+
+        <!-- Origami <link> tag -->
         <link href="path/to/origami.min.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <!-- Your content here -->
+
+        <!-- Origami <script> tag -->
         <script type="text/javascript" src="path/to/origami.min.js"></script>
     </body>
 </html>
