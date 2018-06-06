@@ -24,11 +24,13 @@
             // Append event listeners
                 // Check elements associated with labels
             this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'keyup');
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'change');
+            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'oninput');
+            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'onchange');
                 // Select element labels - add class 'select-label'
             this.selectLabelClass(this.selectElements, options);
                 // Textarea resizing
-            this.cycleAppendTextarea(this.textArea, this.resize, 'change');
+            this.cycleAppendTextarea(this.textArea, this.resize, 'onchange');
+            this.cycleAppendTextarea(this.textArea, this.resize, 'oninput');
             this.cycleAppendTextarea(this.textArea, this.resize, 'cut');
             this.cycleAppendTextarea(this.textArea, this.resize, 'paste');
             this.cycleAppendTextarea(this.textArea, this.resize, 'drop');
@@ -87,7 +89,7 @@
 
         // Grab file upload value for aesthetics.
         // ============================================================ //
-        
+
 
         // Mass initialization load (check for fields already filled out etc.)
         // ============================================================ //
