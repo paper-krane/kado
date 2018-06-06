@@ -1,7 +1,9 @@
 <p align="center">
     <h2 align="center">Origami</h2>
 
-    A mobile-first front-end framework for written for minimal, elegant web design.
+    <p align="center">
+        A mobile-first front-end framework for written for minimal, elegant web design.
+    </p>
 </p>
 
 ***
