@@ -6,8 +6,6 @@
 </p>
 <br/>
 <br/>
-<br/>
-<br/>
 
 ## 1. Getting Started
 
