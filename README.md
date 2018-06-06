@@ -35,6 +35,7 @@ No CDN yet. But it is in the plans.
 
 ## 2. Features
 
+- ie11 + support
 - 12 column grid
 - Flexbox
 - Basic element styles (forms, buttons, & the essentials)
