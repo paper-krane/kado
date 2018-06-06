@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link href="dist/css/origami.css" rel="stylesheet" type="text/css">
+        <style>
+            .grid-box {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                white-space: nowrap;
+                background-color: #f4f5f5;
+                text-align: center;
+                border: 1px solid #dddddd;
+            }
+            .grid-box.small {
+                padding-top: .875rem;
+                padding-bottom: .875rem;
+            }
+            .grid-box-bare {
+                white-space: nowrap;
+                background-color: #f4f5f5;
+                text-align: center;
+                border: 1px solid #dddddd;
+            }
+            .side-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .container-box {
+                border: 1px solid #dddddd;
+                min-height: 88px;
+            }
+            .container-box.big {
+                min-height: 160px;
+            }
+            .transition {
+                transition: all 0.4s ease;
+                -webkit-transition: all 0.4s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container m">
+            <div class="row">
+                <div class="col s12 text-center-s">
+                    <h1><span class="heading-accent">A simple framework</span>This is digital Origami.</h1>
+                </div>
+                <div class="col s12 text-center-s">
+                    <h2><span class="heading-accent">A pure test</span>For heading styles.</h2>
+                    <p class="light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis vehicula dui <a class="btn btn-small light" href="">Button inline</a>, vel volutpat orci lacinia non. Phasellus laoreet ipsum bibendum lorem gravida molestie. Sed maximus eget ipsum a finibus. Cras quis sapien vitae diam euismod auctor ultrices id nunc. Morbi ornare vehicula dui, id <span class="italic">pulvinar ipsum</span> lobortis quis. In condimentum pellentesque rhoncus. Praesent tincidunt bibendum dictum.
+                    </p>
+                    <h3>&amp; Buttons...</h3>
+                    <a class="btn btn-small light" href="">Button Small</a>
+                    <a class="btn light" href="">Button Medium</a>
+                    <a class="btn btn-large light" href="">Button Large</a>
+                    <a class="btn disabled light">Button Disabled</a>
+                    <a class="btn btn-outline light" href="">Button Outline</a>
+                    <br />
+                    <br />
+                    <a class="btn btn-large light full-width" href="">Button Full Width</a>
+                    <br />
+                    <br />
+                    <h3>&amp; Hyperlinks...</h3>
+                    <a href="index.html">Hyperlink</a>
+                </div>
+                <div class="col s12">
+                    <h2 class="text-center-s">Form elements</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col s6 form-element">
+                                <input type="text" name="" value="" id="name">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="col s6 form-element">
+                                <input type="email" name="" value="" id="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col s12 form-element">
+                                <input type="text" name="" value="" id="subject">
+                                <label for="subject">Subject Line</label>
+                            </div>
+                            <div class="col s12 form-element">
+                                <select name="help" id="select">
+                                    <option value=""></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <label for="select">Select Element</label>
+                            </div>
+                            <div class="col s12 form-element">
+                                <textarea name="message" id="message" rows="" cols=""></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <div class="col s12 form-element">
+                                <p>
+                                    <label for="checkbox1" class="origamiCheckbox">
+                                        <input type="checkbox" id="checkbox1" name="checkbox1" value="Checkbox1" />
+                                        <span class="">Checkbox 1</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="checkbox2" class="origamiCheckbox">
+                                        <input type="checkbox" id="checkbox2" name="checkbox1" value="Checkbox2" />
+                                        <span>Checkbox 2</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="radio1" class="origamiRadio">
+                                        <input type="radio" id="radio1" name="radio1" value="radio1" />
+                                        <span>Radio 1</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="radio2" class="origamiRadio">
+                                        <input type="radio" id="radio2" name="radio1" value="radio2" />
+                                        <span>Radio 2</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="switch" class="origamiSwitch">
+                                        On
+                                        <input type="checkbox" id="switch" name="switch1" value="switch" />
+                                        <span class="lever"></span>
+                                        Off
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="col s12">
+                                <button class="btn btn-large full-width" type="submit">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s12">
+                    <h2 class="text-center-s"><span class="heading-accent">Checking blockquotes</span>They work as well.</h2>
+                    <blockquote class="italic bold">
+                        Consectetur adipiscing elit. Mauris lobortis vehicula dui, vel volutpat orci lacinia non. Phasellus laoreet ipsum bibendum lorem gravida molestie. Sed maximus eget ipsum a finibus.
+                    </blockquote>
+                </div>
+                <div class="col s12 no-margin">
+                    <h3 class="text-center-s">Text Styling</h3>
+                </div>
+                <div class="col s12 l4 text-center-s">
+                    <h4>Sizing</h4>
+                    <p class="text-small">
+                        Small
+                    </p>
+                    <p>
+                        Normal
+                    </p>
+                    <p class="text-large">
+                        Large
+                    </p>
+                </div>
+                <div class="col s12 l4 text-center-s">
+                    <h4>Styles</h4>
+                    <p class="italic">
+                        Italic
+                    </p>
+                    <p class="light">
+                        Light
+                    </p>
+                    <p class="bold">
+                        Bold
+                    </p>
+                </div>
+                <div class="col s12 l4 text-center-s">
+                    <h4>Alignment</h4>
+                    <p class="text-left-s">
+                        Left
+                    </p>
+                    <p class="text-center-s">
+                        Center
+                    </p>
+                    <p class="text-right-s">
+                        Right
+                    </p>
+                </div>
+                <div class="col s12 text-center-s">
+                    <h1>h1 Heading Elements</h1>
+                    <h2>h2 Heading Elements</h2>
+                    <h3>h3 Heading Elements</h3>
+                    <h4>h4 Heading Elements</h4>
+                    <h5>h5 Heading Elements</h5>
+                    <h6>h6 Heading Elements</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 text-center-s no-margin">
+                    <h3>Shadows</h3>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box">
+                        Depth 0
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box depth-1">
+                        Depth 1
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box depth-2">
+                        Depth 2
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box depth-3">
+                        Depth 3
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box depth-4">
+                        Depth 4
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box depth-5">
+                        Depth 5
+                    </div>
+                </div>
+                <div class="col s12 text-center-s no-margin">
+                    <h3>Shadows &amp; Hover states</h3>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box transition">
+                        Hover Depth 0
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box hover-depth-1 transition">
+                        Hover Depth 1
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box hover-depth-2 transition">
+                        Hover Depth 2
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box hover-depth-3 transition">
+                        Hover Depth 3
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box hover-depth-4 transition">
+                        Hover Depth 4
+                    </div>
+                </div>
+                <div class="col s12 l2 text-small text-center">
+                    <div class="grid-box hover-depth-5 transition">
+                        Hover Depth 5
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 text-center-s no-margin">
+                    <h3>Padding &amp; Margins</h3>
+                </div>
+                <div class="col s12">
+                    <div class="grid-box-bare inline-block p-1-s mr-2-s">
+                        .p-1-s &amp; .mr-2-s
+                    </div>
+                    <div class="grid-box-bare inline-block pl-5-s pt-2-s pb-3-s">
+                        .pl-5-s, .pt-2-s &amp; pb-3-s
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 text-center-s no-margin">
+                    <h3>Grid System</h3>
+                </div>
+            </div>
+            <div class="row text-small">
+                <div class="col s12">
+                    <div class="grid-box">
+                        Grid 12
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="grid-box">
+                        Grid 6
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="grid-box">
+                        Grid 6
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="grid-box">
+                        Grid 4
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="grid-box">
+                        Grid 4
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="grid-box">
+                        Grid 4
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="grid-box">
+                        Grid 3
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="grid-box">
+                        Grid 3
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="grid-box">
+                        Grid 3
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="grid-box">
+                        Grid 3
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s5">
+                    <div class="grid-box">
+                        Grid 5
+                    </div>
+                </div>
+                <div class="col s7">
+                    <div class="grid-box">
+                        Grid 7
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="grid-box">
+                        Grid 3
+                    </div>
+                </div>
+                <div class="col s9">
+                    <div class="grid-box">
+                        Grid 9
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="grid-box">
+                        Grid 2
+                    </div>
+                </div>
+                <div class="col s10">
+                    <div class="grid-box">
+                        Grid 10
+                    </div>
+                </div>
+                <div class="col s1">
+                    <div class="grid-box">
+                        Grid 1
+                    </div>
+                </div>
+                <div class="col s11">
+                    <div class="grid-box">
+                        Grid 11
+                    </div>
+                </div>
+            </div>
+            <div class="row text-small">
+                <div class="col s12 no-margin text-center-s">
+                    <h4>Push &amp; Pull</h4>
+                </div>
+                <div class="col s12 l7 push-l5">
+                    <div class="grid-box">
+                        1st Grid - Pushed 5
+                    </div>
+                </div>
+                <div class="col s12 l5 pull-l7">
+                    <div class="grid-box">
+                        2nd Grid - Pulled 7
+                    </div>
+                </div>
+                <div class="col s12 no-margin text-center-s">
+                    <h4>Offset</h4>
+                </div>
+                <div class="col s6 offset-s3">
+                    <div class="grid-box">
+                        Offset by 3 (6 columns wide)
+                    </div>
+                </div>
+            </div>
+            <div class="row no-margin">
+                <div class="col s12 text-center-s">
+                    <h2><span class="heading-accent">Grid not enough?</span>It has flexbox too.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h4>Flexbox Containers</h4>
+                    <p class="bold">
+                        .flex
+                    </p>
+                    <div class="flex-s grid-box side-padding text-small">
+                        Flexbox Container
+                    </div>
+                    <p class="bold">
+                        .inline-flex
+                    </p>
+                    <div class="inline-flex-s grid-box side-padding text-small">
+                        Inline-Flexbox Container
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Flex Rows &amp; Columns</h4>
+                    <p class="bold">
+                        Flex row (.flex-row on parent container)
+                    </p>
+                    <div class="container-box flex flex-row text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Flex row reverse (.flex-row-reverse on parent container)
+                    </p>
+                    <div class="container-box flex flex-row-reverse text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Flex column (.flex-column on parent container)
+                    </p>
+                    <div class="container-box flex flex-column text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Flex column reverse (.flex-column-reverse on parent container)
+                    </p>
+                    <div class="container-box flex flex-column-reverse text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Justify flex content</h4>
+                    <p class="bold">
+                        From left (.justify-start on parent container)
+                    </p>
+                    <div class="flex container-box justify-start text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        From right (.justify-end on parent container)
+                    </p>
+                    <div class="flex container-box justify-end text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        From center (.justify-center on parent container)
+                    </p>
+                    <div class="flex container-box justify-center text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Between (.justify-between on parent container)
+                    </p>
+                    <div class="flex container-box justify-between text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        &amp; Around (.justify-around on parent container)
+                    </p>
+                    <div class="flex container-box justify-around text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Veritcal alignment</h4>
+                    <p class="bold">
+                        Start (.align-start on parent container)
+                    </p>
+                    <div class="flex container-box big align-start text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        End (.align-end on parent container)
+                    </p>
+                    <div class="flex container-box big align-end text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Center (.align-center on parent container)
+                    </p>
+                    <div class="flex container-box big align-center text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Baseline (.align-baseline on parent container)
+                    </p>
+                    <div class="flex container-box big align-baseline text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Stretch (.align-stretch on parent container)
+                    </p>
+                    <div class="flex container-box big align-stretch text-small">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Flex fill</h4>
+                    <p class="bold">
+                        .flex-fill (on child items)
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Align self</h4>
+                    <p class="bold">
+                        Start (.align-self-start on child item)
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box small side-padding flex-fill align-self-start">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        End (.align-self-end on child item)
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box small side-padding flex-fill align-self-end">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Center (.align-self-center on child item)
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box small side-padding flex-fill align-self-center">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Baseline (.align-self-baseline on child item)
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box small side-padding flex-fill align-self-baseline">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Stretch (.align-self-stretch on child item)
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box small side-padding flex-fill align-self-stretch">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Flex grow &amp; shrink</h4>
+                    <p class="bold">
+                        .flex-grow placed on child items <span class="normal">(.flex-grow-initial resets it)</span>
+                    </p>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding flex-grow">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding flex-grow-initial">
+                            Flexbox Child 2
+                        </div>
+                    </div>
+                    <p class="bold">
+                        .flex-shrink placed on child items <span class="normal">(.flex-shrink-initial resets it)</span>
+                    </p>
+                    <div class="flex container-box flex-wrap-none text-small">
+                        <div class="grid-box side-padding" style="width: 100%;">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding flex-shrink">
+                            Flexbox Child 2
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Auto margins</h4>
+                    <blockquote class="italic">
+                        IE 10 &amp; 11 render auto margins incorrectly if parent container uses the 'justify-content' properties. They prioritize the 'justify-content' over auto-margins.
+                    </blockquote>
+                    <div class="flex container-box text-small">
+                        <div class="grid-box side-padding mr-auto-s">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding ml-auto-s">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Flexbox element wrapping</h4>
+                    <p>
+                        Choose if your flexbox child items wrap or extend beyond.
+                    </p>
+                    <p class="bold">
+                        Nowrap (.flex-wrap-none)
+                    </p>
+                    <div class="flex container-box flex-wrap-none text-small" style="width:266px;padding: 1rem;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Wrap (.flex-wrap)
+                    </p>
+                    <div class="flex container-box flex-wrap text-small" style="width:266px;padding: 1rem;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                    </div>
+                    <p class="bold">
+                        Wrap reverse (.flex-wrap-reverse)
+                    </p>
+                    <div class="flex container-box flex-wrap-reverse text-small" style="width:266px;padding: 1rem;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Ordering</h4>
+                    <p>
+                        Order flex elements. Can start with 1 and go all the way to 12.
+                    </p>
+                    <p class="bold">
+                        .order-* (1 - 12)
+                    </p>
+                    <div class="flex container-box flex-wrap text-small">
+                        <div class="grid-box side-padding flex-fill order-3">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding flex-fill order-5">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding flex-fill order-1">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding flex-fill order-4">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding flex-fill order-2">
+                            Flexbox Child 5
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h4>Aligning rows</h4>
+                    <blockquote>
+                        This only works if there is 2 or more rows. When using these class styles, only having 1 row will leave the row unaffected.
+                    </blockquote>
+                    <p class="bold">
+                        .align-rows-start
+                    </p>
+                    <div class="flex container-box flex-wrap text-small align-rows-start" style="min-height: 280px;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 5
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 6
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 7
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 8
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 9
+                        </div>
+                    </div>
+                    <p class="bold">
+                        .align-rows-end
+                    </p>
+                    <div class="flex container-box flex-wrap text-small align-rows-end" style="min-height: 280px;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 5
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 6
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 7
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 8
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 9
+                        </div>
+                    </div>
+                    <p class="bold">
+                        .align-rows-center
+                    </p>
+                    <div class="flex container-box flex-wrap text-small align-rows-center" style="min-height: 280px;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 5
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 6
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 7
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 8
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 9
+                        </div>
+                    </div>
+                    <p class="bold">
+                        .align-rows-between
+                    </p>
+                    <div class="flex container-box flex-wrap text-small align-rows-between" style="min-height: 280px;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 5
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 6
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 7
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 8
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 9
+                        </div>
+                    </div>
+                    <p class="bold">
+                        .align-rows-around
+                    </p>
+                    <div class="flex container-box flex-wrap text-small align-rows-around" style="min-height: 280px;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 5
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 6
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 7
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 8
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 9
+                        </div>
+                    </div>
+                    <p class="bold">
+                        .align-rows-stretch
+                    </p>
+                    <div class="flex container-box flex-wrap text-small align-rows-stretch" style="min-height: 280px;">
+                        <div class="grid-box side-padding">
+                            Flexbox Child 1
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 2
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 3
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 4
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 5
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 6
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 7
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 8
+                        </div>
+                        <div class="grid-box side-padding">
+                            Flexbox Child 9
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="dist/js/origami.js"></script>
+    </body>
+</html>
