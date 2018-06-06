@@ -1,9 +1,7 @@
 <p>
     <h2 align="center">Origami</h2>
 
-    <p align="center">
-        A mobile-first front-end framework for minimal, elegant web design.
-    </p>
+    A mobile-first front-end framework for written for minimal, elegant web design.
 </p>
 
 ***
@@ -11,7 +9,7 @@
 ## 1. Getting Started
 
 #### Installation
-It's rather easy. Start by cloning or downloading directly and include the origami.min.css file along with the origami.min.js file (with the script preferably before the closing body tag) in your HTML.
+It's rather easy. Start by cloning or [downloading](https://github.com/benjamin-farnham/origami/archive/master.zip) directly and include the origami.min.css file along with the origami.min.js file (with the script preferably before the closing body tag) in your HTML.
 
 ```html
 <html lang="en" class="no-js">
