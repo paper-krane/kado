@@ -41,4 +41,4 @@ No CDN yet. But it is in the plans.
 - Helpers (spacing, text-alignment, shadow depth, etc.)
 - Quick toggle using HTML5 data attributes
 
-Not a lot but included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (index.html) has been included. As for the Javascript, no dependencies are required. It was written with ES6 and compiled with Babel and is strictly there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).
+Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (index.html) has been included. As for the Javascript, no dependencies are required. It was written with ES6 and compiled with Babel and is current there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).

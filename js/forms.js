@@ -39,6 +39,7 @@
         }
 
         // Utilities / Construction functions
+        // ============================================================ //
         cycleAppendLabel(collection, handler, event) {
             for (let item of collection) {
                 item.addEventListener(event, handler.bind(this, item));
@@ -75,6 +76,7 @@
         }
 
         // Make select labels function
+        // ============================================================ //
         selectLabelClass(selectList, options) {
             for (let select of selectList) {
                 const selectID = select.id;
@@ -83,7 +85,12 @@
             }
         }
 
+        // Grab file upload value for aesthetics.
+        // ============================================================ //
+        
+
         // Mass initialization load (check for fields already filled out etc.)
+        // ============================================================ //
         checkFormElements(elementList) {
             for (let element of elementList) {
                 if ((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {

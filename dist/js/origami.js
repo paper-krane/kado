@@ -69,6 +69,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         // Utilities / Construction functions
+        // ============================================================ //
 
 
         _createClass(FormElements, [{
@@ -158,6 +159,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
 
             // Make select labels function
+            // ============================================================ //
 
         }, {
             key: 'selectLabelClass',
@@ -190,7 +192,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
             }
 
+            // Grab file upload value for aesthetics.
+            // ============================================================ //
+
+
             // Mass initialization load (check for fields already filled out etc.)
+            // ============================================================ //
 
         }, {
             key: 'checkFormElements',
@@ -241,4 +248,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 })(window, document);
 
 var createForm = formElements.init();
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+;(function (window, document, undefined) {
+
+    var parallax = {
+        get: function get() {
+            return _self;
+        },
+        init: function init(element, options) {
+            return _self || new Parallax(element, options);
+        }
+    };
+
+    var Parallax = function Parallax() {
+        var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-parallax=parallax]';
+        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+            speed: .4,
+            xPos: 'center',
+            yPos: 'center'
+        };
+
+        _classCallCheck(this, Parallax);
+    };
+
+    var _self = void 0;
+
+    if (typeof define === 'function' && define.amd) {
+        define([], function () {
+            return parallax;
+        });
+    } else if (typeof module !== 'undefined' && module.exports) {
+        module.exports = parallax;
+    } else {
+        window.parallax = parallax;
+    }
+})(window, document);
+
+var createParallax = parallax.init();
 //# sourceMappingURL=origami.js.map
