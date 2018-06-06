@@ -94,8 +94,8 @@ select::-ms-expand {
     }
 }
 .no-js .form-element label, .ie11 .form-element label {
-    top: 8px;
-    font-size: 12px;
+    top: 8px !important;
+    font-size: 10px !important;
     color: $label-color;
 }
 
@@ -411,17 +411,13 @@ input[type=range]::-ms-track {
     color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-    background: $primary-color;
-    background: $primary-gradient;
-    background: -webkit-#{$primary-gradient};
+    background: $form-border-color;
     border: 0px solid #000;
     border-radius: 6px;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000;
 }
 input[type=range]::-ms-fill-upper {
-    background: $primary-color;
-    background: $primary-gradient;
-    background: -webkit-#{$primary-gradient};
+    background: $form-border-color;
     border: 0px solid #000;
     border-radius: 6px;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000;
@@ -436,8 +432,12 @@ input[type=range]::-ms-thumb {
     cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower {
-    background: $white;
+    background: $primary-color;
+    background: $primary-gradient;
+    background: -webkit-#{$primary-gradient};
 }
 input[type=range]:focus::-ms-fill-upper {
-    background: $white;
+    background: $primary-color;
+    background: $primary-gradient;
+    background: -webkit-#{$primary-gradient};
 }

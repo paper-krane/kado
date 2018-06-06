@@ -2159,8 +2159,8 @@ select::-ms-expand {
   left: 25px; }
 
 .no-js .form-element label, .ie11 .form-element label {
-  top: 8px;
-  font-size: 12px;
+  top: 8px !important;
+  font-size: 10px !important;
   color: #8a8a8a; }
 
 .form-element input[type=text]:focus,
@@ -2436,17 +2436,13 @@ input[type=range]::-ms-track {
   color: transparent; }
 
 input[type=range]::-ms-fill-lower {
-  background: #0070c9;
-  background: linear-gradient(#42a1ec, #0070c9);
-  background: -webkit-linear-gradient(#42a1ec, #0070c9);
+  background: #d6d6d6;
   border: 0px solid #000;
   border-radius: 6px;
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000; }
 
 input[type=range]::-ms-fill-upper {
-  background: #0070c9;
-  background: linear-gradient(#42a1ec, #0070c9);
-  background: -webkit-linear-gradient(#42a1ec, #0070c9);
+  background: #d6d6d6;
   border: 0px solid #000;
   border-radius: 6px;
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000; }
@@ -2461,10 +2457,14 @@ input[type=range]::-ms-thumb {
   cursor: pointer; }
 
 input[type=range]:focus::-ms-fill-lower {
-  background: #FFFFFF; }
+  background: #0070c9;
+  background: linear-gradient(#42a1ec, #0070c9);
+  background: -webkit-linear-gradient(#42a1ec, #0070c9); }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: #FFFFFF; }
+  background: #0070c9;
+  background: linear-gradient(#42a1ec, #0070c9);
+  background: -webkit-linear-gradient(#42a1ec, #0070c9); }
 
 .text-right, .text-right-s {
   text-align: right; }
