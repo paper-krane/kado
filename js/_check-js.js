@@ -1,4 +1,4 @@
 ;(function() {
-    const html = document.querySelector('html');
+    var html = document.querySelector('html');
     html.removeAttribute("class");
 })();

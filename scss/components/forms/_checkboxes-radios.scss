@@ -1,0 +1,167 @@
+// Check box / Radio elements
+// ============================================================ //
+// hide original input elements
+.origamiCheckbox, .origamiRadio {
+    position: relative;
+    padding-left: 2rem;
+    line-height: 24px;
+    font-weight: 300;
+    color: $label-color;
+    margin-right: 1rem;
+    font-size: inherit;
+    input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Checkboxes
+.origamiCheckbox:before, .origamiCheckbox span:before, .origamiRadio:before, .origamiRadio span:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: $border-radius / 2;
+    background-color: $form-border-color;
+    cursor: pointer;
+    transition: $transition-speed-fast;
+    -webkit-transition: $transition-speed-fast;
+}
+.origamiCheckbox span:before, .origamiRadio span:before {
+    background: $primary-color;
+    background: $primary-gradient;
+    background: -webkit-#{$primary-gradient};
+    opacity: 0;
+}
+.origamiCheckbox span:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 8px;
+    border-right: 2px solid $white;
+    border-bottom: 2px solid $white;
+    top: 7px;
+    left: 6px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    cursor: pointer;
+    transition: $transition-speed;
+    -webkit-transition: $transition-speed;
+    opacity: 0;
+}
+
+// Active styles
+.origamiCheckbox input[type=checkbox]:checked + span:before, .origamiCheckbox input[type=checkbox]:checked + span:after, .origamiRadio input[type=radio]:checked + span:before, .origamiRadio input[type=radio]:checked + span:after {
+    opacity: 1;
+}
+
+// Disabled styles
+
+.origamiCheckbox input[type=checkbox]:disabled + span, .origamiRadio input[type=radio]:disabled + span {
+    opacity: .4;
+    color: $label-color;
+    cursor: not-allowed;
+    &:before {
+        opacity: 1;
+        background: #ffffff;
+        cursor: not-allowed;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+// Radio buttons
+.origamiRadio:before, .origamiRadio span:before {
+    border-radius: 50%;
+}
+.origamiRadio span:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 10px;
+    left: 6px;
+    background-color: $white;
+    transition: $transition-speed;
+    -webkit-transition: $transition-speed;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 50%;
+}
+// Active styles
+    // See checkbox active.
+
+// Disabled styles
+    // See checkbox disabled.
+
+
+// Switches
+.origamiSwitch {
+    position: relative;
+    line-height: 24px;
+    font-weight: 300;
+    color: $label-color;
+    -moz-appearance: none;
+    input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+    }
+}
+.origamiSwitch span.lever {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    margin: 0 .5rem;
+    background-color: $form-border-color;
+    height: 24px;
+    width: 42px;
+    border-radius: 1rem;
+    cursor: pointer;
+    &:before {
+        content: '';
+        height: 24px;
+        width: 42px;
+        border-radius: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $primary-color;
+        background: $primary-gradient;
+        background: -webkit-#{$primary-gradient};
+        opacity: 0;
+        transition: $transition-speed-fast;
+        -webkit-transition: $transition-speed-fast;
+    }
+    &:after {
+        content: '';
+        height: 22px;
+        width: 22px;
+        border-radius: 1rem;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        background: $white;
+        transition: $transition-speed-fast;
+        -webkit-transition: $transition-speed-fast;
+    }
+}
+
+// Active styles
+.origamiSwitch input[type=checkbox]:checked + span:before {
+    opacity: 1;
+}
+.origamiSwitch input[type=checkbox]:checked + span:after {
+    left: 19px;
+}
+
+//Disabled styles

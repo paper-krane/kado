@@ -1,0 +1,35 @@
+input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.origamiFile {
+    font-weight: 300;
+    color: $label-color;
+}
+.file-label {
+    display: block;
+    margin-bottom: .5rem;
+}
+.file-value {
+    padding-left: .5rem;
+    font-style: italic;
+    color: $label-color;
+    font-size: .75rem;
+}
+
+// Disabled styles
+input[type=file]:disabled+.btn {
+    background: $light-grey;
+    border-color: $form-border-color;
+    color: $label-color;
+    opacity: .6;
+    cursor: not-allowed;
+    &:hover {
+        color: $label-color;
+        opacity: .6;
+        cursor: not-allowed;
+    }
+}

@@ -13,6 +13,7 @@
 It's rather easy. Start by cloning or [downloading](https://github.com/benjamin-farnham/origami/archive/master.zip) directly and include the origami.min.css file along with the origami.min.js file (with the script preferably before the closing body tag) in your HTML.
 
 ```html
+<!DOCTYPE html>
 <html lang="en" class="no-js"><!-- no-js class allows a small javascript check -->
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,11 +36,12 @@ No CDN yet. But it is in the plans.
 
 ## 2. Features
 
-- ie11 + support
 - 12 column grid
 - Flexbox
 - Basic element styles (forms, buttons, & the essentials)
 - Helpers (spacing, text-alignment, shadow depth, etc.)
 - Quick toggle using HTML5 data attributes
+- ie11 + support
+- Fallbacks styles for browsers without JavaScript
 
 Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (index.html) has been included. As for the Javascript, no dependencies are required. It was written with ES6 and compiled with Babel and is current there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).

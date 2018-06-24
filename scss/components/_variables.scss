@@ -12,12 +12,18 @@
 
     // Media Queries
     $mobile-screen: 599px !default;
+    $tablet-screen-down: 991px !default;
+    $desktop-screen-down: 1279px !default;
+    $desktop-large-screen-down: 1599px !default;
     $mobile-landscape-screen-up: 600px !default;
     $tablet-landscape-screen-up: 992px !default;
     $desktop-screen-up: 1280px !default;
     $desktop-large-screen-up: 1600px !default;
 
     $s-and-down: "only screen and (max-width : #{$mobile-screen})" !default;
+    $m-and-down: "only screen and (max-width : #{$tablet-screen-down})" !default;
+    $l-and-down: "only screen and (max-width : #{$desktop-screen-down})" !default;
+    $xl-and-down: "only screen and (max-width : #{$desktop-large-screen-down})" !default;
     $m-and-up: "only screen and (min-width : #{$mobile-landscape-screen-up})" !default;
     $l-and-up: "only screen and (min-width : #{$tablet-landscape-screen-up})" !default;
     $xl-and-up: "only screen and (min-width : #{$desktop-screen-up})" !default;
@@ -26,13 +32,16 @@
 
     // Columns
     $num-cols: 12 !default;
-    $gutter-size: 1rem !default;
+    $gutter-size: 16px !default;
     $element-top-margin: $gutter-size/3 !default;
     $element-bottom-margin: ($gutter-size*2)/3 !default;
 
     // Transitions
     $transition-speed: all 0.4s ease;
     $transition-speed-fast: all 0.2s ease;
+
+    // Design Patterns
+    $border-radius: .25rem;
 
 
 // 2) Fonts
@@ -72,16 +81,16 @@
     // Quick colors
     $white: #FFFFFF;
     $black: #000000;
+    $light-grey: #f4f5f5;
 
 
 // 4) Buttons
 // ============================================================ //
 
     $btn-height: 36px !default;
-    $btn-padding: 0 16px !default;
-    $btn-large-padding: 0 24px !default;
-    $btn-small-padding: 0 8px !default;
-    $btn-radius: 4px;
+    $btn-padding: 0 1rem !default;
+    $btn-large-padding: 0 1.5rem !default;
+    $btn-small-padding: 0 .5rem !default;
 
 
 // 5) Forms
@@ -93,4 +102,3 @@
     $form-border-color: #d6d6d6;
 
     // Form Styles
-    $form-border-radius: 4px;

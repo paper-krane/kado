@@ -1,116 +1,128 @@
 // Form element constructor
 // ============================================================ //
-
-;((window, document, undefined) => {
-
-    const formElements = {
+;(function(window, document, undefined){
+    var formElements = {
         get: function() {
             return _self;
         },
         init: function(options) {
-            const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-            if (isIE11) {
-                document.querySelector('html').classList.add('ie11');
-                return
-            }
             return _self || new FormElements(options);
-        },
-    };
-
-    class FormElements {
-        constructor(options) {
-            options = options || {};
-            this.labeledElements = document.querySelectorAll('input[type=text], input[type=email], input[type=password], input[type=url], input[type=number], input[type=date], input[type=datetime], input[type=datetime-local], input[type=number], input[type=time], input[type=tel], textarea, select');
-            this.selectElements = document.querySelectorAll('select');
-            this.selectLabels = document.querySelectorAll('select-label');
-            this.textArea = document.querySelectorAll('textarea');
-            this.selectInput = document.querySelectorAll('select');
-
-            // Append event listeners
-                // Check elements associated with labels
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'keyup');
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'oninput');
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'onchange');
-                // Select element labels - add class 'select-label'
-            this.selectLabelClass(this.selectElements, options);
-                // Textarea resizing
-            this.cycleAppendTextarea(this.textArea, this.resize, 'onchange');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'oninput');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'cut');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'paste');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'drop');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'keyup');
-
-            // Check elements on load
-            this.checkFormElements(this.labeledElements);
         }
+    }
 
-        // Utilities / Construction functions
-        // ============================================================ //
-        cycleAppendLabel(collection, handler, event) {
-            for (let item of collection) {
-                item.addEventListener(event, handler.bind(this, item));
-            }
+    function FormElements(options) {
+        options = options || {};
+
+        // Selectors
+        this.labeledElements = document.querySelectorAll('input[type=text], input[type=email], input[type=password], input[type=url], input[type=number], input[type=date], input[type=datetime], input[type=datetime-local], input[type=number], input[type=time], input[type=tel], textarea, select');
+        this.selectElements = document.querySelectorAll('select');
+        this.selectLabels = document.querySelectorAll('select-label');
+        this.textArea = document.querySelectorAll('textarea');
+        this.selectInput = document.querySelectorAll('select');
+        this.fileInput = document.querySelectorAll('input[type=file]');
+
+        // Append event listeners
+            // Check elements associated with labels
+        this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'keyup');
+        this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'input');
+        this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'change');
+            // Select element labels - add class 'select-label'
+        this.selectLabelClass(this.selectElements, options);
+            // Textarea resizing
+        this.cycleAppendTextarea(this.textArea, this.resize, 'change');
+        this.cycleAppendTextarea(this.textArea, this.resize, 'cut');
+        this.cycleAppendTextarea(this.textArea, this.resize, 'paste');
+        this.cycleAppendTextarea(this.textArea, this.resize, 'drop');
+        this.cycleAppendTextarea(this.textArea, this.resize, 'keyup');
+            // Check file input value
+        this.fileValues(this.fileInput);
+
+        // Check elements on load
+        this.checkFormElements(this.labeledElements);
+    }
+
+    // Utilities / Construction functions
+    // ============================================================ //
+    FormElements.prototype.cycleAppendLabel = function(collection, handler, event) {
+        for (var item = 0; item < collection.length; item ++) {
+            collection[item].addEventListener(event, handler.bind(this, collection[item]));
         }
+    }
 
-        cycleAppendTextarea(collection, handler, event) {
-            for (let item of collection) {
-                item.addEventListener(event, handler.bind(this, item));
-            }
+    FormElements.prototype.cycleAppendTextarea = function(collection, handler, event) {
+        for (var item = 0; item < collection.length; item ++) {
+            collection[item].addEventListener(event, handler.bind(this, collection[item]));
         }
+    }
 
-        // Checking form labels sibling status to append 'active'
-        // ============================================================ //
-        checkSiblingValue(element) {
-            const elementForVal = element.id;
-            const labelQuery = document.querySelector(`label[for=${elementForVal}]`);
-            if((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
-                labelQuery.classList.add('active');
-            } else {
-                labelQuery.classList.remove('active');
-            }
+    // Checking form labels sibling status to append 'active'
+    // ============================================================ //
+    FormElements.prototype.checkSiblingValue = function(element) {
+        var elementForVal = element.id;
+        var labelQuery = document.querySelector('label[for=' + elementForVal + ']');
+        if((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
+            labelQuery.classList.add('active');
+        } else {
+            labelQuery.classList.remove('active');
         }
+    }
 
-        // Auto-resize textarea elements based upon amount written content
-        // ============================================================ //
-        resize(element, elementEvent) {
-            window.setTimeout(() => {
-                element.style.overflow = 'hidden';
-                element.style.minHeight = '112px';
-                element.style.height = 'auto';
-                element.style.height = element.scrollHeight + 'px';
-            }, 0);
+    // Auto-resize textarea elements based upon amount written content
+    // ============================================================ //
+    FormElements.prototype.resize = function(element, elementEvent) {
+        window.setTimeout(function() {
+            element.style.overflow = 'hidden';
+            element.style.minHeight = '112px';
+            element.style.height = 'auto';
+            element.style.height = element.scrollHeight + 'px';
+        }, 0);
+    }
+
+    // Make select labels function
+    // ============================================================ //
+    FormElements.prototype.selectLabelClass = function(selectList, options) {
+        for (var select = 0; select < selectList.length; select++) {
+            var selectID = selectList[select].id;
+            var selectLabel = document.querySelector('label[for=' + selectID + ']');
+            selectLabel.classList.add('select-label');
         }
+    }
 
-        // Make select labels function
-        // ============================================================ //
-        selectLabelClass(selectList, options) {
-            for (let select of selectList) {
-                const selectID = select.id;
-                const selectLabel = document.querySelector(`label[for=${selectID}]`);
-                selectLabel.classList.add('select-label');
-            }
-        }
-
-        // Grab file upload value for aesthetics.
-        // ============================================================ //
-
-
-        // Mass initialization load (check for fields already filled out etc.)
-        // ============================================================ //
-        checkFormElements(elementList) {
-            for (let element of elementList) {
-                if ((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
-                    element.nextElementSibling.classList.add('active');
+    // Grab file upload value for aesthetics.
+    // ============================================================ //
+    FormElements.prototype.fileValues = function(fileList) {
+        for (var fileInput = 0; fileInput < fileList.length; fileInput++) {
+            fileList[fileInput].addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    var fileVal = this.parentNode.querySelector('.file-value');
+                    var fileValue = '';
+                    for (var i = 0; i < this.files.length; i++) {
+                        if (i + 1 != this.files.length) {
+                            fileValue += this.files[i].name + ' , '
+                        } else {
+                            fileValue += this.files[i].name
+                        }
+                    }
+                    fileVal.innerText = fileValue;
                 }
+            });
+        }
+    }
+
+    // Mass initialization load (check for fields already filled out etc.)
+    // ============================================================ //
+    FormElements.prototype.checkFormElements = function(elementList) {
+        for (var element = 0; element < elementList.length; element++) {
+            if ((elementList[element].nodeName === 'SELECT' && elementList[element].firstElementChild.innerText !== '') || elementList[element].value !== '') {
+                elementList[element].nextElementSibling.classList.add('active');
             }
         }
     }
 
-    let _self;
+    var _self;
 
     if (typeof define === 'function' && define.amd) {
-        define([], () => {
+        define([], function() {
             return formElements;
         });
     } else if (typeof module !== 'undefined' && module.exports) {
@@ -121,4 +133,4 @@
 
 })(window, document);
 
-const createForm = formElements.init();
+var createForm = formElements.init();

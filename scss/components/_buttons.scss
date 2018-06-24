@@ -1,13 +1,14 @@
 .btn, .btn:visited, .btn:focus {
     font-size: inherit;
     font-family: inherit;
+    font-weight: inherit;
     height: $btn-height;
-    line-height: $btn-height - 2;
+    line-height: $btn-height;
     background-color: $primary-color;
     background: $primary-gradient;
     background: -webkit-#{$primary-gradient};
-    border: 1px solid $primary-color;
-    border-radius: $btn-radius;
+    border: none;
+    border-radius: $border-radius;
     color: $white;
     padding: $btn-padding;
     cursor: pointer;
@@ -23,10 +24,14 @@
     &.disabled,
     &:disabled,
     &[disabled] {
-        opacity: .3;
+        background: $light-grey;
+        border-color: $form-border-color;
+        color: $label-color;
+        opacity: .7;
         cursor: not-allowed;
         &:hover {
-            opacity: .3;
+            color: $label-color;
+            opacity: .7;
             cursor: not-allowed;
         }
     }
@@ -49,6 +54,9 @@
         background-color: transparent;
         background: transparent;
         color: $primary-color;
+        border: 1px solid $primary-color;
+        height: $btn-height;
+        line-height: $btn-height - 2;
     }
 }
 .btn:hover {

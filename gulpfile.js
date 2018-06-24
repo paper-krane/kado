@@ -7,7 +7,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const maps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
+//const babel = require('gulp-babel');
 const del = require('del');
 
 // Clean tasks
@@ -18,9 +18,9 @@ gulp.task("clean", function(done){
 
 // Concatinate scripts
 gulp.task("concatScripts", function() {
+    // Add '.pipe(babel({presets: ['env']}))' for Babel if need be.
     return gulp.src([
     'js/*.js'])
-    .pipe(babel({presets: ['env']}))
     .pipe(maps.init())
     .pipe(concat('origami.js'))
     .pipe(maps.write('./'))

@@ -1,0 +1,262 @@
+// Form element container
+.form-element {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.helper-text {
+    font-size: .625rem;
+    font-weight: 300;
+    color: $label-color;
+    display: block;
+    padding-top: 4px;
+    padding-left: 2px;
+}
+
+// Text Input
+// ============================================================ //
+.form-element input[type=text],
+.form-element input[type=email],
+.form-element input[type=password],
+.form-element input[type=url],
+.form-element input[type=number],
+.form-element input[type=date],
+.form-element input[type=datetime],
+.form-element input[type=datetime-local],
+.form-element input[type=number],
+.form-element input[type=time],
+.form-element input[type=tel],
+.form-element textarea,
+.form-element select {
+    font-size: inherit;
+    font-weight: inherit;
+    font-weight: 400;
+    font-family: $font-stack;
+    color: $font-color;
+    line-height: 1.4em;
+    height: 56px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding: 18px 16px 0;
+    text-align: left;
+    border: 1px solid $form-border-color;
+    border-radius: $border-radius;
+    background: $form-element-bg;
+    background-clip: padding-box;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: $transition-speed-fast;
+    -webkit-transition: $transition-speed-fast;
+}
+select::-ms-expand {
+    display: none;
+}
+
+// label - non-active
+.form-element input[type=text]+label,
+.form-element input[type=email]+label,
+.form-element input[type=password]+label,
+.form-element input[type=url]+label,
+.form-element input[type=number]+label,
+.form-element input[type=date]+label,
+.form-element input[type=datetime]+label,
+.form-element input[type=datetime-local]+label,
+.form-element input[type=number]+label,
+.form-element input[type=time]+label,
+.form-element input[type=tel]+label,
+.form-element textarea+label,
+.form-element select+label {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    font-weight: 300;
+    color: $label-color;
+    transition: $transition-speed-fast;
+    -webkit-transition: $transition-speed-fast;
+}
+.col {
+    &.form-element input[type=text]+label,
+    &.form-element input[type=email]+label,
+    &.form-element input[type=password]+label,
+    &.form-element input[type=url]+label,
+    &.form-element input[type=number]+label,
+    &.form-element input[type=date]+label,
+    &.form-element input[type=datetime]+label,
+    &.form-element input[type=datetime-local]+label,
+    &.form-element input[type=number]+label,
+    &.form-element input[type=time]+label,
+    &.form-element input[type=tel]+label,
+    &.form-element textarea+label,
+    &.form-element select+label {
+        left: $gutter-size / 2 + 17;
+    }
+}
+.no-js, .ie11 {
+    .form-element input[type=text]+label,
+    .form-element input[type=email]+label,
+    .form-element input[type=password]+label,
+    .form-element input[type=url]+label,
+    .form-element input[type=number]+label,
+    .form-element input[type=date]+label,
+    .form-element input[type=datetime]+label,
+    .form-element input[type=datetime-local]+label,
+    .form-element input[type=number]+label,
+    .form-element input[type=time]+label,
+    .form-element input[type=tel]+label,
+    .form-element textarea+label,
+    .form-element select+label {
+        top: 8px !important;
+        font-size: 10px !important;
+    }
+}
+
+// Active states
+.form-element input[type=text]:focus,
+.form-element input[type=email]:focus,
+.form-element input[type=password]:focus,
+.form-element input[type=url]:focus,
+.form-element input[type=number]:focus,
+.form-element input[type=date]:focus,
+.form-element input[type=datetime]:focus,
+.form-element input[type=datetime-local]:focus,
+.form-element input[type=number]:focus,
+.form-element input[type=time]:focus,
+.form-element input[type=tel]:focus,
+.form-element textarea:focus,
+.form-element select:focus {
+    border-color: $primary-color;
+}
+.form-element input[type=text]:focus+label,
+.form-element input[type=email]:focus+label,
+.form-element input[type=password]:focus+label,
+.form-element input[type=url]:focus+label,
+.form-element input[type=number]:focus+label,
+.form-element input[type=date]:focus+label,
+.form-element input[type=datetime]:focus+label,
+.form-element input[type=datetime-local]:focus+label,
+.form-element input[type=number]:focus+label,
+.form-element input[type=time]:focus+label,
+.form-element input[type=tel]:focus+label,
+.form-element textarea:focus+label,
+.form-element select:focus+label,
+.form-element input[type=text]:focus+label.active,
+.form-element input[type=email]:focus+label.active,
+.form-element input[type=password]:focus+label.active,
+.form-element input[type=url]:focus+label.active,
+.form-element input[type=number]:focus+label.active,
+.form-element input[type=date]:focus+label.active,
+.form-element input[type=datetime]:focus+label.active,
+.form-element input[type=datetime-local]:focus+label.active,
+.form-element input[type=number]:focus+label.active,
+.form-element input[type=time]:focus+label.active,
+.form-element input[type=tel]:focus+label.active,
+.form-element textarea:focus+label.active,
+.form-element select:focus+label.active {
+    color: $primary-color !important;
+}
+.form-element input[type=text]:focus+label,
+.form-element input[type=email]:focus+label,
+.form-element input[type=password]:focus+label,
+.form-element input[type=url]:focus+label,
+.form-element input[type=number]:focus+label,
+.form-element input[type=date]:focus+label,
+.form-element input[type=datetime]:focus+label,
+.form-element input[type=datetime-local]:focus+label,
+.form-element input[type=number]:focus+label,
+.form-element input[type=time]:focus+label,
+.form-element input[type=tel]:focus+label,
+.form-element textarea:focus+label,
+.form-element input[type=text]+label.active,
+.form-element input[type=email]+label.active,
+.form-element input[type=password]+label.active,
+.form-element input[type=url]+label.active,
+.form-element input[type=number]+label.active,
+.form-element input[type=date]+label.active,
+.form-element input[type=datetime]+label.active,
+.form-element input[type=datetime-local]+label.active,
+.form-element input[type=number]+label.active,
+.form-element input[type=time]+label.active,
+.form-element input[type=tel]+label.active,
+.form-element textarea:focus+label.active,
+.form-element textarea+label.active,
+.form-element select:focus+label.active,
+.form-element select+label.active {
+    top: 8px;
+    font-size: 10px;
+}
+// Override the previous active color
+.form-element input[type=text]+label.active,
+.form-element input[type=email]+label.active,
+.form-element input[type=password]+label.active,
+.form-element input[type=url]+label.active,
+.form-element input[type=number]+label.active,
+.form-element input[type=date]+label.active,
+.form-element input[type=datetime]+label.active,
+.form-element input[type=datetime-local]+label.active,
+.form-element input[type=number]+label.active,
+.form-element input[type=time]+label.active,
+.form-element input[type=tel]+label.active,
+.form-element textarea+label.active,
+.form-element select+label.active {
+    color: $label-color;
+}
+.select-label {
+    pointer-events: none;
+}
+.select-icon {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform: translate(0, -50%) rotate(45deg);
+    -webkit-transform: translate(0, -50%) rotate(45deg);
+    -ms-transform: translate(0, -50%) rotate(45deg);
+    height: 8px;
+    width: 8px;
+    border-right: 1px solid $label-color;
+    border-bottom: 1px solid $label-color;
+    pointer-events: none;
+    background: transparent;
+}
+.col.form-element .select-icon {
+    right: $gutter-size / 2 + 17;
+}
+
+// TextArea
+// ============================================================ //
+.form-element textarea {
+    padding: 24px 16px 16px;
+    height: 112px;
+    max-width: 100%;
+    min-width: 100%;
+    resize: none;
+}
+.no-js, .ie11 {
+    .form-element textarea {
+        resize: vertical !important;
+    }
+}
+
+// Disabled styles
+.form-element input[type=text]:disabled,
+.form-element input[type=email]:disabled,
+.form-element input[type=password]:disabled,
+.form-element input[type=url]:disabled,
+.form-element input[type=number]:disabled,
+.form-element input[type=date]:disabled,
+.form-element input[type=datetime]:disabled,
+.form-element input[type=datetime-local]:disabled,
+.form-element input[type=number]:disabled,
+.form-element input[type=time]:disabled,
+.form-element input[type=tel]:disabled,
+.form-element textarea:disabled,
+.form-element select:disabled {
+    background-color: $light-grey;
+    opacity: .4;
+    cursor: not-allowed;
+    &+label {
+        opacity: .4;
+        cursor: not-allowed;
+    }
+}
