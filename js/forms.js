@@ -23,17 +23,17 @@
 
         // Append event listeners
             // Check elements associated with labels
-        this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'keyup');
-        this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'input');
-        this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'change');
+        this.cycleAppend(this.labeledElements, this.checkSiblingValue, 'keyup');
+        this.cycleAppend(this.labeledElements, this.checkSiblingValue, 'input');
+        this.cycleAppend(this.labeledElements, this.checkSiblingValue, 'change');
             // Select element labels - add class 'select-label'
         this.selectLabelClass(this.selectElements, options);
             // Textarea resizing
-        this.cycleAppendTextarea(this.textArea, this.resize, 'change');
-        this.cycleAppendTextarea(this.textArea, this.resize, 'cut');
-        this.cycleAppendTextarea(this.textArea, this.resize, 'paste');
-        this.cycleAppendTextarea(this.textArea, this.resize, 'drop');
-        this.cycleAppendTextarea(this.textArea, this.resize, 'keyup');
+        this.cycleAppend(this.textArea, this.resize, 'change');
+        this.cycleAppend(this.textArea, this.resize, 'cut');
+        this.cycleAppend(this.textArea, this.resize, 'paste');
+        this.cycleAppend(this.textArea, this.resize, 'drop');
+        this.cycleAppend(this.textArea, this.resize, 'keyup');
             // Check file input value
         this.fileValues(this.fileInput);
 
@@ -43,13 +43,7 @@
 
     // Utilities / Construction functions
     // ============================================================ //
-    FormElements.prototype.cycleAppendLabel = function(collection, handler, event) {
-        for (var item = 0; item < collection.length; item ++) {
-            collection[item].addEventListener(event, handler.bind(this, collection[item]));
-        }
-    }
-
-    FormElements.prototype.cycleAppendTextarea = function(collection, handler, event) {
+    FormElements.prototype.cycleAppend = function(collection, handler, event) {
         for (var item = 0; item < collection.length; item ++) {
             collection[item].addEventListener(event, handler.bind(this, collection[item]));
         }

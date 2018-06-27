@@ -1,0 +1,214 @@
+// Calendar Background
+#calendar-bg {
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+    -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+    // When active
+    &.date-select-active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+}
+
+// Calendar Body
+#calendar {
+    width: 280px;
+    border-radius: $border-radius;
+    background-color: $white;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s;
+    -webkit-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s;
+    // When active
+    &.date-select-active {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+        -webkit-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+    }
+}
+#calendar-header {
+    padding: 2rem 1rem;
+    background-color: $primary-color;
+    color: $white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: .25rem .25rem 0 0;
+    #current-selected-year {
+        display: block;
+        font-size: .875rem;
+    }
+}
+
+// Previous & next buttons for choosing a date
+#calendar-selection {
+    div {
+        float: left;
+    }
+    #previous-month, #next-month {
+        width: 20%;
+        height: 36px;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-left: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            top: 14px;
+            left: .875rem;
+        }
+    }
+    #previous-month:before {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+    #next-month:before {
+        left: auto;
+        right: .875rem;
+        transform: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+    }
+    #calendar-listed-date {
+        width: 60%;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        color: #aaaaaa;
+        font-weight: 300;
+        font-size: .875rem;
+    }
+    #calendar-listed-date span {
+        cursor: pointer;
+    }
+}
+
+// Calendar container that holds selectable dates, selectable years, selectable months, etc.
+#calendar-wrap {
+    position: relative;
+    #calendar-select-months, #calendar-select-years {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        background-color: $white;
+        overflow-x: hidden;
+        overflow-y: auto;
+        line-height: 36px;
+        padding: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+        -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+        &.select-month,
+        &.select-year {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        a, a:visited, a:focus {
+            color: $font-color;
+            font-weight: 300;
+            display: block;
+        }
+        a:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+// Calendar Days / Selectable Dates
+#calendar-days .calendar-box {
+    font-size: .65rem;
+    font-weight: 400;
+    cursor: text;
+}
+.calendar-box, .calendar-box:visited {
+    width: 14.2857142857%;
+    float: left;
+    min-height: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-top: 1px solid $light-grey;
+    font-size: .875rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: $font-color;
+    outline: none;
+    &#selected-date {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+a.calendar-box:focus {
+    color: $primary-color;
+    outline: none;
+}
+a.calendar-box:hover {
+    color: $primary-color;
+}
+
+// Calendar Footer
+#calendar-footer {
+    display: flex;
+    border-top: 1px solid $light-grey;
+    a, a:visited {
+        line-height: 36px;
+        font-size: .875rem;
+        color: $grey;
+        display: block;
+        padding: 0 .875rem;
+        font-weight: 300;
+    }
+    #calendar-clear {
+        margin-left: auto;
+    }
+}
+@media #{$l-and-up} {
+    #calendar {
+        width: 520px;
+    }
+    #calendar-header {
+        padding: 3rem 1rem;
+        font-size: 1.75rem;
+    }
+    #calendar {
+        #calendar-select-months, #previous-month, #next-month, #calendar-listed-date, .calendar-box, #calendar-footer a, #calendar-footer a:visited {
+            line-height: 48px;
+            height: 48px;
+        }
+        #previous-month:before, #next-month:before {
+            top: 20px;
+        }
+    }
+}

@@ -74,20 +74,21 @@
 // ============================================================ //
 
     // Default color scheme
-    $primary-color: #0070c9 !default;
-    $secondary-color: #42a1ec !default;
-    $primary-gradient: linear-gradient(#{$secondary-color}, #{$primary-color}) !default;
+    $primary-color: #6557FF !default;
+    $secondary-color: #5045CC !default;
+    $primary-gradient: linear-gradient(#{$primary-color}, #{$secondary-color}) !default;
 
     // Quick colors
     $white: #FFFFFF;
     $black: #000000;
     $light-grey: #f4f5f5;
+    $grey: #aaaaaa;
 
 
 // 4) Buttons
 // ============================================================ //
 
-    $btn-height: 36px !default;
+    $btn-height: 42px !default;
     $btn-padding: 0 1rem !default;
     $btn-large-padding: 0 1.5rem !default;
     $btn-small-padding: 0 .5rem !default;

@@ -5,8 +5,6 @@
     height: $btn-height;
     line-height: $btn-height;
     background-color: $primary-color;
-    background: $primary-gradient;
-    background: -webkit-#{$primary-gradient};
     border: none;
     border-radius: $border-radius;
     color: $white;
@@ -24,8 +22,7 @@
     &.disabled,
     &:disabled,
     &[disabled] {
-        background: $light-grey;
-        border-color: $form-border-color;
+        background: $form-border-color !important;
         color: $label-color;
         opacity: .7;
         cursor: not-allowed;
@@ -37,13 +34,13 @@
     }
     &.btn-large {
         height: $btn-height + 18;
-        line-height: $btn-height + 16;
+        line-height: $btn-height + 18;
         padding: $btn-large-padding;
     }
     &.btn-small {
         font-size: .875rem;
-        height: $btn-height - 10;
-        line-height: $btn-height - 12;
+        height: $btn-height - 14;
+        line-height: $btn-height - 14;
         padding: $btn-small-padding;
     }
     &.full-width {
@@ -57,12 +54,22 @@
         border: 1px solid $primary-color;
         height: $btn-height;
         line-height: $btn-height - 2;
+        &.btn-small {
+            height: $btn-height - 14;
+            line-height: $btn-height - 12;
+        }
+        &.btn-large {
+            height: $btn-height + 18;
+            line-height: $btn-height + 16;
+        }
     }
 }
 .btn:hover {
     color: $white;
-    opacity: .85;
+    background-color: $secondary-color;
 }
 .btn.btn-outline:hover {
-    color: $primary-color;
+    color: $secondary-color;
+    border-color: $secondary-color;
+    background-color: transparent;
 }

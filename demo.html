@@ -42,16 +42,8 @@
         </style>
     </head>
     <body>
-        <!-- <nav class="origamiNav">
-            <div class="mobile-bar">
-                <a href="demo.html">origami</a>
-                <a href="#" data-toggle="true" data-toggle-class="origamiNav-active" class="origamiToggle">
-                    <span class="origami-bar-1"></span>
-                    <span class="origami-bar-2"></span>
-                </a>
-            </div>
-        </nav> -->
-        <div class="container pt-5-s pb-5-s">
+        </div>
+        <div class="container py-5-s">
             <div class="row">
                 <div class="col s12 text-center-s">
                     <h1><span class="heading-accent">A simple framework</span>This is digital Origami.</h1>
@@ -64,7 +56,7 @@
                     <h3>&amp; Buttons...</h3>
                     <a class="btn btn-small light" href="">Button Small</a>
                     <a class="btn light" href="">Button Medium</a>
-                    <a class="btn btn-large light" href="">Button Large</a>
+                    <a class="btn btn-large btn-outline light" href="">Button Large</a>
                     <a class="btn disabled light">Button Disabled</a>
                     <a class="btn btn-outline light" href="">Button Outline</a>
                     <br />
@@ -90,6 +82,14 @@
                             <div class="col s12 form-element">
                                 <input type="text" name="" value="" id="subject">
                                 <label for="subject">Subject Line</label>
+                            </div>
+                            <div class="col s12 form-element">
+                                <input type="text" name="" value="" id="date" class="datepicker">
+                                <label for="date">Birthday</label>
+                            </div>
+                            <div class="col s12 form-element">
+                                <input type="text" name="" value="" id="date2" class="datepicker">
+                                <label for="date2">Maybe Another Birthday</label>
                             </div>
                             <div class="col s12 form-element">
                                 <select name="help" id="select">
@@ -150,13 +150,13 @@
                                     <span class="file-label">Upload your application</span>
                                     <div>
                                         <input name="upload" type="file" id="upload" multiple/>
-                                        <span class="btn btn-small">Upload File(s)</span>
+                                        <span class="btn">Upload File(s)</span>
                                         <span class="file-value"></span>
                                     </div>
                                 </label>
                             </div>
                             <div class="col s12">
-                                <button class="btn btn-large full-width" type="submit">Sign Up</button>
+                                <button class="btn btn-large" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -1211,5 +1211,12 @@
             </div>
         </div>
         <script type="text/javascript" src="dist/js/origami.js"></script>
+        <script type="text/javascript">
+            var initDatepicker = datepicker.init({
+                limitYearsBack: 100,
+                limitYearsForward: 0,
+                closeOnSelect: false
+            });
+        </script>
     </body>
 </html>

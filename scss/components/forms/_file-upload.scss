@@ -8,9 +8,10 @@ input[type=file] {
 .origamiFile {
     font-weight: 300;
     color: $label-color;
+    display: inline-block;
 }
 .file-label {
-    display: block;
+    display: inline-block;
     margin-bottom: .5rem;
 }
 .file-value {

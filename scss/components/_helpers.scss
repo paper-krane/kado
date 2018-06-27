@@ -61,7 +61,7 @@ $i: 0;
 }
 @media #{$m-and-up} {
     $i: 0;
-    @while $i <= 10 {
+    @while $i <= 5 {
         .p-#{$i}-m {padding: #{$i}rem !important;}
         .px-#{$i}-m {padding-left: #{$i}rem !important; padding-right: #{$i}rem !important;}
         .py-#{$i}-m {padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important;}
@@ -74,7 +74,7 @@ $i: 0;
 }
 @media #{$l-and-up} {
     $i: 0;
-    @while $i <= 10 {
+    @while $i <= 5 {
         .p-#{$i}-l {padding: #{$i}rem !important;}
         .px-#{$i}-l {padding-left: #{$i}rem !important; padding-right: #{$i}rem !important;}
         .py-#{$i}-l {padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important;}
@@ -87,7 +87,7 @@ $i: 0;
 }
 @media #{$xl-and-up} {
     $i: 0;
-    @while $i <= 10 {
+    @while $i <= 5 {
         .p-#{$i}-xl {padding: #{$i}rem !important;}
         .px-#{$i}-xl {padding-left: #{$i}rem !important; padding-right: #{$i}rem !important;}
         .py-#{$i}-xl {padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important;}
@@ -100,7 +100,7 @@ $i: 0;
 }
 @media #{$xxl-and-up} {
     $i: 0;
-    @while $i <= 10 {
+    @while $i <= 5 {
         .p-#{$i}-xxl {padding: #{$i}rem !important;}
         .px-#{$i}-xxl {padding-left: #{$i}rem !important; padding-right: #{$i}rem !important;}
         .py-#{$i}-xxl {padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important;}

@@ -34,8 +34,6 @@
 }
 .origamiCheckbox span:before, .origamiRadio span:before {
     background: $primary-color;
-    background: $primary-gradient;
-    background: -webkit-#{$primary-gradient};
     opacity: 0;
 }
 .origamiCheckbox span:after {
@@ -136,8 +134,6 @@
         top: 0;
         left: 0;
         background: $primary-color;
-        background: $primary-gradient;
-        background: -webkit-#{$primary-gradient};
         opacity: 0;
         transition: $transition-speed-fast;
         -webkit-transition: $transition-speed-fast;
