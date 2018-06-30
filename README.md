@@ -86,7 +86,8 @@ I also want to state that Origami was built mobile first and has 5 breakpoints t
 - xxl (desktop - >= 1600px)
 
 Pretty simple sizing, but memorizing the sizes / styles will let you build quickly. Now with that out of the way, let's look at layouts.
-
+<br/>
+<br/>
 ## 3.1 - Grid System
 
 Origami's default grid is 12 columns wide and is fluid with each breakpoint. The default container size maxes its width out at 1080px with a 5% margin on each side in mobile, and a 7.5% margin on each side on desktop.
@@ -124,7 +125,7 @@ Another note, containers have different sizes as well (sure you could just nest 
 - xxl (max-width: 1600px)
 - full-width (max-width: 100%)
 
-#### 3.1.1 - Push, Pull, & Offset
+### 3.1.1 - Push, Pull, & Offset
 
 Of course, you can push elements, pull elements, and offset them. Usage is pretty simple as well:
 
@@ -149,12 +150,13 @@ Offset (uses margins to offset element)
 ```
 
 Pretty straight forward. Just type what effect you are trying to achieve and then the desired breakpoint you wish for this s effect to be seen on along with the columns you wish it to push, pull or offset (`push-{device-size}{column-count}`, `pull-{device-size}{column-count}`, or `offset-{device-size}{column-count}`).
-
+<br/>
+<br/>
 ## 3.2 - Flexbox
 
 Now that flexbox is in the green for browsers ie11 & up, I wanted to make sure and include it with Origami.
 
-#### 3.2.1 - Flex Containers
+### 3.2.1 - Flex Containers
 
 Container declaration is as follows and you have two options:
 
@@ -165,7 +167,7 @@ Container declaration is as follows and you have two options:
 
 > Also note that if you want to add the flex layout only in larger breakpoints, you can add the desired breakpoint at the end (`flex-{device-size}` or `inline-flex-{device-size}`).
 
-#### 3.2.2 - Flex Rows & Columns
+### 3.2.2 - Flex Rows & Columns
 
 With flexbox, you can specify how to align elements horizontally and vertically. Let's start with the horizontal declarations...
 
