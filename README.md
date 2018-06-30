@@ -77,13 +77,13 @@ It's rather easy. Start by cloning or [downloading](https://github.com/benjamin-
 
 No CDN yet. But it is in the plans.
 
-First, I want to state that Origami was built mobile first and has 5 breakpoints that will be defined as follows:
+I also want to state that Origami was built mobile first and has 5 breakpoints that will be defined as follows:
 
-- s (mobile size - 320px to 599px)
+- s (mobile size - <= 599px)
 - m (mobile landscape / small tablets - 600px to 991px)
 - l (tablets / small desktops - 992px to 1279px)
 - xl (desktop - 1280px to 1599px)
-- xxl (desktop - 1600px +)
+- xxl (desktop - >= 1600px)
 
 Pretty simple sizing, but memorizing the sizes / styles will let you build quickly. Now with that out of the way, let's look at layouts.
 
@@ -128,7 +128,7 @@ Another note, containers have different sizes as well (sure you could just nest 
 
 Of course, you can push elements, pull elements, and offset them. Usage is pretty simple as well:
 
-Push & pull
+Push & pull (uses left & right positioning to offset elements)
 ```html
 <div class="container">
     <div class="row">
@@ -138,12 +138,55 @@ Push & pull
 </div>
 ```
 
-Offset
+Offset (uses margins to offset element)
 ```html
 <div class="container">
     <div class="row">
         <!-- centered element -->
         <div class="col s12 l6 offset-l3"></div>
     </div>
+</div>
+```
+
+Pretty straight forward. Just type what effect you are trying to achieve and then the desired breakpoint you wish for this s effect to be seen on along with the columns you wish it to push, pull or offset (`push-{device-size}{column-count}`, `pull-{device-size}{column-count}`, or `offset-{device-size}{column-count}`).
+
+### 3.2 - Flexbox
+
+Now that flexbox is in the green for browsers ie11 & up, I wanted to make sure and include it with Origami.
+
+#### 3.2.1 - Flex Containers
+
+Container declaration is as follows and you have two options:
+
+```html
+<div class="flex"></div>
+<div class="inline-flex"></div>
+```
+
+> Also note that if you want to add the flex layout only in larger breakpoints, you can add the desired breakpoint at the end (`flex-{device-size}` or `inline-flex-{device-size}`).
+
+#### 3.2.2 - Flex Rows & Columns
+
+With flexbox, you can specify how to align elements horizontally and vertically. Let's start with the horizontal declarations...
+
+> You can also declare at which device breakpoint you want to add these styles as well by appending a '-{device-size}'. For example `flex-row-s`
+
+Rows
+```html
+<div class="flex flex-row">
+    <!-- Aligns items starting from left to right and starting on top left (normal) -->
+</div>
+<div class="flex flex-row-reverse">
+    <!-- Aligns items starting from right to left from the top right side -->
+</div>
+```
+
+Columns
+```html
+<div class="flex flex-column">
+    <!-- Aligns items starting/ordered from top to bottom -->
+</div>
+<div class="flex flex-column-reverse">
+    <!-- Aligns items starting/ordered from bottom to top -->
 </div>
 ```
