@@ -76,3 +76,76 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 - Button ripple effect on click
 - Notifications / Toasts
 - Modal
+
+## 4. Usage
+
+First, I want to state that Origami was built mobile first and has 5 breakpoints that will be defined as follows:
+
+- s (mobile size - 320px to 599px)
+- m (mobile landscape / small tablets - 600px to 991px)
+- l (tablets / small desktops - 992px to 1279px)
+- xl (desktop - 1280px to 1599px)
+- xxl (desktop - 1600px +)
+
+Pretty simple sizing, but memorizing the sizes / styles will let you build quickly. Now with that out of the way, let's look at layouts.
+
+### 4.1 - Grid System
+
+Origami's default grid is 12 columns wide and is fluid with each breakpoint. The default container size maxes its width out at 1080px with a 5% margin on each side in mobile, and a 7.5% margin on each side on desktop.
+
+To use the grid system, simply declare a container, a row, and finally declare an element a column and tell that element how many columns you want your element to span at what breakpoint. Basic usage would be the following:
+
+```html
+<div class="container">
+    <div class="row">
+        <!-- This element will span 12 columns on mobile, 6 columns on mobile landscape / small tablets, and 3 columns on desktop -->
+        <div class="col s12 m6 l3"></div>
+        <!-- This element will span 12 columns on mobile, 6 columns on mobile landscape / small tablets, and 3 columns on desktop -->
+        <div class="col s12 m6 l3"></div>
+        <!-- This element will span 12 columns on mobile and 3 columns on desktop -->
+        <div class="col s12 l6"></div>
+    </div>
+</div>
+```
+
+By default, `row`'s have a bottom margin. To remove it, simply add the `no-margin` class to your row you wish to remove the margin from.
+
+```html
+<div class="container">
+    <div class="row no-margin">
+        <div class="col s12"></div>
+    </div>
+</div>
+```
+
+Another note, containers have different sizes as well (sure you could just nest grid systems inside of another grid but I find that rather cumbersome). The sizes are as follows:
+
+- s (max-width: 600px)
+- m (max-width: 800px)
+- xl (max-width: 1280px)
+- xxl (max-width: 1600px)
+- full-width (max-width: 100%)
+
+#### 4.1.1 - Push, Pull, & Offset
+
+Of course, you can push elements, pull elements, and offset them. Usage is pretty simple as well:
+
+Push & pull
+```html
+<div class="container">
+    <div class="row">
+        <div class="col s12 l4 push-l4"></div>
+        <div class="col s12 l8 pull-l8"></div>
+    </div>
+</div>
+```
+
+Offset
+```html
+<div class="container">
+    <div class="row">
+        <!-- centered element -->
+        <div class="col s12 l6 offset-l3"></div>
+    </div>
+</div>
+```
