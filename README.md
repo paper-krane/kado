@@ -40,7 +40,8 @@
 - Fallbacks styles for browsers without JavaScript
 
 Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (demo.html) has been included. As for the Javascript, no dependencies are required. It was written with ES5 and is currently there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).
-
+<br/>
+<br/>
 ## 2. In the works...
 
 - Navigation
@@ -49,7 +50,8 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 - Button ripple effect on click
 - Notifications / Toasts
 - Modal
-
+<br/>
+<br/>
 ## 3. Usage
 
 ### Installation
@@ -151,6 +153,7 @@ Offset (uses margins to offset element)
 
 Pretty straight forward. Just type what effect you are trying to achieve and then the desired breakpoint you wish for this s effect to be seen on along with the columns you wish it to push, pull or offset (`push-{device-size}{column-count}`, `pull-{device-size}{column-count}`, or `offset-{device-size}{column-count}`).
 <br/>
+<br/><br/>
 <br/>
 ## 3.2 - Flexbox
 
