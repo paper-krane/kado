@@ -1,3 +1,8 @@
+// Todo's
+// - Add rounded button corners
+
+// Overall button styles
+// ============================================================ //
 .btn, .btn:visited, .btn:focus {
     font-size: inherit;
     font-family: inherit;
@@ -19,6 +24,9 @@
     -webkit-tap-highlight-color: transparent;
     transition: $transition-speed;
     -webkit-transition: $transition-speed;
+
+    // Disabled styles
+
     &.disabled,
     &:disabled,
     &[disabled] {
@@ -32,21 +40,33 @@
             cursor: not-allowed;
         }
     }
+
+    // Large button styles
+
     &.btn-large {
         height: $btn-height + 18;
         line-height: $btn-height + 18;
         padding: $btn-large-padding;
     }
+
+    // Small button styles
+
     &.btn-small {
         font-size: .875rem;
         height: $btn-height - 14;
         line-height: $btn-height - 14;
         padding: $btn-small-padding;
     }
+
+    // Full width button styles
+
     &.full-width {
         display: block;
         width: 100%;
     }
+
+    // Outline button styles
+
     &.btn-outline {
         background-color: transparent;
         background: transparent;
@@ -64,6 +84,9 @@
         }
     }
 }
+
+// Hover state styles
+
 .btn:hover {
     color: $white;
     background-color: $secondary-color;

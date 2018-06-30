@@ -14,17 +14,7 @@
 
 // Text Input
 // ============================================================ //
-.form-element input[type=text],
-.form-element input[type=email],
-.form-element input[type=password],
-.form-element input[type=url],
-.form-element input[type=number],
-.form-element input[type=date],
-.form-element input[type=datetime],
-.form-element input[type=datetime-local],
-.form-element input[type=number],
-.form-element input[type=time],
-.form-element input[type=tel],
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
 .form-element textarea,
 .form-element select {
     font-size: inherit;
@@ -55,17 +45,7 @@ select::-ms-expand {
 }
 
 // label - non-active
-.form-element input[type=text]+label,
-.form-element input[type=email]+label,
-.form-element input[type=password]+label,
-.form-element input[type=url]+label,
-.form-element input[type=number]+label,
-.form-element input[type=date]+label,
-.form-element input[type=datetime]+label,
-.form-element input[type=datetime-local]+label,
-.form-element input[type=number]+label,
-.form-element input[type=time]+label,
-.form-element input[type=tel]+label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
 .form-element textarea+label,
 .form-element select+label {
     position: absolute;
@@ -77,34 +57,14 @@ select::-ms-expand {
     -webkit-transition: $transition-speed-fast;
 }
 .col {
-    &.form-element input[type=text]+label,
-    &.form-element input[type=email]+label,
-    &.form-element input[type=password]+label,
-    &.form-element input[type=url]+label,
-    &.form-element input[type=number]+label,
-    &.form-element input[type=date]+label,
-    &.form-element input[type=datetime]+label,
-    &.form-element input[type=datetime-local]+label,
-    &.form-element input[type=number]+label,
-    &.form-element input[type=time]+label,
-    &.form-element input[type=tel]+label,
+    &.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
     &.form-element textarea+label,
     &.form-element select+label {
         left: $gutter-size / 2 + 17;
     }
 }
-.no-js, .ie11 {
-    .form-element input[type=text]+label,
-    .form-element input[type=email]+label,
-    .form-element input[type=password]+label,
-    .form-element input[type=url]+label,
-    .form-element input[type=number]+label,
-    .form-element input[type=date]+label,
-    .form-element input[type=datetime]+label,
-    .form-element input[type=datetime-local]+label,
-    .form-element input[type=number]+label,
-    .form-element input[type=time]+label,
-    .form-element input[type=tel]+label,
+.no-js {
+    .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
     .form-element textarea+label,
     .form-element select+label {
         top: 8px !important;
@@ -113,72 +73,23 @@ select::-ms-expand {
 }
 
 // Active states
-.form-element input[type=text]:focus,
-.form-element input[type=email]:focus,
-.form-element input[type=password]:focus,
-.form-element input[type=url]:focus,
-.form-element input[type=number]:focus,
-.form-element input[type=date]:focus,
-.form-element input[type=datetime]:focus,
-.form-element input[type=datetime-local]:focus,
-.form-element input[type=number]:focus,
-.form-element input[type=time]:focus,
-.form-element input[type=tel]:focus,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus,
 .form-element textarea:focus,
 .form-element select:focus {
     border-color: $primary-color;
 }
-.form-element input[type=text]:focus+label,
-.form-element input[type=email]:focus+label,
-.form-element input[type=password]:focus+label,
-.form-element input[type=url]:focus+label,
-.form-element input[type=number]:focus+label,
-.form-element input[type=date]:focus+label,
-.form-element input[type=datetime]:focus+label,
-.form-element input[type=datetime-local]:focus+label,
-.form-element input[type=number]:focus+label,
-.form-element input[type=time]:focus+label,
-.form-element input[type=tel]:focus+label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus+label,
 .form-element textarea:focus+label,
 .form-element select:focus+label,
-.form-element input[type=text]:focus+label.active,
-.form-element input[type=email]:focus+label.active,
-.form-element input[type=password]:focus+label.active,
-.form-element input[type=url]:focus+label.active,
-.form-element input[type=number]:focus+label.active,
-.form-element input[type=date]:focus+label.active,
-.form-element input[type=datetime]:focus+label.active,
-.form-element input[type=datetime-local]:focus+label.active,
-.form-element input[type=number]:focus+label.active,
-.form-element input[type=time]:focus+label.active,
-.form-element input[type=tel]:focus+label.active,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus+label.active,
 .form-element textarea:focus+label.active,
 .form-element select:focus+label.active {
     color: $primary-color !important;
 }
-.form-element input[type=text]:focus+label,
-.form-element input[type=email]:focus+label,
-.form-element input[type=password]:focus+label,
-.form-element input[type=url]:focus+label,
-.form-element input[type=number]:focus+label,
-.form-element input[type=date]:focus+label,
-.form-element input[type=datetime]:focus+label,
-.form-element input[type=datetime-local]:focus+label,
-.form-element input[type=number]:focus+label,
-.form-element input[type=time]:focus+label,
-.form-element input[type=tel]:focus+label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus+label,
 .form-element textarea:focus+label,
-.form-element input[type=text]+label.active,
-.form-element input[type=email]+label.active,
-.form-element input[type=password]+label.active,
-.form-element input[type=url]+label.active,
-.form-element input[type=number]+label.active,
-.form-element input[type=date]+label.active,
-.form-element input[type=datetime]+label.active,
-.form-element input[type=datetime-local]+label.active,
-.form-element input[type=number]+label.active,
-.form-element input[type=time]+label.active,
-.form-element input[type=tel]+label.active,
+.form-element select:focus+label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label.active,
 .form-element textarea:focus+label.active,
 .form-element textarea+label.active,
 .form-element select:focus+label.active,
@@ -187,17 +98,7 @@ select::-ms-expand {
     font-size: 10px;
 }
 // Override the previous active color
-.form-element input[type=text]+label.active,
-.form-element input[type=email]+label.active,
-.form-element input[type=password]+label.active,
-.form-element input[type=url]+label.active,
-.form-element input[type=number]+label.active,
-.form-element input[type=date]+label.active,
-.form-element input[type=datetime]+label.active,
-.form-element input[type=datetime-local]+label.active,
-.form-element input[type=number]+label.active,
-.form-element input[type=time]+label.active,
-.form-element input[type=tel]+label.active,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label.active,
 .form-element textarea+label.active,
 .form-element select+label.active {
     color: $label-color;
@@ -209,9 +110,10 @@ select::-ms-expand {
     position: absolute;
     top: 50%;
     right: 17px;
-    transform: translate(0, -50%) rotate(45deg);
-    -webkit-transform: translate(0, -50%) rotate(45deg);
-    -ms-transform: translate(0, -50%) rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    margin-top: -6px;
     height: 8px;
     width: 8px;
     border-right: 1px solid $label-color;
@@ -239,17 +141,7 @@ select::-ms-expand {
 }
 
 // Disabled styles
-.form-element input[type=text]:disabled,
-.form-element input[type=email]:disabled,
-.form-element input[type=password]:disabled,
-.form-element input[type=url]:disabled,
-.form-element input[type=number]:disabled,
-.form-element input[type=date]:disabled,
-.form-element input[type=datetime]:disabled,
-.form-element input[type=datetime-local]:disabled,
-.form-element input[type=number]:disabled,
-.form-element input[type=time]:disabled,
-.form-element input[type=tel]:disabled,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
 .form-element textarea:disabled,
 .form-element select:disabled {
     background-color: $light-grey;

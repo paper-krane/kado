@@ -83,9 +83,13 @@
                     dateInputs[i].addEventListener('focus', function(e){
                         if (this.value !== '' && new Date(this.value).toString() !== 'Invalid Date'){
                             initialDate = new Date(this.value);
+                            currentMonth = initialDate.getMonth();
+                            currentYear = initialDate.getFullYear();
                             selectedDate = new Date(this.value);
                         } else {
                             initialDate = new Date();
+                            currentMonth = initialDate.getMonth();
+                            currentYear = initialDate.getFullYear();
                             selectedDate = '';
                         }
 

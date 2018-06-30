@@ -45,3 +45,9 @@ No CDN yet. But it is in the plans.
 - Fallbacks styles for browsers without JavaScript
 
 Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (index.html) has been included. As for the Javascript, no dependencies are required. It was written with ES5 and is currently there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).
+
+## 2. In the works...
+
+- Drag'n'drop file uploads
+- Button ripple effect on click
+- Notifications / Toasts

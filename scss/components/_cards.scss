@@ -1,0 +1,28 @@
+// Card Elements
+// ============================================================ //
+
+.origami-card {
+    display: block;
+    border-radius: $border-radius;
+    background-color: $white;
+    overflow: hidden;
+    .origami-card-content {
+        padding: 1rem;
+    }
+    .origami-card-image {
+        border-radius: $border-radius $border-radius 0 0;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media #{$l-and-up} {
+
+    .origami-card {
+        .origami-card-content {
+            padding: 1.5rem;
+        }
+    }
+
+}

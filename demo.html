@@ -35,19 +35,16 @@
             .container-box.big {
                 height: 160px;
             }
-            .transition {
-                transition: all 0.4s ease;
-                -webkit-transition: all 0.4s ease;
-            }
         </style>
     </head>
     <body>
+        <div id="origami-hero" class="height-80-l py-5-s flex-l justify-center-l align-center-s" style="background-image:url('https://images.unsplash.com/photo-1487446929682-f62f73984006');background-position: center;background-size:cover;">
+            <div class="text-center-s text-white">
+                <h1><span class="heading-accent">A simple framework</span>This is digital Origami.</h1>
+            </div>
         </div>
         <div class="container py-5-s">
             <div class="row">
-                <div class="col s12 text-center-s">
-                    <h1><span class="heading-accent">A simple framework</span>This is digital Origami.</h1>
-                </div>
                 <div class="col s12 text-center-s">
                     <h2><span class="heading-accent">A pure test</span>For heading styles.</h2>
                     <p class="light">
@@ -221,6 +218,46 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col s12">
+                    <h2 class="text-center"><span class="heading-accent">What Framework Would Be Complete</span>Without Card Quick Classes...</h2>
+                </div>
+                <div class="col s12 l4">
+                    <div class="origami-card depth-2 hover-depth-4">
+                        <div class="ratio-16x9 origami-card-image" style="background-image:url('https://images.unsplash.com/photo-1506367289495-02a78c329501');background-size: cover; background-position: center;"></div>
+                        <div class="origami-card-content">
+                            <h5 class="truncate">This is a test heading</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus at orci at auctor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="origami-card depth-2 hover-depth-4">
+                        <a href="">
+                            <div class="ratio-16x9 origami-card-image" style="background-image:url('https://images.unsplash.com/photo-1510935813936-763eb6fbc613');background-size: cover; background-position: center;"></div>
+                        </a>
+                        <div class="origami-card-content">
+                            <h5 class="truncate">This is a another test heading</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus at orci at auctor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <a href="" class="origami-card depth-2 hover-depth-4">
+                        <div class="ratio-16x9 origami-card-image" style="background-image:url('https://images.unsplash.com/photo-1515787366009-7cbdd2dc587b');background-size: cover; background-position: center;"></div>
+                        <div class="origami-card-content">
+                            <h5 class="truncate">This is the final test heading</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus at orci at auctor.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col s12 text-center-s no-margin">
                     <h3>Shadows</h3>
                 </div>
@@ -258,7 +295,7 @@
                     <h3>Shadows &amp; Hover states</h3>
                 </div>
                 <div class="col s12 l2 text-small text-center">
-                    <div class="grid-box transition">
+                    <div class="grid-box transition hover-depth-0 depth-5">
                         Hover Depth 0
                     </div>
                 </div>

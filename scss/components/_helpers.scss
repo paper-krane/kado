@@ -1,3 +1,6 @@
+// Todo's
+// - Border radius classes
+
 // CSS utlity classes / helpers
 // ============================================================ //
 
@@ -6,6 +9,68 @@
     display: table;
     clear: both;
 }
+
+// Height quick classes (using viewport height)
+// ============================================================ //
+.height-auto-s, .height-auto {
+    height: auto;
+}
+$i: 1;
+@while $i <= 10 {
+    .height-#{$i}0-s, .height-#{$i}0 {
+        height: #{$i}0vh;
+    }
+    $i: $i + 1;
+}
+@media #{$m-and-up} {
+    .height-auto-m {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-m {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$l-and-up} {
+    .height-auto-l {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-l {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .height-auto-xl {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-xl {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .height-auto-xxl {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-xxl {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+
 
 // Text alignment utilities
 // ============================================================ //
@@ -35,7 +100,7 @@
 
 // Text size
 .text-small {font-size: .75em;}
-.text-large {font-size: 1.25em;}
+.text-large {font-size: 1.5em;}
 
 
 // Display helpers
@@ -192,6 +257,10 @@ $i: 0;
 
 // Shadow
 // ============================================================ //
+.depth-0, .hover-depth-0, .depth-1, .hover-depth-1, .depth-2, .hover-depth-2, .depth-3, .hover-depth-3, .depth-4, .hover-depth-4, .depth-5, .hover-depth-5 {
+    transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
 .depth-0, .hover-depth-0:hover {
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -253,4 +322,92 @@ $i: 0;
 }
 @media #{$xxl-and-up} {
     .hide-xxl-up {display: none !important;}
+}
+
+// Responsive iframes / ratio based containers
+// ============================================================ //
+.video-iframe iframe, .video-iframe object, .video-iframe embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ratio-16x9-s, .ratio-16x9, .video-container, .ratio-1x1-s, .ratio-1x1, .ratio-2x3-s, .ratio-2x3 {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+}
+.ratio-16x9-s, .ratio-16x9, .video-container {
+    padding-bottom: 56.25%;
+}
+.ratio-1x1-s, .ratio-1x1 {
+    padding-bottom: 100%;
+}
+.ratio-2x3-s, .ratio-2x3 {
+    padding-bottom: 150%;
+}
+@media #{$m-and-up} {
+    .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-m {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-m {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-m {
+        padding-bottom: 150%;
+    }
+}
+@media #{$l-and-up} {
+    .ratio-16x9-l, .ratio-1x1-l, .ratio-2x3-l {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-l {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-l {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-l {
+        padding-bottom: 150%;
+    }
+}
+@media #{$xl-and-up} {
+    .ratio-16x9-xl, .ratio-1x1-xl, .ratio-2x3-xl {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-xl {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-xl {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-xl {
+        padding-bottom: 150%;
+    }
+}
+@media #{$xxl-and-up} {
+    .ratio-16x9-xxl, .ratio-1x1-xxl, .ratio-2x3-xxl {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-xxl {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-xxl {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-xxl {
+        padding-bottom: 150%;
+    }
 }

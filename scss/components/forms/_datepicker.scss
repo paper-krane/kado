@@ -1,7 +1,10 @@
 // Calendar Background
+#calendar, #calendar-bg {
+    position: fixed;
+    font-weight: 300;
+}
 #calendar-bg {
     background-color: rgba(0,0,0,.3);
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -26,7 +29,6 @@
     border-radius: $border-radius;
     background-color: $white;
     margin: 0 auto;
-    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
@@ -52,13 +54,11 @@
     padding: 2rem 1rem;
     background-color: $primary-color;
     color: $white;
-    font-weight: 300;
     font-size: 1.5rem;
     text-align: center;
     border-radius: .25rem .25rem 0 0;
     #current-selected-year {
         display: block;
-        font-size: .875rem;
     }
 }
 
@@ -100,13 +100,16 @@
         height: 36px;
         line-height: 36px;
         text-align: center;
-        color: #aaaaaa;
-        font-weight: 300;
-        font-size: .875rem;
+        color: $grey;
     }
     #calendar-listed-date span {
         cursor: pointer;
     }
+}
+
+// Shared font sizes
+.calendar-box, .calendar-box:visited, #calendar-listed-date, #current-selected-year, #calendar-footer a {
+    font-size: .875rem;
 }
 
 // Calendar container that holds selectable dates, selectable years, selectable months, etc.
@@ -132,7 +135,6 @@
         -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
         a, a:visited, a:focus {
             color: $font-color;
-            font-weight: 300;
             display: block;
         }
         a:hover {
@@ -161,8 +163,6 @@
     line-height: 36px;
     text-align: center;
     border-top: 1px solid $light-grey;
-    font-size: .875rem;
-    font-weight: 300;
     cursor: pointer;
     color: $font-color;
     outline: none;
@@ -185,11 +185,9 @@ a.calendar-box:hover {
     border-top: 1px solid $light-grey;
     a, a:visited {
         line-height: 36px;
-        font-size: .875rem;
         color: $grey;
         display: block;
         padding: 0 .875rem;
-        font-weight: 300;
     }
     #calendar-clear {
         margin-left: auto;

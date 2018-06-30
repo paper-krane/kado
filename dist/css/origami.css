@@ -1950,7 +1950,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.3;
   margin-top: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
   h1 .heading-accent, h2 .heading-accent, h3 .heading-accent, h4 .heading-accent, h5 .heading-accent, h6 .heading-accent {
     font-size: 1rem;
     line-height: 1.5;
@@ -2024,6 +2024,9 @@ h1, h2, h3, h4, h5, h6 {
 .light {
   font-weight: 300; }
 
+.text-white {
+  color: #FFFFFF; }
+
 .btn, .btn:visited, .btn:focus {
   font-size: inherit;
   font-family: inherit;
@@ -2032,7 +2035,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 42px;
   background-color: #6557FF;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.1875rem;
   color: #FFFFFF;
   padding: 0 1rem;
   cursor: pointer;
@@ -2101,17 +2104,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 4px;
   padding-left: 2px; }
 
-.form-element input[type=text],
-.form-element input[type=email],
-.form-element input[type=password],
-.form-element input[type=url],
-.form-element input[type=number],
-.form-element input[type=date],
-.form-element input[type=datetime],
-.form-element input[type=datetime-local],
-.form-element input[type=number],
-.form-element input[type=time],
-.form-element input[type=tel],
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
 .form-element textarea,
 .form-element select {
   font-size: inherit;
@@ -2128,7 +2121,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 18px 16px 0;
   text-align: left;
   border: 1px solid #d6d6d6;
-  border-radius: 0.25rem;
+  border-radius: 0.1875rem;
   background: rgba(255, 255, 255, 0.8);
   background-clip: padding-box;
   outline: none;
@@ -2140,17 +2133,7 @@ h1, h2, h3, h4, h5, h6 {
 select::-ms-expand {
   display: none; }
 
-.form-element input[type=text] + label,
-.form-element input[type=email] + label,
-.form-element input[type=password] + label,
-.form-element input[type=url] + label,
-.form-element input[type=number] + label,
-.form-element input[type=date] + label,
-.form-element input[type=datetime] + label,
-.form-element input[type=datetime-local] + label,
-.form-element input[type=number] + label,
-.form-element input[type=time] + label,
-.form-element input[type=tel] + label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label,
 .form-element textarea + label,
 .form-element select + label {
   position: absolute;
@@ -2161,115 +2144,34 @@ select::-ms-expand {
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease; }
 
-.col.form-element input[type=text] + label,
-.col.form-element input[type=email] + label,
-.col.form-element input[type=password] + label,
-.col.form-element input[type=url] + label,
-.col.form-element input[type=number] + label,
-.col.form-element input[type=date] + label,
-.col.form-element input[type=datetime] + label,
-.col.form-element input[type=datetime-local] + label,
-.col.form-element input[type=number] + label,
-.col.form-element input[type=time] + label,
-.col.form-element input[type=tel] + label,
+.col.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label,
 .col.form-element textarea + label,
 .col.form-element select + label {
   left: 25px; }
 
-.no-js .form-element input[type=text] + label,
-.no-js .form-element input[type=email] + label,
-.no-js .form-element input[type=password] + label,
-.no-js .form-element input[type=url] + label,
-.no-js .form-element input[type=number] + label,
-.no-js .form-element input[type=date] + label,
-.no-js .form-element input[type=datetime] + label,
-.no-js .form-element input[type=datetime-local] + label,
-.no-js .form-element input[type=number] + label,
-.no-js .form-element input[type=time] + label,
-.no-js .form-element input[type=tel] + label,
+.no-js .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label,
 .no-js .form-element textarea + label,
-.no-js .form-element select + label, .ie11 .form-element input[type=text] + label,
-.ie11 .form-element input[type=email] + label,
-.ie11 .form-element input[type=password] + label,
-.ie11 .form-element input[type=url] + label,
-.ie11 .form-element input[type=number] + label,
-.ie11 .form-element input[type=date] + label,
-.ie11 .form-element input[type=datetime] + label,
-.ie11 .form-element input[type=datetime-local] + label,
-.ie11 .form-element input[type=number] + label,
-.ie11 .form-element input[type=time] + label,
-.ie11 .form-element input[type=tel] + label,
-.ie11 .form-element textarea + label,
-.ie11 .form-element select + label {
+.no-js .form-element select + label {
   top: 8px !important;
   font-size: 10px !important; }
 
-.form-element input[type=text]:focus,
-.form-element input[type=email]:focus,
-.form-element input[type=password]:focus,
-.form-element input[type=url]:focus,
-.form-element input[type=number]:focus,
-.form-element input[type=date]:focus,
-.form-element input[type=datetime]:focus,
-.form-element input[type=datetime-local]:focus,
-.form-element input[type=number]:focus,
-.form-element input[type=time]:focus,
-.form-element input[type=tel]:focus,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus,
 .form-element textarea:focus,
 .form-element select:focus {
   border-color: #6557FF; }
 
-.form-element input[type=text]:focus + label,
-.form-element input[type=email]:focus + label,
-.form-element input[type=password]:focus + label,
-.form-element input[type=url]:focus + label,
-.form-element input[type=number]:focus + label,
-.form-element input[type=date]:focus + label,
-.form-element input[type=datetime]:focus + label,
-.form-element input[type=datetime-local]:focus + label,
-.form-element input[type=number]:focus + label,
-.form-element input[type=time]:focus + label,
-.form-element input[type=tel]:focus + label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus + label,
 .form-element textarea:focus + label,
 .form-element select:focus + label,
-.form-element input[type=text]:focus + label.active,
-.form-element input[type=email]:focus + label.active,
-.form-element input[type=password]:focus + label.active,
-.form-element input[type=url]:focus + label.active,
-.form-element input[type=number]:focus + label.active,
-.form-element input[type=date]:focus + label.active,
-.form-element input[type=datetime]:focus + label.active,
-.form-element input[type=datetime-local]:focus + label.active,
-.form-element input[type=number]:focus + label.active,
-.form-element input[type=time]:focus + label.active,
-.form-element input[type=tel]:focus + label.active,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus + label.active,
 .form-element textarea:focus + label.active,
 .form-element select:focus + label.active {
   color: #6557FF !important; }
 
-.form-element input[type=text]:focus + label,
-.form-element input[type=email]:focus + label,
-.form-element input[type=password]:focus + label,
-.form-element input[type=url]:focus + label,
-.form-element input[type=number]:focus + label,
-.form-element input[type=date]:focus + label,
-.form-element input[type=datetime]:focus + label,
-.form-element input[type=datetime-local]:focus + label,
-.form-element input[type=number]:focus + label,
-.form-element input[type=time]:focus + label,
-.form-element input[type=tel]:focus + label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus + label,
 .form-element textarea:focus + label,
-.form-element input[type=text] + label.active,
-.form-element input[type=email] + label.active,
-.form-element input[type=password] + label.active,
-.form-element input[type=url] + label.active,
-.form-element input[type=number] + label.active,
-.form-element input[type=date] + label.active,
-.form-element input[type=datetime] + label.active,
-.form-element input[type=datetime-local] + label.active,
-.form-element input[type=number] + label.active,
-.form-element input[type=time] + label.active,
-.form-element input[type=tel] + label.active,
+.form-element select:focus + label,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label.active,
 .form-element textarea:focus + label.active,
 .form-element textarea + label.active,
 .form-element select:focus + label.active,
@@ -2277,17 +2179,7 @@ select::-ms-expand {
   top: 8px;
   font-size: 10px; }
 
-.form-element input[type=text] + label.active,
-.form-element input[type=email] + label.active,
-.form-element input[type=password] + label.active,
-.form-element input[type=url] + label.active,
-.form-element input[type=number] + label.active,
-.form-element input[type=date] + label.active,
-.form-element input[type=datetime] + label.active,
-.form-element input[type=datetime-local] + label.active,
-.form-element input[type=number] + label.active,
-.form-element input[type=time] + label.active,
-.form-element input[type=tel] + label.active,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label.active,
 .form-element textarea + label.active,
 .form-element select + label.active {
   color: #8a8a8a; }
@@ -2299,9 +2191,10 @@ select::-ms-expand {
   position: absolute;
   top: 50%;
   right: 17px;
-  transform: translate(0, -50%) rotate(45deg);
-  -webkit-transform: translate(0, -50%) rotate(45deg);
-  -ms-transform: translate(0, -50%) rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  margin-top: -6px;
   height: 8px;
   width: 8px;
   border-right: 1px solid #8a8a8a;
@@ -2322,33 +2215,13 @@ select::-ms-expand {
 .no-js .form-element textarea, .ie11 .form-element textarea {
   resize: vertical !important; }
 
-.form-element input[type=text]:disabled,
-.form-element input[type=email]:disabled,
-.form-element input[type=password]:disabled,
-.form-element input[type=url]:disabled,
-.form-element input[type=number]:disabled,
-.form-element input[type=date]:disabled,
-.form-element input[type=datetime]:disabled,
-.form-element input[type=datetime-local]:disabled,
-.form-element input[type=number]:disabled,
-.form-element input[type=time]:disabled,
-.form-element input[type=tel]:disabled,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
 .form-element textarea:disabled,
 .form-element select:disabled {
   background-color: #f4f5f5;
   opacity: .4;
   cursor: not-allowed; }
-  .form-element input[type=text]:disabled + label,
-  .form-element input[type=email]:disabled + label,
-  .form-element input[type=password]:disabled + label,
-  .form-element input[type=url]:disabled + label,
-  .form-element input[type=number]:disabled + label,
-  .form-element input[type=date]:disabled + label,
-  .form-element input[type=datetime]:disabled + label,
-  .form-element input[type=datetime-local]:disabled + label,
-  .form-element input[type=number]:disabled + label,
-  .form-element input[type=time]:disabled + label,
-  .form-element input[type=tel]:disabled + label,
+  .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled + label,
   .form-element textarea:disabled + label,
   .form-element select:disabled + label {
     opacity: .4;
@@ -2376,7 +2249,7 @@ select::-ms-expand {
   left: 0;
   width: 16px;
   height: 16px;
-  border-radius: 0.125rem;
+  border-radius: 0.09375rem;
   background-color: #d6d6d6;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -2623,9 +2496,12 @@ input[type=file]:disabled + .btn {
     opacity: .6;
     cursor: not-allowed; }
 
+#calendar, #calendar-bg {
+  position: fixed;
+  font-weight: 300; }
+
 #calendar-bg {
   background-color: rgba(0, 0, 0, 0.3);
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -2643,10 +2519,9 @@ input[type=file]:disabled + .btn {
 
 #calendar {
   width: 280px;
-  border-radius: 0.25rem;
+  border-radius: 0.1875rem;
   background-color: #FFFFFF;
   margin: 0 auto;
-  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
@@ -2670,13 +2545,11 @@ input[type=file]:disabled + .btn {
   padding: 2rem 1rem;
   background-color: #6557FF;
   color: #FFFFFF;
-  font-weight: 300;
   font-size: 1.5rem;
   text-align: center;
   border-radius: .25rem .25rem 0 0; }
   #calendar-header #current-selected-year {
-    display: block;
-    font-size: .875rem; }
+    display: block; }
 
 #calendar-selection div {
   float: left; }
@@ -2713,12 +2586,13 @@ input[type=file]:disabled + .btn {
   height: 36px;
   line-height: 36px;
   text-align: center;
-  color: #aaaaaa;
-  font-weight: 300;
-  font-size: .875rem; }
+  color: #aaaaaa; }
 
 #calendar-selection #calendar-listed-date span {
   cursor: pointer; }
+
+.calendar-box, .calendar-box:visited, #calendar-listed-date, #current-selected-year, #calendar-footer a {
+  font-size: .875rem; }
 
 #calendar-wrap {
   position: relative; }
@@ -2742,7 +2616,6 @@ input[type=file]:disabled + .btn {
     -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s; }
     #calendar-wrap #calendar-select-months a, #calendar-wrap #calendar-select-months a:visited, #calendar-wrap #calendar-select-months a:focus, #calendar-wrap #calendar-select-years a, #calendar-wrap #calendar-select-years a:visited, #calendar-wrap #calendar-select-years a:focus {
       color: #333;
-      font-weight: 300;
       display: block; }
     #calendar-wrap #calendar-select-months a:hover, #calendar-wrap #calendar-select-years a:hover {
       color: #6557FF; }
@@ -2765,8 +2638,6 @@ input[type=file]:disabled + .btn {
   line-height: 36px;
   text-align: center;
   border-top: 1px solid #f4f5f5;
-  font-size: .875rem;
-  font-weight: 300;
   cursor: pointer;
   color: #333;
   outline: none; }
@@ -2786,11 +2657,9 @@ a.calendar-box:hover {
   border-top: 1px solid #f4f5f5; }
   #calendar-footer a, #calendar-footer a:visited {
     line-height: 36px;
-    font-size: .875rem;
     color: #aaaaaa;
     display: block;
-    padding: 0 .875rem;
-    font-weight: 300; }
+    padding: 0 .875rem; }
   #calendar-footer #calendar-clear {
     margin-left: auto; }
 
@@ -2806,10 +2675,156 @@ a.calendar-box:hover {
   #calendar #previous-month:before, #calendar #next-month:before {
     top: 20px; } }
 
+.origami-card {
+  display: block;
+  border-radius: 0.1875rem;
+  background-color: #FFFFFF;
+  overflow: hidden; }
+  .origami-card .origami-card-content {
+    padding: 1rem; }
+  .origami-card .origami-card-image {
+    border-radius: 0.1875rem 0.1875rem 0 0;
+    display: block;
+    width: 100%;
+    height: auto; }
+
+@media only screen and (min-width: 992px) {
+  .origami-card .origami-card-content {
+    padding: 1.5rem; } }
+
 .float-fix:after {
   content: '';
   display: table;
   clear: both; }
+
+.height-auto-s, .height-auto {
+  height: auto; }
+
+.height-10-s, .height-10 {
+  height: 10vh; }
+
+.height-20-s, .height-20 {
+  height: 20vh; }
+
+.height-30-s, .height-30 {
+  height: 30vh; }
+
+.height-40-s, .height-40 {
+  height: 40vh; }
+
+.height-50-s, .height-50 {
+  height: 50vh; }
+
+.height-60-s, .height-60 {
+  height: 60vh; }
+
+.height-70-s, .height-70 {
+  height: 70vh; }
+
+.height-80-s, .height-80 {
+  height: 80vh; }
+
+.height-90-s, .height-90 {
+  height: 90vh; }
+
+.height-100-s, .height-100 {
+  height: 100vh; }
+
+@media only screen and (min-width: 600px) {
+  .height-auto-m {
+    height: auto; }
+  .height-10-m {
+    height: 10vh; }
+  .height-20-m {
+    height: 20vh; }
+  .height-30-m {
+    height: 30vh; }
+  .height-40-m {
+    height: 40vh; }
+  .height-50-m {
+    height: 50vh; }
+  .height-60-m {
+    height: 60vh; }
+  .height-70-m {
+    height: 70vh; }
+  .height-80-m {
+    height: 80vh; }
+  .height-90-m {
+    height: 90vh; }
+  .height-100-m {
+    height: 100vh; } }
+
+@media only screen and (min-width: 992px) {
+  .height-auto-l {
+    height: auto; }
+  .height-10-l {
+    height: 10vh; }
+  .height-20-l {
+    height: 20vh; }
+  .height-30-l {
+    height: 30vh; }
+  .height-40-l {
+    height: 40vh; }
+  .height-50-l {
+    height: 50vh; }
+  .height-60-l {
+    height: 60vh; }
+  .height-70-l {
+    height: 70vh; }
+  .height-80-l {
+    height: 80vh; }
+  .height-90-l {
+    height: 90vh; }
+  .height-100-l {
+    height: 100vh; } }
+
+@media only screen and (min-width: 1280px) {
+  .height-auto-xl {
+    height: auto; }
+  .height-10-xl {
+    height: 10vh; }
+  .height-20-xl {
+    height: 20vh; }
+  .height-30-xl {
+    height: 30vh; }
+  .height-40-xl {
+    height: 40vh; }
+  .height-50-xl {
+    height: 50vh; }
+  .height-60-xl {
+    height: 60vh; }
+  .height-70-xl {
+    height: 70vh; }
+  .height-80-xl {
+    height: 80vh; }
+  .height-90-xl {
+    height: 90vh; }
+  .height-100-xl {
+    height: 100vh; } }
+
+@media only screen and (min-width: 1280px) {
+  .height-auto-xxl {
+    height: auto; }
+  .height-10-xxl {
+    height: 10vh; }
+  .height-20-xxl {
+    height: 20vh; }
+  .height-30-xxl {
+    height: 30vh; }
+  .height-40-xxl {
+    height: 40vh; }
+  .height-50-xxl {
+    height: 50vh; }
+  .height-60-xxl {
+    height: 60vh; }
+  .height-70-xxl {
+    height: 70vh; }
+  .height-80-xxl {
+    height: 80vh; }
+  .height-90-xxl {
+    height: 90vh; }
+  .height-100-xxl {
+    height: 100vh; } }
 
 .text-right, .text-right-s {
   text-align: right; }
@@ -2856,7 +2871,7 @@ a.calendar-box:hover {
   font-size: .75em; }
 
 .text-large {
-  font-size: 1.25em; }
+  font-size: 1.5em; }
 
 .block {
   display: block; }
@@ -3949,6 +3964,10 @@ a.calendar-box:hover {
   .ml-5-xxl {
     margin-left: 5rem !important; } }
 
+.depth-0, .hover-depth-0, .depth-1, .hover-depth-1, .depth-2, .hover-depth-2, .depth-3, .hover-depth-3, .depth-4, .hover-depth-4, .depth-5, .hover-depth-5 {
+  transition: box-shadow 0.4s ease;
+  -webkit-transition: box-shadow 0.4s ease; }
+
 .depth-0, .hover-depth-0:hover {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
@@ -4012,5 +4031,74 @@ a.calendar-box:hover {
 @media only screen and (min-width: 1600px) {
   .hide-xxl-up {
     display: none !important; } }
+
+.video-iframe iframe, .video-iframe object, .video-iframe embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.ratio-16x9-s, .ratio-16x9, .video-container, .ratio-1x1-s, .ratio-1x1, .ratio-2x3-s, .ratio-2x3 {
+  position: relative;
+  overflow: hidden;
+  height: 0; }
+
+.ratio-16x9-s, .ratio-16x9, .video-container {
+  padding-bottom: 56.25%; }
+
+.ratio-1x1-s, .ratio-1x1 {
+  padding-bottom: 100%; }
+
+.ratio-2x3-s, .ratio-2x3 {
+  padding-bottom: 150%; }
+
+@media only screen and (min-width: 600px) {
+  .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m {
+    position: relative;
+    overflow: hidden;
+    height: 0; }
+  .ratio-16x9-m {
+    padding-bottom: 56.25%; }
+  .ratio-1x1-m {
+    padding-bottom: 100%; }
+  .ratio-2x3-m {
+    padding-bottom: 150%; } }
+
+@media only screen and (min-width: 992px) {
+  .ratio-16x9-l, .ratio-1x1-l, .ratio-2x3-l {
+    position: relative;
+    overflow: hidden;
+    height: 0; }
+  .ratio-16x9-l {
+    padding-bottom: 56.25%; }
+  .ratio-1x1-l {
+    padding-bottom: 100%; }
+  .ratio-2x3-l {
+    padding-bottom: 150%; } }
+
+@media only screen and (min-width: 1280px) {
+  .ratio-16x9-xl, .ratio-1x1-xl, .ratio-2x3-xl {
+    position: relative;
+    overflow: hidden;
+    height: 0; }
+  .ratio-16x9-xl {
+    padding-bottom: 56.25%; }
+  .ratio-1x1-xl {
+    padding-bottom: 100%; }
+  .ratio-2x3-xl {
+    padding-bottom: 150%; } }
+
+@media only screen and (min-width: 1600px) {
+  .ratio-16x9-xxl, .ratio-1x1-xxl, .ratio-2x3-xxl {
+    position: relative;
+    overflow: hidden;
+    height: 0; }
+  .ratio-16x9-xxl {
+    padding-bottom: 56.25%; }
+  .ratio-1x1-xxl {
+    padding-bottom: 100%; }
+  .ratio-2x3-xxl {
+    padding-bottom: 150%; } }
 
 /*# sourceMappingURL=origami.css.map */
