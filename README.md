@@ -48,6 +48,8 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 
 ## 3. In the works...
 
+- Navigation
+- Footer
 - Drag'n'drop file uploads
 - Button ripple effect on click
 - Notifications / Toasts
