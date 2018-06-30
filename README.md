@@ -42,6 +42,7 @@
 Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (demo.html) has been included. As for the Javascript, no dependencies are required. It was written with ES5 and is currently there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).
 <br/>
 <br/>
+
 ## 2. In the works...
 
 - Navigation
@@ -52,6 +53,7 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 - Modal
 <br/>
 <br/>
+
 ## 3. Usage
 
 ### Installation
