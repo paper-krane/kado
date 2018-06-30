@@ -53,7 +53,6 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 - Modal
 <br/>
 <br/>
-
 ## 3. Usage
 
 ### Installation
