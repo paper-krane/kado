@@ -7,34 +7,7 @@
 <br/>
 <br/>
 
-## 1. Getting Started
-
-#### Installation
-It's rather easy. Start by cloning or [downloading](https://github.com/benjamin-farnham/origami/archive/master.zip) directly and include the origami.min.css file along with the origami.min.js file (with the script preferably before the closing body tag) in your HTML.
-
-```html
-<!DOCTYPE html>
-<html lang="en" class="no-js"><!-- no-js class allows a small javascript check -->
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-
-        <!-- Origami <link> tag -->
-        <link href="path/to/origami.min.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <!-- Your content here -->
-
-        <!-- Origami <script> tag -->
-        <script type="text/javascript" src="path/to/origami.min.js"></script>
-    </body>
-</html>
-```
-
-No CDN yet. But it is in the plans.
-
-## 2. Features
+## 1. Features
 
 - 12 column grid
     - Push, pull, & offset
@@ -68,7 +41,7 @@ No CDN yet. But it is in the plans.
 
 Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (demo.html) has been included. As for the Javascript, no dependencies are required. It was written with ES5 and is currently there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).
 
-## 3. In the works...
+## 2. In the works...
 
 - Navigation
 - Footer
@@ -77,7 +50,32 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 - Notifications / Toasts
 - Modal
 
-## 4. Usage
+## 3. Usage
+
+### Installation
+It's rather easy. Start by cloning or [downloading](https://github.com/benjamin-farnham/origami/archive/master.zip) directly and include the origami.min.css file along with the origami.min.js file (with the script preferably before the closing body tag) in your HTML.
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="no-js"><!-- no-js class allows a small javascript check -->
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <!-- Origami <link> tag -->
+        <link href="path/to/origami.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!-- Your content here -->
+
+        <!-- Origami <script> tag -->
+        <script type="text/javascript" src="path/to/origami.min.js"></script>
+    </body>
+</html>
+```
+
+No CDN yet. But it is in the plans.
 
 First, I want to state that Origami was built mobile first and has 5 breakpoints that will be defined as follows:
 
@@ -89,7 +87,7 @@ First, I want to state that Origami was built mobile first and has 5 breakpoints
 
 Pretty simple sizing, but memorizing the sizes / styles will let you build quickly. Now with that out of the way, let's look at layouts.
 
-### 4.1 - Grid System
+### 3.1 - Grid System
 
 Origami's default grid is 12 columns wide and is fluid with each breakpoint. The default container size maxes its width out at 1080px with a 5% margin on each side in mobile, and a 7.5% margin on each side on desktop.
 
@@ -126,7 +124,7 @@ Another note, containers have different sizes as well (sure you could just nest 
 - xxl (max-width: 1600px)
 - full-width (max-width: 100%)
 
-#### 4.1.1 - Push, Pull, & Offset
+#### 3.1.1 - Push, Pull, & Offset
 
 Of course, you can push elements, pull elements, and offset them. Usage is pretty simple as well:
 
