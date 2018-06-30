@@ -40,6 +40,7 @@
 - Fallbacks styles for browsers without JavaScript
 
 Included are a lot of the tools to build and scale a website quickly. Until the doc site is up, a test page (demo.html) has been included. As for the Javascript, no dependencies are required. It was written with ES5 and is currently there to enhance user experience with forms and to add quick toggle abilities (to create your own custom modals and navigations).
+
 <br/>
 <br/>
 
@@ -51,8 +52,10 @@ Included are a lot of the tools to build and scale a website quickly. Until the 
 - Button ripple effect on click
 - Notifications / Toasts
 - Modal
+
 <br/>
 <br/>
+
 ## 3. Usage
 
 ### Installation
@@ -89,8 +92,10 @@ I also want to state that Origami was built mobile first and has 5 breakpoints t
 - xxl (desktop - >= 1600px)
 
 Pretty simple sizing, but memorizing the sizes / styles will let you build quickly. Now with that out of the way, let's look at layouts.
+
 <br/>
 <br/>
+
 ## 3.1 - Grid System
 
 Origami's default grid is 12 columns wide and is fluid with each breakpoint. The default container size maxes its width out at 1080px with a 5% margin on each side in mobile, and a 7.5% margin on each side on desktop.
