@@ -87,7 +87,7 @@ I also want to state that Origami was built mobile first and has 5 breakpoints t
 
 Pretty simple sizing, but memorizing the sizes / styles will let you build quickly. Now with that out of the way, let's look at layouts.
 
-### 3.1 - Grid System
+## 3.1 - Grid System
 
 Origami's default grid is 12 columns wide and is fluid with each breakpoint. The default container size maxes its width out at 1080px with a 5% margin on each side in mobile, and a 7.5% margin on each side on desktop.
 
@@ -150,7 +150,7 @@ Offset (uses margins to offset element)
 
 Pretty straight forward. Just type what effect you are trying to achieve and then the desired breakpoint you wish for this s effect to be seen on along with the columns you wish it to push, pull or offset (`push-{device-size}{column-count}`, `pull-{device-size}{column-count}`, or `offset-{device-size}{column-count}`).
 
-### 3.2 - Flexbox
+## 3.2 - Flexbox
 
 Now that flexbox is in the green for browsers ie11 & up, I wanted to make sure and include it with Origami.
 
