@@ -35,7 +35,8 @@
         options = options || {
             limitYearsBack: 100,
             limitYearsForward: 100,
-            closeOnSelect: false
+            closeOnSelect: false,
+            disableDaysOfWeek: []
         };
 
         // Check for datepicker elements
@@ -121,7 +122,7 @@
 
                         // Set header / calendar dates
                         setHeaderDates(initialDate);
-                        calendarLayout(initialDate);
+                        calendarLayout(initialDate, options.disableDaysOfWeek);
 
                         // Store 'this'
                         selectedInput = this;
@@ -134,7 +135,10 @@
                     calBox[box].addEventListener('click', function(e){
                         e.preventDefault();
                         if (!this.dataset.selectMonth) return;
-                        if(selectedCalBox)selectedCalBox.removeAttribute('id');
+                        if (document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+
+                        // Check if Day is one of the disabled days of the week
+                        if (this.dataset.available == 'false') return;
 
                         // Set new header
                         setHeaderDates(new Date(this.dataset.selectYear, this.dataset.selectMonth, this.dataset.selectDay));
@@ -174,7 +178,7 @@
                         prevMonth = new Date(currentYear - 1, currentMonth);
                     }
                     if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
-                    calendarLayout(prevMonth);
+                    calendarLayout(prevMonth, options.disableDaysOfWeek);
                 }, false);
 
                 next.addEventListener('click', function(e) {
@@ -186,7 +190,7 @@
                         nextMonth = new Date(initialDate.getFullYear() + 1, currentMonth - 1);
                     }
                     if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
-                    calendarLayout(nextMonth);
+                    calendarLayout(nextMonth, options.disableDaysOfWeek);
                 }, false);
 
                 // Set new month from selection
@@ -197,7 +201,7 @@
                         var newSelectedMonthDate = new Date(currentYear, currentMonth, 1);
 
                         if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
-                        calendarLayout(newSelectedMonthDate);
+                        calendarLayout(newSelectedMonthDate, options.disableDaysOfWeek);
                         monthSelectList.classList.toggle('select-month');
                     }, false);
                 }
@@ -209,7 +213,7 @@
                         var newSelectedYearDate = new Date(currentYear, currentMonth, 1);
 
                         if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
-                        calendarLayout(newSelectedYearDate);
+                        calendarLayout(newSelectedYearDate, options.disableDaysOfWeek);
                         yearSelectList.classList.toggle('select-year');
                     }, false);
                 }
@@ -252,7 +256,7 @@
                     if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
 
                     // Reset calendar
-                    calendarLayout(initialDate);
+                    calendarLayout(initialDate, options.disableDaysOfWeek);
                     setHeaderDates(initialDate);
                 }, false);
 
@@ -279,17 +283,27 @@
                 }
 
                 //Create Calendar Elements
-                function calendarLayout(dateObject) {
+                function calendarLayout(dateObject, unavailableArray) {
                     var el = document.querySelectorAll('#calendar-dates a');
                     var startingDayName = new Date(dateObject.getFullYear(), dateObject.getMonth(), 1).getDay();
                     var lastDay = new Date(dateObject.getFullYear(), dateObject.getMonth() + 1, 0).getDate();
                     var dayName = startingDayName;
+                    var unavailableDays = [];
+
+                    // Unavailable days
+                    if (unavailableArray.length > 0) {
+                        for (var y = 0; y < unavailableArray.length; y++) {
+                            unavailableDays.push(dayNames.indexOf(unavailableArray[y]));
+                        }
+                    }
+
                     for (var div = 0; div < el.length; div++) {
                         el[div].innerText = '';
                         el[div].removeAttribute('data-select-year');
                         el[div].removeAttribute('data-select-month');
                         el[div].removeAttribute('data-select-day');
                         el[div].removeAttribute('data-select-day-of-week');
+                        el[div].removeAttribute('data-available');
                         el[div].style.cursor = 'text';
                     }
                     for (var i = 1; i <= lastDay; i++) {
@@ -298,6 +312,16 @@
                         el[startingDayName].dataset.selectMonth = dateObject.getMonth();
                         el[startingDayName].dataset.selectDay = i;
                         el[startingDayName].dataset.selectDayOfWeek = dayName;
+
+                        // Check if dayName matches the disabled days of the Weekdays
+                        if (unavailableDays.length > 0) {
+                            for (var z = 0; z < unavailableDays.length; z++) {
+                                if (dayName === unavailableDays[z]) {
+                                    el[startingDayName].dataset.available = false;
+                                }
+                            }
+                        }
+
                         el[startingDayName].style.cursor = 'pointer';
                         if (selectedDate && selectedDate.getFullYear() === dateObject.getFullYear() && selectedDate.getMonth() === dateObject.getMonth() && selectedDate.getDate() === i) {
                             el[startingDayName].id = 'selected-date';
@@ -459,7 +483,8 @@
 // var initDatepicker = datepicker.init({
 //     limitYearsBack: 100,
 //     limitYearsForward: 100,
-//     closeOnSelect: false
+//     closeOnSelect: false,
+//     disableDaysOfWeek: ['Mon']
 // });
 
 // Form element constructor

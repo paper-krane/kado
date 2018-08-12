@@ -1,5 +1,5 @@
 <p align="center">
-    <h2 align="center">Origami</h2>
+    <h1 align="center">Origami</h1>
 </p>
 <p align="center">
     A mobile-first front-end framework for written for minimal, elegant web design.
@@ -180,24 +180,71 @@ Container declaration is as follows and you have two options:
 
 With flexbox, you can specify how to align elements horizontally and vertically. Let's start with the horizontal declarations...
 
-> You can also declare at which device breakpoint you want to add these styles as well by appending a '-{device-size}'. For example `flex-row-s`
+> You can also declare at which device breakpoint you want to add these styles as well by appending a '-{device-size}' to the end of the class name. For example `flex-row-s`. This applies to **all** flexbox quick classes.
 
 Rows
 ```html
 <div class="flex flex-row">
-    <!-- Aligns items starting from left to right and starting on top left (normal) -->
+    <!-- Aligns child items starting from left to right and starting on top left (normal) -->
 </div>
 <div class="flex flex-row-reverse">
-    <!-- Aligns items starting from right to left from the top right side -->
+    <!-- Aligns child items starting from right to left from the top right side -->
 </div>
 ```
 
 Columns
 ```html
 <div class="flex flex-column">
-    <!-- Aligns items starting/ordered from top to bottom -->
+    <!-- Aligns child items starting/ordered from top to bottom -->
 </div>
 <div class="flex flex-column-reverse">
-    <!-- Aligns items starting/ordered from bottom to top -->
+    <!-- Aligns child items starting/ordered from bottom to top -->
+</div>
+```
+
+Horizontal Content Alignment
+```html
+<div class="flex justify-start">
+    <!-- Aligns child items to the left side of the flex container -->
+</div>
+<div class="flex justify-end">
+    <!-- Aligns child items to the right side of the flex container -->
+</div>
+<div class="flex justify-center">
+    <!-- Aligns child items in the center of the flex container -->
+</div>
+<div class="flex justify-between">
+    <!-- Aligns child items with equal space in between each child item in the flex container -->
+</div>
+<div class="flex justify-around">
+    <!-- Aligns child items with equal space in between each child item (including the first and last items) in the flex container -->
+</div>
+```
+
+Vertical Content Alignment
+```html
+<div class="flex align-start">
+    <!-- Align child items at the top of the parent flex container -->
+</div>
+<div class="flex align-end">
+    <!-- Align child items at the bottom of the parent flex container -->
+</div>
+<div class="flex align-center">
+    <!-- Align child items at the center (vertically) of the parent flex container -->
+</div>
+<div class="flex align-baseline">
+    <!-- Align child items at the baseline of the parent flex container -->
+</div>
+<div class="flex align-stretch">
+    <!-- Force child items to stretch to match the height of the parent container -->
+</div>
+```
+
+Flex Fill (used on child items of the flex container)
+```html
+<div class="flex">
+    <div class="flex-fill">
+        <!-- Force item to stretch to fill negative space inside of the parent flex container -->
+    </div>
 </div>
 ```

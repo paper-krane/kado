@@ -170,6 +170,10 @@
         background-color: $primary-color;
         color: $white;
     }
+    &[data-available=false] {
+        background-color: #f2f3f3;
+        cursor: not-allowed !important;
+    }
 }
 a.calendar-box:focus {
     color: $primary-color;

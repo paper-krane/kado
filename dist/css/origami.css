@@ -2078,10 +2078,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 40px; }
     .btn.btn-outline.btn-small, .btn:visited.btn-outline.btn-small, .btn:focus.btn-outline.btn-small {
       height: 28px;
-      line-height: 30px; }
+      line-height: 26px; }
     .btn.btn-outline.btn-large, .btn:visited.btn-outline.btn-large, .btn:focus.btn-outline.btn-large {
       height: 60px;
-      line-height: 58px; }
+      line-height: 62px; }
 
 .btn:hover {
   color: #FFFFFF;
@@ -2644,6 +2644,9 @@ input[type=file]:disabled + .btn {
   .calendar-box#selected-date, .calendar-box:visited#selected-date {
     background-color: #6557FF;
     color: #FFFFFF; }
+  .calendar-box[data-available=false], .calendar-box:visited[data-available=false] {
+    background-color: #f2f3f3;
+    cursor: not-allowed !important; }
 
 a.calendar-box:focus {
   color: #6557FF;
@@ -3963,10 +3966,6 @@ a.calendar-box:hover {
     margin-bottom: 5rem !important; }
   .ml-5-xxl {
     margin-left: 5rem !important; } }
-
-.depth-0, .hover-depth-0, .depth-1, .hover-depth-1, .depth-2, .hover-depth-2, .depth-3, .hover-depth-3, .depth-4, .hover-depth-4, .depth-5, .hover-depth-5 {
-  transition: box-shadow 0.4s ease;
-  -webkit-transition: box-shadow 0.4s ease; }
 
 .depth-0, .hover-depth-0:hover {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);

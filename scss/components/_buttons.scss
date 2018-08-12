@@ -76,11 +76,11 @@
         line-height: $btn-height - 2;
         &.btn-small {
             height: $btn-height - 14;
-            line-height: $btn-height - 12;
+            line-height: $btn-height - 16;
         }
         &.btn-large {
             height: $btn-height + 18;
-            line-height: $btn-height + 16;
+            line-height: $btn-height + 20;
         }
     }
 }

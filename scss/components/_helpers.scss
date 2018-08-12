@@ -257,10 +257,6 @@ $i: 0;
 
 // Shadow
 // ============================================================ //
-.depth-0, .hover-depth-0, .depth-1, .hover-depth-1, .depth-2, .hover-depth-2, .depth-3, .hover-depth-3, .depth-4, .hover-depth-4, .depth-5, .hover-depth-5 {
-    transition: box-shadow 0.4s ease;
-    -webkit-transition: box-shadow 0.4s ease;
-}
 .depth-0, .hover-depth-0:hover {
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
