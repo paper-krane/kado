@@ -202,6 +202,8 @@ Columns
 </div>
 ```
 
+### 3.2.3 - Alignment
+
 Horizontal Content Alignment
 ```html
 <div class="flex justify-start">
@@ -239,6 +241,8 @@ Vertical Content Alignment
     <!-- Force child items to stretch to match the height of the parent container -->
 </div>
 ```
+
+### 3.2.4 - Fill
 
 Flex Fill (used on child items of the flex container)
 ```html
