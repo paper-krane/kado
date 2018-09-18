@@ -2473,7 +2473,7 @@ input[type=file] {
 .origamiFile {
   font-weight: 300;
   color: #8a8a8a;
-  display: inline-block; }
+  display: block; }
 
 .file-label {
   display: inline-block;
@@ -2699,6 +2699,9 @@ a.calendar-box:hover {
   content: '';
   display: table;
   clear: both; }
+
+.relative {
+  position: relative; }
 
 .height-auto-s, .height-auto {
   height: auto; }
