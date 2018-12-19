@@ -94,7 +94,7 @@ select::-ms-expand {
 .form-element textarea+label.active,
 .form-element select:focus+label.active,
 .form-element select+label.active {
-    top: 8px;
+    top: 6px;
     font-size: 10px;
 }
 // Override the previous active color
@@ -142,6 +142,7 @@ select::-ms-expand {
 
 // Disabled styles
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):read-only,
 .form-element textarea:disabled,
 .form-element select:disabled {
     background-color: $light-grey;

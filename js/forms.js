@@ -54,10 +54,12 @@
     FormElements.prototype.checkSiblingValue = function(element) {
         var elementForVal = element.id;
         var labelQuery = document.querySelector('label[for=' + elementForVal + ']');
-        if((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
-            labelQuery.classList.add('active');
-        } else {
-            labelQuery.classList.remove('active');
+        if (labelQuery) {
+            if((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
+                labelQuery.classList.add('active');
+            } else {
+                labelQuery.classList.remove('active');
+            }
         }
     }
 
@@ -78,7 +80,9 @@
         for (var select = 0; select < selectList.length; select++) {
             var selectID = selectList[select].id;
             var selectLabel = document.querySelector('label[for=' + selectID + ']');
-            selectLabel.classList.add('select-label');
+            if (selectLabel) {
+                selectLabel.classList.add('select-label');
+            }
         }
     }
 
@@ -108,7 +112,9 @@
     FormElements.prototype.checkFormElements = function(elementList) {
         for (var element = 0; element < elementList.length; element++) {
             if ((elementList[element].nodeName === 'SELECT' && elementList[element].firstElementChild.innerText !== '') || elementList[element].value !== '') {
-                elementList[element].nextElementSibling.classList.add('active');
+                if (elementList[element].nextElementSibling) {
+                    elementList[element].nextElementSibling.classList.add('active');
+                }
             }
         }
     }
