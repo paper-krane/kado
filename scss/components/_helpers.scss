@@ -347,7 +347,7 @@ $i: 0;
     padding-bottom: 150%;
 }
 .ratio-3x2-s, .ratio-3x2 {
-    padding-bottom: 150%;
+    padding-bottom: 66.666666667%;
 }
 @media #{$m-and-up} {
     .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m {
@@ -365,7 +365,7 @@ $i: 0;
         padding-bottom: 150%;
     }
     .ratio-3x2-m {
-        padding-bottom: 150%;
+        padding-bottom: 66.666666667%;
     }
 }
 @media #{$l-and-up} {
@@ -384,7 +384,7 @@ $i: 0;
         padding-bottom: 150%;
     }
     .ratio-3x2-l {
-        padding-bottom: 150%;
+        padding-bottom: 66.666666667%;
     }
 }
 @media #{$xl-and-up} {
@@ -403,7 +403,7 @@ $i: 0;
         padding-bottom: 150%;
     }
     .ratio-3x2-xl {
-        padding-bottom: 150%;
+        padding-bottom: 66.666666667%;
     }
 }
 @media #{$xxl-and-up} {
@@ -422,6 +422,6 @@ $i: 0;
         padding-bottom: 150%;
     }
     .ratio-3x2-xxl {
-        padding-bottom: 150%;
+        padding-bottom: 66.666666667%;
     }
 }

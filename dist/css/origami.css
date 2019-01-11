@@ -2078,8 +2078,8 @@ h1, h2, h3, h4, h5, h6 {
       height: 28px;
       line-height: 26px; }
     .btn.btn-outline.btn-large, .btn:visited.btn-outline.btn-large, .btn:focus.btn-outline.btn-large {
-      height: 60px;
-      line-height: 62px; }
+      height: 62px;
+      line-height: 60px; }
 
 .btn:hover {
   color: #FFFFFF;
@@ -4056,7 +4056,7 @@ a.calendar-box:hover {
   padding-bottom: 150%; }
 
 .ratio-3x2-s, .ratio-3x2 {
-  padding-bottom: 150%; }
+  padding-bottom: 66.666666667%; }
 
 @media only screen and (min-width: 600px) {
   .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m {
@@ -4070,7 +4070,7 @@ a.calendar-box:hover {
   .ratio-2x3-m {
     padding-bottom: 150%; }
   .ratio-3x2-m {
-    padding-bottom: 150%; } }
+    padding-bottom: 66.666666667%; } }
 
 @media only screen and (min-width: 992px) {
   .ratio-16x9-l, .ratio-1x1-l, .ratio-2x3-l {
@@ -4084,7 +4084,7 @@ a.calendar-box:hover {
   .ratio-2x3-l {
     padding-bottom: 150%; }
   .ratio-3x2-l {
-    padding-bottom: 150%; } }
+    padding-bottom: 66.666666667%; } }
 
 @media only screen and (min-width: 1280px) {
   .ratio-16x9-xl, .ratio-1x1-xl, .ratio-2x3-xl {
@@ -4098,7 +4098,7 @@ a.calendar-box:hover {
   .ratio-2x3-xl {
     padding-bottom: 150%; }
   .ratio-3x2-xl {
-    padding-bottom: 150%; } }
+    padding-bottom: 66.666666667%; } }
 
 @media only screen and (min-width: 1600px) {
   .ratio-16x9-xxl, .ratio-1x1-xxl, .ratio-2x3-xxl {
@@ -4112,6 +4112,6 @@ a.calendar-box:hover {
   .ratio-2x3-xxl {
     padding-bottom: 150%; }
   .ratio-3x2-xxl {
-    padding-bottom: 150%; } }
+    padding-bottom: 66.666666667%; } }
 
 /*# sourceMappingURL=origami.css.map */
