@@ -1,9 +1,9 @@
 // Calendar Background
-#calendar, #calendar-bg {
+#origami-calendar, #origami-calendar-bg {
     position: fixed;
     font-weight: 300;
 }
-#calendar-bg {
+#origami-calendar-bg {
     background-color: rgba(0,0,0,.3);
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
     -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
     // When active
-    &.date-select-active {
+    &.origami-date-select-active {
         opacity: 1;
         visibility: visible;
         transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -24,7 +24,7 @@
 }
 
 // Calendar Body
-#calendar {
+#origami-calendar {
     width: 280px;
     border-radius: $border-radius;
     background-color: $white;
@@ -40,7 +40,7 @@
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s;
     -webkit-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s;
     // When active
-    &.date-select-active {
+    &.origami-date-select-active {
         visibility: visible;
         opacity: 1;
         transform: translate(-50%, -50%);
@@ -50,24 +50,24 @@
         -webkit-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
     }
 }
-#calendar-header {
+#origami-calendar-header {
     padding: 2rem 1rem;
     background-color: $primary-color;
     color: $white;
     font-size: 1.5rem;
     text-align: center;
-    border-radius: .25rem .25rem 0 0;
-    #current-selected-year {
+    border-radius: $border-radius $border-radius 0 0;
+    #origami-current-selected-year {
         display: block;
     }
 }
 
 // Previous & next buttons for choosing a date
-#calendar-selection {
+#origami-calendar-selection {
     div {
         float: left;
     }
-    #previous-month, #next-month {
+    #origami-previous-month, #origami-next-month {
         width: 20%;
         height: 36px;
         position: relative;
@@ -83,39 +83,39 @@
             left: .875rem;
         }
     }
-    #previous-month:before {
+    #origami-previous-month:before {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
     }
-    #next-month:before {
+    #origami-next-month:before {
         left: auto;
         right: .875rem;
         transform: rotate(225deg);
         -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
     }
-    #calendar-listed-date {
+    #origami-calendar-listed-date {
         width: 60%;
         height: 36px;
         line-height: 36px;
         text-align: center;
         color: $grey;
     }
-    #calendar-listed-date span {
+    #origami-calendar-listed-date span {
         cursor: pointer;
     }
 }
 
 // Shared font sizes
-.calendar-box, .calendar-box:visited, #calendar-listed-date, #current-selected-year, #calendar-footer a {
+.origami-calendar-box, .origami-calendar-box:visited, #origami-calendar-listed-date, #origami-current-selected-year, #origami-calendar-footer a {
     font-size: .875rem;
 }
 
 // Calendar container that holds selectable dates, selectable years, selectable months, etc.
-#calendar-wrap {
+#origami-calendar-wrap {
     position: relative;
-    #calendar-select-months, #calendar-select-years {
+    #origami-calendar-select-months, #origami-calendar-select-years {
         position: absolute;
         top: 0;
         left: 0;
@@ -141,7 +141,7 @@
             color: $primary-color;
         }
     }
-    #calendar-select-months.select-month, #calendar-select-years.select-year {
+    #origami-calendar-select-months.origami-select-month, #origami-calendar-select-years.origami-select-year {
         opacity: 1;
         visibility: visible;
         transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -150,12 +150,12 @@
 }
 
 // Calendar Days / Selectable Dates
-#calendar-days .calendar-box {
+#origami-calendar-days .origami-calendar-box {
     font-size: .65rem;
     font-weight: 400;
     cursor: text;
 }
-.calendar-box, .calendar-box:visited {
+.origami-calendar-box, .origami-calendar-box:visited {
     width: 14.2857142857%;
     float: left;
     min-height: 36px;
@@ -166,7 +166,7 @@
     cursor: pointer;
     color: $font-color;
     outline: none;
-    &#selected-date {
+    &#origami-selected-date {
         background-color: $primary-color;
         color: $white;
     }
@@ -175,16 +175,16 @@
         cursor: not-allowed !important;
     }
 }
-a.calendar-box:focus {
+a.origami-calendar-box:focus {
     color: $primary-color;
     outline: none;
 }
-a.calendar-box:hover {
+a.origami-calendar-box:hover {
     color: $primary-color;
 }
 
 // Calendar Footer
-#calendar-footer {
+#origami-calendar-footer {
     display: flex;
     border-top: 1px solid $light-grey;
     a, a:visited {
@@ -193,24 +193,24 @@ a.calendar-box:hover {
         display: block;
         padding: 0 .875rem;
     }
-    #calendar-clear {
+    #origami-calendar-clear {
         margin-left: auto;
     }
 }
 @media #{$l-and-up} {
-    #calendar {
+    #origami-calendar {
         width: 520px;
     }
-    #calendar-header {
+    #origami-calendar-header {
         padding: 3rem 1rem;
         font-size: 1.75rem;
     }
-    #calendar {
-        #calendar-select-months a, #calendar-select-years a, #previous-month, #next-month, #calendar-listed-date, .calendar-box, #calendar-footer a, #calendar-footer a:visited {
+    #origami-calendar {
+        #origami-calendar-select-months a, #origami-calendar-select-years a, #origami-previous-month, #origami-next-month, #origami-calendar-listed-date, .origami-calendar-box, #origami-calendar-footer a, #origami-calendar-footer a:visited {
             line-height: 48px;
             height: 48px;
         }
-        #previous-month:before, #next-month:before {
+        #origami-previous-month:before, #origami-next-month:before {
             top: 20px;
         }
     }

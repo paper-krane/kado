@@ -1,5 +1,4 @@
 // Todo's
-// - Border radius classes
 
 // CSS utlity classes / helpers
 // ============================================================ //
@@ -11,6 +10,23 @@
 }
 .relative {
     position: relative;
+}
+
+// Borders
+// ============================================================ //
+
+.rounded-corner {
+    border-radius: $border-radius;
+}
+
+// BG Colors
+// ============================================================ //
+
+.white-bg {
+    background-color: $white;
+}
+.black-bg {
+    background-color: $black;
 }
 
 // Height quick classes (using viewport height)
@@ -183,8 +199,14 @@ $i: 0;
 // Margin helpers
 // ============================================================ //
 
+.mt-half {margin-top: .5rem;}
+.mr-half {margin-right: .5rem;}
+.mb-half {margin-bottom: .5rem;}
+.ml-half {margin-left: .5rem;}
 .ml-auto, .ml-auto-s {margin-left: auto !important;}
+.mt-auto, .mt-auto-s {margin-top: auto !important;}
 .mr-auto, .mr-auto-s {margin-right: auto !important;}
+.mb-auto, .mb-auto-s {margin-bottom: auto !important;}
 $i: 0;
 @while $i <= 5 {
     .m-#{$i}-s {margin: #{$i}rem !important;}
@@ -198,7 +220,9 @@ $i: 0;
 }
 @media #{$m-and-up} {
     .ml-auto-m {margin-left: auto !important;}
+    .mt-auto-m {margin-top: auto !important;}
     .mr-auto-m {margin-right: auto !important;}
+    .mb-auto-m {margin-bottom: auto !important;}
     $i: 0;
     @while $i <= 5 {
         .m-#{$i}-m {margin: #{$i}rem !important;}
@@ -213,7 +237,9 @@ $i: 0;
 }
 @media #{$l-and-up} {
     .ml-auto-l {margin-left: auto !important;}
+    .mt-auto-l {margin-top: auto !important;}
     .mr-auto-l {margin-right: auto !important;}
+    .mb-auto-l {margin-bottom: auto !important;}
     $i: 0;
     @while $i <= 5 {
         .m-#{$i}-l {margin: #{$i}rem !important;}
@@ -228,7 +254,9 @@ $i: 0;
 }
 @media #{$xl-and-up} {
     .ml-auto-xl {margin-left: auto !important;}
+    .mt-auto-xl {margin-top: auto !important;}
     .mr-auto-xl {margin-right: auto !important;}
+    .mb-auto-xl {margin-bottom: auto !important;}
     $i: 0;
     @while $i <= 5 {
         .m-#{$i}-xl {margin: #{$i}rem !important;}
@@ -243,7 +271,9 @@ $i: 0;
 }
 @media #{$xxl-and-up} {
     .ml-auto-xxl {margin-left: auto !important;}
+    .mt-auto-xxl {margin-top: auto !important;}
     .mr-auto-xxl {margin-right: auto !important;}
+    .mb-auto-xxl {margin-bottom: auto !important;}
     $i: 0;
     @while $i <= 5 {
         .m-#{$i}-xxl {margin: #{$i}rem !important;}
@@ -350,7 +380,7 @@ $i: 0;
     padding-bottom: 66.666666667%;
 }
 @media #{$m-and-up} {
-    .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m {
+    .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m, .ratio-3x2-m {
         position: relative;
         overflow: hidden;
         height: 0;
@@ -369,7 +399,7 @@ $i: 0;
     }
 }
 @media #{$l-and-up} {
-    .ratio-16x9-l, .ratio-1x1-l, .ratio-2x3-l {
+    .ratio-16x9-l, .ratio-1x1-l, .ratio-2x3-l, .ratio-3x2-l {
         position: relative;
         overflow: hidden;
         height: 0;
@@ -388,7 +418,7 @@ $i: 0;
     }
 }
 @media #{$xl-and-up} {
-    .ratio-16x9-xl, .ratio-1x1-xl, .ratio-2x3-xl {
+    .ratio-16x9-xl, .ratio-1x1-xl, .ratio-2x3-xl, .ratio-3x2-xl {
         position: relative;
         overflow: hidden;
         height: 0;
@@ -407,7 +437,7 @@ $i: 0;
     }
 }
 @media #{$xxl-and-up} {
-    .ratio-16x9-xxl, .ratio-1x1-xxl, .ratio-2x3-xxl {
+    .ratio-16x9-xxl, .ratio-1x1-xxl, .ratio-2x3-xxl, .ratio-3x2-xxl {
         position: relative;
         overflow: hidden;
         height: 0;

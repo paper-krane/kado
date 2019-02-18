@@ -20,11 +20,11 @@
     class FormElements {
         constructor(options) {
             options = options || {};
-            this.labeledElements = document.querySelectorAll('input[type=text], input[type=email], input[type=password], input[type=url], input[type=number], input[type=date], input[type=datetime], input[type=datetime-local], input[type=number], input[type=time], input[type=tel], textarea, select');
-            this.selectElements = document.querySelectorAll('select');
-            this.selectLabels = document.querySelectorAll('select-label');
-            this.textArea = document.querySelectorAll('textarea');
-            this.selectInput = document.querySelectorAll('select');
+            this.labeledElements = document.querySelectorAll('.form-element input[type=text], .form-element input[type=email], .form-element input[type=password], .form-element input[type=url], .form-element input[type=number], .form-element input[type=date], .form-element input[type=datetime], .form-element input[type=datetime-local], .form-element input[type=number], .form-element input[type=time], .form-element input[type=tel], .form-element textarea, .form-element select');
+            this.selectElements = document.querySelectorAll('.form-element select');
+            this.selectLabels = document.querySelectorAll('.form-element select-label');
+            this.textArea = document.querySelectorAll('.form-element textarea');
+            this.selectInput = document.querySelectorAll('.form-element select');
 
             // Append event listeners
                 // Check elements associated with labels

@@ -113,9 +113,9 @@ select::-ms-expand {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
-    margin-top: -6px;
-    height: 8px;
-    width: 8px;
+    margin-top: -4px;
+    height: 6px;
+    width: 6px;
     border-right: 1px solid $label-color;
     border-bottom: 1px solid $label-color;
     pointer-events: none;

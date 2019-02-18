@@ -20,16 +20,18 @@ textarea {
 
 
 // Links
-a, a:visited, a:focus {
+a, a:visited {
     color: $primary-color;
     -webkit-tap-highlight-color: transparent;
     transition: $transition-speed;
     -webkit-transition: $transition-speed;
 }
-a:hover {
+a:hover, a:focus {
     color: $secondary-color;
 }
-
+a * {
+    pointer-events: none;
+}
 
 //  Blockquote
 blockquote {

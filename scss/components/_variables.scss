@@ -32,16 +32,16 @@
 
     // Columns
     $num-cols: 12 !default;
-    $gutter-size: 16px !default;
-    $element-top-margin: $gutter-size/3 !default;
-    $element-bottom-margin: ($gutter-size*2)/3 !default;
+    $gutter-size: 20px !default;
 
     // Transitions
     $transition-speed: all 0.4s ease;
     $transition-speed-fast: all 0.2s ease;
+    $transition-speed-time: 0.4s;
+    $transition-speed-fast-time: 0.2s;
 
     // Design Patterns
-    $border-radius: .1875rem;
+    $border-radius: .5rem;
 
 
 // 2) Fonts
@@ -52,14 +52,14 @@
     $font-color: #333;
 
     // Heading Styles
-    $h1-fontsize-mobile: 2.5rem !default;
+    $h1-fontsize-mobile: 2rem !default;
     $h2-fontsize-mobile: 1.75rem !default;
     $h3-fontsize-mobile: 1.5rem !default;
     $h4-fontsize-mobile: 1.25rem !default;
     $h5-fontsize-mobile: 1.2rem !default;
     $h6-fontsize-mobile: 1rem !default;
-    $h1-fontsize: 5rem !default;
-    $h2-fontsize: 3.5rem !default;
+    $h1-fontsize: 3rem !default;
+    $h2-fontsize: 2.75rem !default;
     $h3-fontsize: 2.5rem !default;
     $h4-fontsize: 2rem !default;
     $h5-fontsize: 1.75rem !default;
@@ -74,9 +74,8 @@
 // ============================================================ //
 
     // Default color scheme
-    $primary-color: #6557FF !default;
-    $secondary-color: #5045CC !default;
-    $primary-gradient: linear-gradient(#{$primary-color}, #{$secondary-color}) !default;
+    $primary-color: #007adf !default;
+    $secondary-color: #00ecbc !default;
 
     // Quick colors
     $white: #FFFFFF;
@@ -89,9 +88,9 @@
 // ============================================================ //
 
     $btn-height: 42px !default;
-    $btn-padding: 0 1rem !default;
-    $btn-large-padding: 0 1.5rem !default;
-    $btn-small-padding: 0 .5rem !default;
+    $btn-padding: 0 1.5rem !default;
+    $btn-large-padding: 0 2.5rem !default;
+    $btn-small-padding: 0 .75rem !default;
 
 
 // 5) Forms

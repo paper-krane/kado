@@ -79,22 +79,22 @@
                     'Sat'
                 ];
                 var dateInputs = document.querySelectorAll('.datepicker');
-                var calBg = document.querySelector('#calendar-bg');
-                var cal = document.querySelector('#calendar');
-                var monthSelect = document.querySelector('#calendar-month');
-                var yearSelect = document.querySelector('#calendar-year');
-                var monthSelectList = document.querySelector('#calendar-select-months');
-                var yearSelectList = document.querySelector('#calendar-select-years');
-                var monthSelectListAnchors = document.querySelectorAll('#calendar-select-months a');
-                var yearSelectListAnchors = document.querySelectorAll('#calendar-select-years a');
-                var currentSelectedDate = document.querySelector('#current-selected-day');
-                var currentSelectedYear = document.querySelector('#current-selected-year');
-                var prev = document.querySelector('#previous-month');
-                var next = document.querySelector('#next-month');
-                var calBox = document.querySelectorAll('.calendar-box');
-                var calCancel = document.querySelector('#calendar-cancel');
-                var calOk = document.querySelector('#calendar-ok');
-                var calClear = document.querySelector('#calendar-clear');
+                var calBg = document.querySelector('#origami-calendar-bg');
+                var cal = document.querySelector('#origami-calendar');
+                var monthSelect = document.querySelector('#origami-calendar-month');
+                var yearSelect = document.querySelector('#origami-calendar-year');
+                var monthSelectList = document.querySelector('#origami-calendar-select-months');
+                var yearSelectList = document.querySelector('#origami-calendar-select-years');
+                var monthSelectListAnchors = document.querySelectorAll('#origami-calendar-select-months a');
+                var yearSelectListAnchors = document.querySelectorAll('#origami-calendar-select-years a');
+                var currentSelectedDate = document.querySelector('#origami-current-selected-day');
+                var currentSelectedYear = document.querySelector('#origami-current-selected-year');
+                var prev = document.querySelector('#origami-previous-month');
+                var next = document.querySelector('#origami-next-month');
+                var calBox = document.querySelectorAll('.origami-calendar-box');
+                var calCancel = document.querySelector('#origami-calendar-cancel');
+                var calOk = document.querySelector('#origami-calendar-ok');
+                var calClear = document.querySelector('#origami-calendar-clear');
 
                 // Event Listeners
 
@@ -116,9 +116,9 @@
                         }
 
                         // Set elements on select active
-                        calBg.classList.add('date-select-active');
-                        cal.classList.add('date-select-active');
-                        this.classList.add('date-select-active');
+                        calBg.classList.add('origami-date-select-active');
+                        cal.classList.add('origami-date-select-active');
+                        this.classList.add('origami-date-select-active');
 
                         // Set header / calendar dates
                         setHeaderDates(initialDate);
@@ -135,7 +135,7 @@
                     calBox[box].addEventListener('click', function(e){
                         e.preventDefault();
                         if (!this.dataset.selectMonth) return;
-                        if (document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+                        if (document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
 
                         // Check if Day is one of the disabled days of the week
                         if (this.dataset.available == 'false') return;
@@ -147,10 +147,10 @@
                         selectedInput.value = monthNames[this.dataset.selectMonth] + ' ' + this.dataset.selectDay + ', ' + this.dataset.selectYear;
 
                         // Ensure that label doesn't clash with content
-                        selectedInput.nextElementSibling.classList.add('active');
+                        if (selectedInput.nextElementSibling && selectedInput.nextElementSibling.nodeName == 'LABEL') selectedInput.nextElementSibling.classList.add('active');
 
                         // Set selected ID
-                        this.id = 'selected-date';
+                        this.id = 'origami-selected-date';
 
                         // Store 'this'
                         selectedCalBox = this;
@@ -158,9 +158,9 @@
 
                         // Check options for closeOnSelect
                         if (options.closeOnSelect === true) {
-                            var activeDatepicker = document.querySelectorAll('.date-select-active');
+                            var activeDatepicker = document.querySelectorAll('.origami-date-select-active');
                             for (var i = 0; i < activeDatepicker.length; i++) {
-                                activeDatepicker[i].classList.remove('date-select-active');
+                                activeDatepicker[i].classList.remove('origami-date-select-active');
                             }
                         }
                     }, false);
@@ -177,7 +177,7 @@
                         currentMonth = 11;
                         prevMonth = new Date(currentYear - 1, currentMonth);
                     }
-                    if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+                    if(document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
                     calendarLayout(prevMonth, options.disableDaysOfWeek);
                 }, false);
 
@@ -189,7 +189,7 @@
                     if(nextMonth.getMonth() < 0) {
                         nextMonth = new Date(initialDate.getFullYear() + 1, currentMonth - 1);
                     }
-                    if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+                    if(document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
                     calendarLayout(nextMonth, options.disableDaysOfWeek);
                 }, false);
 
@@ -200,9 +200,9 @@
                         currentMonth = monthNames.indexOf(this.innerText);
                         var newSelectedMonthDate = new Date(currentYear, currentMonth, 1);
 
-                        if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+                        if(document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
                         calendarLayout(newSelectedMonthDate, options.disableDaysOfWeek);
-                        monthSelectList.classList.toggle('select-month');
+                        monthSelectList.classList.toggle('origami-select-month');
                     }, false);
                 }
 
@@ -212,31 +212,31 @@
                         currentYear = parseInt(this.innerText, 0);
                         var newSelectedYearDate = new Date(currentYear, currentMonth, 1);
 
-                        if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+                        if(document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
                         calendarLayout(newSelectedYearDate, options.disableDaysOfWeek);
-                        yearSelectList.classList.toggle('select-year');
+                        yearSelectList.classList.toggle('origami-select-year');
                     }, false);
                 }
 
                 // Close date modal
                 calBg.addEventListener('click', function(e){
-                    var activeDatepicker = document.querySelectorAll('.date-select-active');
+                    var activeDatepicker = document.querySelectorAll('.origami-date-select-active');
                     for (var i = 0; i < activeDatepicker.length; i++) {
-                        activeDatepicker[i].classList.remove('date-select-active');
+                        activeDatepicker[i].classList.remove('origami-date-select-active');
                     }
                 }, false);
                 calCancel.addEventListener('click', function(e){
                     e.preventDefault();
-                    var activeDatepicker = document.querySelectorAll('.date-select-active');
+                    var activeDatepicker = document.querySelectorAll('.origami-date-select-active');
                     for (var i = 0; i < activeDatepicker.length; i++) {
-                        activeDatepicker[i].classList.remove('date-select-active');
+                        activeDatepicker[i].classList.remove('origami-date-select-active');
                     }
                 }, false);
                 calOk.addEventListener('click', function(e){
                     e.preventDefault();
-                    var activeDatepicker = document.querySelectorAll('.date-select-active');
+                    var activeDatepicker = document.querySelectorAll('.origami-date-select-active');
                     for (var i = 0; i < activeDatepicker.length; i++) {
-                        activeDatepicker[i].classList.remove('date-select-active');
+                        activeDatepicker[i].classList.remove('origami-date-select-active');
                     }
                 }, false);
 
@@ -250,10 +250,10 @@
 
                     // Reset input value to empty
                     selectedInput.value = '';
-                    selectedInput.nextElementSibling.classList.remove('active');
+                    if (selectedInput.nextElementSibling && selectedInput.nextElementSibling.nodeName == 'LABEL') selectedInput.nextElementSibling.classList.remove('active');
 
                     // Remove selected date
-                    if(document.querySelector('#selected-date'))document.querySelector('#selected-date').removeAttribute('id');
+                    if(document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
 
                     // Reset calendar
                     calendarLayout(initialDate, options.disableDaysOfWeek);
@@ -262,16 +262,16 @@
 
                 // Month / Year selections
                 monthSelect.addEventListener('click', function() {
-                    if(document.querySelector('.select-year')) {
-                        document.querySelector('.select-year').classList.remove('select-year');
+                    if(document.querySelector('.origami-select-year')) {
+                        document.querySelector('.origami-select-year').classList.remove('origami-select-year');
                     }
-                    monthSelectList.classList.toggle('select-month');
+                    monthSelectList.classList.toggle('origami-select-month');
                 }, false);
                 yearSelect.addEventListener('click', function() {
-                    if(document.querySelector('.select-month')) {
-                        document.querySelector('.select-month').classList.remove('select-month');
+                    if(document.querySelector('.origami-select-month')) {
+                        document.querySelector('.origami-select-month').classList.remove('origami-select-month');
                     }
-                    yearSelectList.classList.toggle('select-year');
+                    yearSelectList.classList.toggle('origami-select-year');
                 }, false);
 
                 // Functions
@@ -284,16 +284,17 @@
 
                 //Create Calendar Elements
                 function calendarLayout(dateObject, unavailableArray) {
-                    var el = document.querySelectorAll('#calendar-dates a');
+                    var unavailable = unavailableArray || [];
+                    var el = document.querySelectorAll('#origami-calendar-dates a');
                     var startingDayName = new Date(dateObject.getFullYear(), dateObject.getMonth(), 1).getDay();
                     var lastDay = new Date(dateObject.getFullYear(), dateObject.getMonth() + 1, 0).getDate();
                     var dayName = startingDayName;
                     var unavailableDays = [];
 
                     // Unavailable days
-                    if (unavailableArray.length > 0) {
-                        for (var y = 0; y < unavailableArray.length; y++) {
-                            unavailableDays.push(dayNames.indexOf(unavailableArray[y]));
+                    if (unavailable.length > 0) {
+                        for (var y = 0; y < unavailable.length; y++) {
+                            unavailableDays.push(dayNames.indexOf(unavailable[y]));
                         }
                     }
 
@@ -324,7 +325,7 @@
 
                         el[startingDayName].style.cursor = 'pointer';
                         if (selectedDate && selectedDate.getFullYear() === dateObject.getFullYear() && selectedDate.getMonth() === dateObject.getMonth() && selectedDate.getDate() === i) {
-                            el[startingDayName].id = 'selected-date';
+                            el[startingDayName].id = 'origami-selected-date';
                         } else {
                             el[startingDayName].removeAttribute('id');
                         }
@@ -344,6 +345,8 @@
     // Create the calendar picker
     Datepicker.prototype.createDatepicker = function(options, callback) {
         options = options;
+        options.limitYearsBack = options.limitYearsBack || 100;
+        options.limitYearsForward = options.limitYearsForward || 100;
         var createWeekDays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
         var createMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         var createYears = [];
@@ -351,11 +354,11 @@
         var createCal = document.createElement('div');
 
         // Set array of ID's
-        var createCalSecondLevelArray = ['calendar-header', 'calendar-selection', 'calendar-wrap'];
-        var createCalThirdLevelArray = ['calendar-select-months', 'calendar-select-years', 'calendar-days', 'calendar-dates', 'calendar-footer'];
-        var createCalHeaderSelectedArray = ['current-selected-day', 'current-selected-year'];
-        var createCalSelectorArray = ['previous-month', 'calendar-listed-date', 'next-month'];
-        var createFooterArray = ['calendar-cancel', 'calendar-clear', 'calendar-ok'];
+        var createCalSecondLevelArray = ['origami-calendar-header', 'origami-calendar-selection', 'origami-calendar-wrap'];
+        var createCalThirdLevelArray = ['origami-calendar-select-months', 'origami-calendar-select-years', 'origami-calendar-days', 'origami-calendar-dates', 'origami-calendar-footer'];
+        var createCalHeaderSelectedArray = ['origami-current-selected-day', 'origami-current-selected-year'];
+        var createCalSelectorArray = ['origami-previous-month', 'origami-calendar-listed-date', 'origami-next-month'];
+        var createFooterArray = ['origami-calendar-cancel', 'origami-calendar-clear', 'origami-calendar-ok'];
 
         // Create fragments
         var createCalSecondLevel = document.createDocumentFragment();
@@ -369,9 +372,9 @@
         var createFooterFragment = document.createDocumentFragment();
 
         // Add classes / ID's
-        createCalBg.id = 'calendar-bg';
-        createCalBg.classList.add('flex-l', 'align-center-s', 'jesticy-center-s');
-        createCal.id = 'calendar';
+        createCalBg.id = 'origami-calendar-bg';
+        createCalBg.classList.add('flex-l', 'align-center-s', 'justify-center-s');
+        createCal.id = 'origami-calendar';
         createCal.classList.add('depth-5', 'ml-auto', 'mr-auto');
 
         // Create sub element layers
@@ -407,7 +410,7 @@
         createWeekDays.forEach(function(createWeekDays) {
             var calendarDivs = document.createElement('div');
             calendarDivs.innerText = createWeekDays;
-            calendarDivs.classList.add('calendar-box');
+            calendarDivs.classList.add('origami-calendar-box');
             createWeekDayFragment.appendChild(calendarDivs);
         });
 
@@ -431,7 +434,7 @@
         for (var i = 0; i < 42; i++) {
             var calendarAnchors = document.createElement('a');
             calendarAnchors.innerText = '';
-            calendarAnchors.classList.add('calendar-box');
+            calendarAnchors.classList.add('origami-calendar-box');
             calendarAnchors.href = '#';
             createDateFragment.appendChild(calendarAnchors);
         }
@@ -442,7 +445,7 @@
             var textString = createFooterArray.split('-');
             calendarAnchors.href = '#';
             calendarAnchors.id = createFooterArray;
-            calendarAnchors.innerText = textString[1].toUpperCase();
+            calendarAnchors.innerText = textString[2].toUpperCase();
             createFooterFragment.appendChild(calendarAnchors);
         });
 
@@ -450,15 +453,15 @@
         document.body.appendChild(createCalBg);
         document.body.appendChild(createCal);
         createCal.appendChild(createCalSecondLevel);
-        document.getElementById('calendar-wrap').appendChild(createCalThirdLevel);
-        document.getElementById('calendar-header').appendChild(createCalHeaderSelected);
-        document.getElementById('calendar-select-months').appendChild(createMonthFragment);
-        document.getElementById('calendar-selection').appendChild(createCalSelector);
-        document.getElementById('calendar-listed-date').innerHTML = '<span id="calendar-month"></span> - <span id="calendar-year"></span>';
-        document.getElementById('calendar-select-years').appendChild(createYearFragment);
-        document.getElementById('calendar-days').appendChild(createWeekDayFragment);
-        document.getElementById('calendar-dates').appendChild(createDateFragment);
-        document.getElementById('calendar-footer').appendChild(createFooterFragment);
+        document.getElementById('origami-calendar-wrap').appendChild(createCalThirdLevel);
+        document.getElementById('origami-calendar-header').appendChild(createCalHeaderSelected);
+        document.getElementById('origami-calendar-select-months').appendChild(createMonthFragment);
+        document.getElementById('origami-calendar-selection').appendChild(createCalSelector);
+        document.getElementById('origami-calendar-listed-date').innerHTML = '<span id="origami-calendar-month"></span> - <span id="origami-calendar-year"></span>';
+        document.getElementById('origami-calendar-select-years').appendChild(createYearFragment);
+        document.getElementById('origami-calendar-days').appendChild(createWeekDayFragment);
+        document.getElementById('origami-calendar-dates').appendChild(createDateFragment);
+        document.getElementById('origami-calendar-footer').appendChild(createFooterFragment);
 
         return callback();
 
@@ -503,12 +506,12 @@
         options = options || {};
 
         // Selectors
-        this.labeledElements = document.querySelectorAll('input[type=text], input[type=email], input[type=password], input[type=url], input[type=number], input[type=date], input[type=datetime], input[type=datetime-local], input[type=number], input[type=time], input[type=tel], textarea, select');
-        this.selectElements = document.querySelectorAll('select');
-        this.selectLabels = document.querySelectorAll('select-label');
-        this.textArea = document.querySelectorAll('textarea');
-        this.selectInput = document.querySelectorAll('select');
-        this.fileInput = document.querySelectorAll('input[type=file]');
+        this.labeledElements = document.querySelectorAll('.form-element input[type=text], .form-element input[type=email], .form-element input[type=password], .form-element input[type=url], .form-element input[type=number], .form-element input[type=date], .form-element input[type=datetime], .form-element input[type=datetime-local], .form-element input[type=number], .form-element input[type=time], .form-element input[type=tel], .form-element textarea, .form-element select');
+        this.selectElements = document.querySelectorAll('.form-element select');
+        this.selectLabels = document.querySelectorAll('.form-element select-label');
+        this.textArea = document.querySelectorAll('.form-element textarea');
+        this.selectInput = document.querySelectorAll('.form-element select');
+        this.fileInput = document.querySelectorAll('.form-element input[type=file]');
 
         // Append event listeners
             // Check elements associated with labels
