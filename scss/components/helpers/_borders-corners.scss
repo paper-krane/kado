@@ -1,0 +1,13 @@
+// CORNERS AND BORDERS
+
+// Corners
+// ============================================================ //
+.corners-circle {
+    border-radius: 50%;
+}
+.corners-rounded {
+    border-radius: $border-radius;
+}
+.corners-square {
+    border-radius: 0;
+}

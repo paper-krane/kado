@@ -1,0 +1,81 @@
+// TEXT HELPERS
+
+// Text alignment utilities
+// ============================================================ //
+.text-right {text-align: right;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+@media #{$m-and-up} {
+    .text-right-m {text-align: right;}
+    .text-left-m {text-align: left;}
+    .text-center-m {text-align: center;}
+}
+@media #{$l-and-up} {
+    .text-right-l {text-align: right;}
+    .text-left-l {text-align: left;}
+    .text-center-l {text-align: center;}
+}
+@media #{$xl-and-up} {
+    .text-right-xl {text-align: right;}
+    .text-left-xl {text-align: left;}
+    .text-center-xl {text-align: center;}
+}
+@media #{$xxl-and-up} {
+    .text-right-xxl {text-align: right;}
+    .text-left-xxl {text-align: left;}
+    .text-center-xxl {text-align: center;}
+}
+
+// Text size
+// ============================================================ //
+.text-small {font-size: .75em;}
+.text-large {font-size: 1.4em;}
+
+
+// Truncate
+// ============================================================ //
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+// Text styles
+// ============================================================ //
+.italic, em {
+    font-style: italic;
+}
+.bold, strong {
+    font-weight: 700;
+}
+.strike, strike {
+    text-decoration: line-through;
+}
+.normal {
+    font-weight: normal;
+}
+.light {
+    font-weight: 300;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+// Text colors
+// ============================================================ //
+.text-white {
+    color: $white;
+}
+.text-primary {
+    color: $primary-color;
+}
+.text-gradient {
+    background-image: linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+    background-image: -webkit-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

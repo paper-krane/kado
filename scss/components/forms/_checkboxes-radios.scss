@@ -31,7 +31,6 @@
     background-color: $form-border-color;
     cursor: pointer;
     transition: $transition-speed-fast;
-    -webkit-transition: $transition-speed-fast;
 }
 .origamiCheckbox span:before, .origamiRadio span:before {
     background: $primary-color;
@@ -51,7 +50,6 @@
     -ms-transform: rotate(45deg);
     cursor: pointer;
     transition: $transition-speed;
-    -webkit-transition: $transition-speed;
     opacity: 0;
 }
 
@@ -89,7 +87,6 @@
     left: 6px;
     background-color: $white;
     transition: $transition-speed;
-    -webkit-transition: $transition-speed;
     cursor: pointer;
     opacity: 0;
     border-radius: 50%;
@@ -137,7 +134,6 @@
         background: $primary-color;
         opacity: 0;
         transition: $transition-speed-fast;
-        -webkit-transition: $transition-speed-fast;
     }
     &:after {
         content: '';
@@ -149,7 +145,6 @@
         left: 1px;
         background: $white;
         transition: $transition-speed-fast;
-        -webkit-transition: $transition-speed-fast;
     }
 }
 

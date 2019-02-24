@@ -13,13 +13,11 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
-    -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
     // When active
     &.origami-date-select-active {
         opacity: 1;
         visibility: visible;
         transition: opacity 0.4s ease, visibility 0.4s ease;
-        -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
     }
 }
 
@@ -38,7 +36,6 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s;
-    -webkit-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s;
     // When active
     &.origami-date-select-active {
         visibility: visible;
@@ -47,7 +44,6 @@
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
-        -webkit-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
     }
 }
 #origami-calendar-header {
@@ -132,7 +128,6 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
-        -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
         a, a:visited, a:focus {
             color: $font-color;
             display: block;
@@ -145,7 +140,6 @@
         opacity: 1;
         visibility: visible;
         transition: opacity 0.4s ease, visibility 0.4s ease;
-        -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
     }
 }
 

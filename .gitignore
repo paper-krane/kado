@@ -1,10 +1,10 @@
+# files
 .DS_Store
-dist/.DS_Store
-docs
-docs/css/.DS_Store
-docs/js/.DS_Store
-docs/.DS_Store
-js/.DS_Store
-scss/.DS_Store
-scss/components/.DS_Store
+index.html
+
+# folders
+site
+_site
 node_modules
+site/Gemfile
+site/Gemfile.lock

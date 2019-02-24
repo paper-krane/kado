@@ -11,10 +11,10 @@
 // ============================================================ //
 
     // Media Queries
-    $mobile-screen: 599px !default;
-    $tablet-screen-down: 991px !default;
-    $desktop-screen-down: 1279px !default;
-    $desktop-large-screen-down: 1599px !default;
+    $mobile-screen: 599.98px !default;
+    $tablet-screen-down: 991.98px !default;
+    $desktop-screen-down: 1279.98px !default;
+    $desktop-large-screen-down: 1599.98px !default;
     $mobile-landscape-screen-up: 600px !default;
     $tablet-landscape-screen-up: 992px !default;
     $desktop-screen-up: 1280px !default;
@@ -29,6 +29,12 @@
     $xl-and-up: "only screen and (min-width : #{$desktop-screen-up})" !default;
     $xxl-and-up: "only screen and (min-width : #{$desktop-large-screen-up})" !default;
 
+    // Container max widths
+    $container: 1080px;
+    $container-s: 600px;
+    $container-m: 800px;
+    $container-xl: 1280px;
+    $container-xxl: 1600px;
 
     // Columns
     $num-cols: 12 !default;
@@ -74,14 +80,15 @@
 // ============================================================ //
 
     // Default color scheme
-    $primary-color: #007adf !default;
-    $secondary-color: #00ecbc !default;
+    $primary-color: #ff612f !default;
+    $secondary-color: #f76697 !default;
 
     // Quick colors
     $white: #FFFFFF;
     $black: #000000;
-    $light-grey: #f4f5f5;
+    $light-grey: #f2f2f2;
     $grey: #aaaaaa;
+    $deep-grey: #2a2a2a;
 
 
 // 4) Buttons
@@ -102,3 +109,14 @@
     $form-border-color: #d6d6d6;
 
     // Form Styles
+
+// 6) Navbars
+// ============================================================ //
+
+    // Text colors
+    $nav-bg-color: #000000;
+    $nav-bg-secondary-color: #0a0a0a;
+    $nav-bg-gradient: linear-gradient(45deg, $nav-bg-color, $nav-bg-secondary-color);
+    $nav-font-color: rgba(255,255,255,.6);
+    $nav-font-size: .875rem;
+    $nav-transition-speed-time: 0.4;

@@ -1,0 +1,104 @@
+// IFRAME / RATIO BASED CONTAINER HELPERS
+
+// Responsive iframes / ratio based containers
+// ============================================================ //
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ratio-16x9, .video-container, .ratio-1x1, .ratio-2x3, .ratio-3x2 {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+}
+.ratio-16x9, .video-container {
+    padding-bottom: 56.25%;
+}
+.ratio-1x1 {
+    padding-bottom: 100%;
+}
+.ratio-2x3 {
+    padding-bottom: 150%;
+}
+.ratio-3x2 {
+    padding-bottom: 66.666666667%;
+}
+@media #{$m-and-up} {
+    .ratio-16x9-m, .ratio-1x1-m, .ratio-2x3-m, .ratio-3x2-m {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-m {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-m {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-m {
+        padding-bottom: 150%;
+    }
+    .ratio-3x2-m {
+        padding-bottom: 66.666666667%;
+    }
+}
+@media #{$l-and-up} {
+    .ratio-16x9-l, .ratio-1x1-l, .ratio-2x3-l, .ratio-3x2-l {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-l {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-l {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-l {
+        padding-bottom: 150%;
+    }
+    .ratio-3x2-l {
+        padding-bottom: 66.666666667%;
+    }
+}
+@media #{$xl-and-up} {
+    .ratio-16x9-xl, .ratio-1x1-xl, .ratio-2x3-xl, .ratio-3x2-xl {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-xl {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-xl {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-xl {
+        padding-bottom: 150%;
+    }
+    .ratio-3x2-xl {
+        padding-bottom: 66.666666667%;
+    }
+}
+@media #{$xxl-and-up} {
+    .ratio-16x9-xxl, .ratio-1x1-xxl, .ratio-2x3-xxl, .ratio-3x2-xxl {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+    .ratio-16x9-xxl {
+        padding-bottom: 56.25%;
+    }
+    .ratio-1x1-xxl {
+        padding-bottom: 100%;
+    }
+    .ratio-2x3-xxl {
+        padding-bottom: 150%;
+    }
+    .ratio-3x2-xxl {
+        padding-bottom: 66.666666667%;
+    }
+}

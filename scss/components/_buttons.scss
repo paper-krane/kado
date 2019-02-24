@@ -27,7 +27,6 @@
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-	-webkit-transition: color $transition-speed-time ease;
 	transition: color $transition-speed-time ease;
 
     // Light button variation
@@ -49,9 +48,7 @@
     	bottom: 100%;
     	left: 0;
     	z-index: -1;
-    	-webkit-transition: -webkit-transform 0.3s;
     	transition: transform 0.3s;
-    	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
     	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
     }
 
@@ -136,7 +133,6 @@
     	transform: translate3d(0, 100%, 0);
     }
     &:hover::after {
-    	-webkit-transition-delay: 0.175s;
     	transition-delay: 0.175s;
     }
     &.btn-outline:hover {
@@ -145,36 +141,3 @@
         background-color: transparent;
     }
 }
-// .btn::before,
-// .btn::after {
-// 	content: '';
-// 	position: absolute;
-// 	height: 100%;
-// 	width: 100%;
-// 	bottom: 100%;
-// 	left: 0;
-// 	z-index: -1;
-// 	-webkit-transition: -webkit-transform 0.3s;
-// 	transition: transform 0.3s;
-// 	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-// 	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-// }
-// .btn::before {
-// 	background: $secondary-color;
-//     opacity: .5;
-// }
-// .btn::after {
-// 	background: $secondary-color;
-// }
-// .btn:hover {
-// 	color: #fff;
-// }
-// .btn:hover::before,
-// .btn:hover::after {
-// 	-webkit-transform: translate3d(0, 100%, 0);
-// 	transform: translate3d(0, 100%, 0);
-// }
-// .btn:hover::after {
-// 	-webkit-transition-delay: 0.175s;
-// 	transition-delay: 0.175s;
-// }

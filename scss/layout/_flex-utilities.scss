@@ -13,8 +13,8 @@
     display: -webkit-inline-flex;
     display: inline-flex;
 }
-.flex, .flex-s {@include display-flex();}
-.inline-flex, .inline-flex-s {@include display-inline-flex();}
+.flex {@include display-flex();}
+.inline-flex {@include display-inline-flex();}
 @media #{$m-and-up} {
     .flex-m {@include display-flex();}
     .inline-flex-m {@include display-inline-flex();}
@@ -43,10 +43,10 @@
     -ms-flex-direction: $direction;
     flex-direction: $direction;
 }
-.row-normal, .row-normal-s {@include flex-directions(horizontal, normal, row);}
-.row-reverse, .row-reverse-s {@include flex-directions(horizontal, reverse, row-reverse);}
-.column, .column-s {@include flex-directions(vertical, normal, column);}
-.column-reverse, .column-reverse-s {@include flex-directions(vertical, normal, column-reverse);}
+.row-normal {@include flex-directions(horizontal, normal, row);}
+.row-reverse {@include flex-directions(horizontal, reverse, row-reverse);}
+.column {@include flex-directions(vertical, normal, column);}
+.column-reverse {@include flex-directions(vertical, normal, column-reverse);}
 @media #{$m-and-up} {
     .row-normal-m {@include flex-directions(horizontal, normal, row);}
     .row-reverse-m {@include flex-directions(horizontal, reverse, row-reverse);}
@@ -82,38 +82,38 @@
     -ms-flex-pack: $value-1;
     justify-content: $value-2;
 }
-.content-x-left, .content-x-left-s {@include flex-justify(start, flex-start);}
-.content-x-right, .content-x-right-s {@include flex-justify(end, flex-end);}
-.content-x-center, .content-x-center-s {@include flex-justify(center, center);}
-.content-x-space-between, .content-x-space-between-s {@include flex-justify(justify, space-between);}
-.content-x-space-around, .content-x-space-around-s {@include flex-justify(distribute, space-around);}
+.justify-start {@include flex-justify(start, flex-start);}
+.justify-end {@include flex-justify(end, flex-end);}
+.justify-center {@include flex-justify(center, center);}
+.justify-space-between {@include flex-justify(justify, space-between);}
+.justify-space-around {@include flex-justify(distribute, space-around);}
 @media #{$m-and-up} {
-    .content-x-left-m {@include flex-justify(start, flex-start);}
-    .content-x-right-m {@include flex-justify(end, flex-end);}
-    .content-x-center-m {@include flex-justify(center, center);}
-    .content-x-space-between-m {@include flex-justify(justify, space-between);}
-    .content-x-space-around-m {@include flex-justify(distribute, space-around);}
+    .justify-start-m {@include flex-justify(start, flex-start);}
+    .justify-end-m {@include flex-justify(end, flex-end);}
+    .justify-center-m {@include flex-justify(center, center);}
+    .justify-space-between-m {@include flex-justify(justify, space-between);}
+    .justify-space-around-m {@include flex-justify(distribute, space-around);}
 }
 @media #{$l-and-up} {
-    .content-x-left-l {@include flex-justify(start, flex-start);}
-    .content-x-right-l {@include flex-justify(end, flex-end);}
-    .content-x-center-l {@include flex-justify(center, center);}
-    .content-x-space-between-l {@include flex-justify(justify, space-between);}
-    .content-x-space-around-l {@include flex-justify(distribute, space-around);}
+    .justify-start-l {@include flex-justify(start, flex-start);}
+    .justify-end-l {@include flex-justify(end, flex-end);}
+    .justify-center-l {@include flex-justify(center, center);}
+    .justify-space-between-l {@include flex-justify(justify, space-between);}
+    .justify-space-around-l {@include flex-justify(distribute, space-around);}
 }
 @media #{$xl-and-up} {
-    .content-x-left-xl {@include flex-justify(start, flex-start);}
-    .content-x-right-xl {@include flex-justify(end, flex-end);}
-    .content-x-center-xl {@include flex-justify(center, center);}
-    .content-x-space-between-xl {@include flex-justify(justify, space-between);}
-    .content-x-space-around-xl {@include flex-justify(distribute, space-around);}
+    .justify-start-xl {@include flex-justify(start, flex-start);}
+    .justify-end-xl {@include flex-justify(end, flex-end);}
+    .justify-center-xl {@include flex-justify(center, center);}
+    .justify-space-between-xl {@include flex-justify(justify, space-between);}
+    .justify-space-around-xl {@include flex-justify(distribute, space-around);}
 }
 @media #{$xxl-and-up} {
-    .content-x-left-xxl {@include flex-justify(start, flex-start);}
-    .content-x-right-xxl {@include flex-justify(end, flex-end);}
-    .content-x-center-xxl {@include flex-justify(center, center);}
-    .content-x-space-between-xxl {@include flex-justify(justify, space-between);}
-    .content-x-space-around-xxl {@include flex-justify(distribute, space-around);}
+    .justify-start-xxl {@include flex-justify(start, flex-start);}
+    .justify-end-xxl {@include flex-justify(end, flex-end);}
+    .justify-center-xxl {@include flex-justify(center, center);}
+    .justify-space-between-xxl {@include flex-justify(justify, space-between);}
+    .justify-space-around-xxl {@include flex-justify(distribute, space-around);}
 }
 
 
@@ -126,38 +126,38 @@
     -ms-flex-align: $value-1;
     align-items: $value-2;
 }
-.content-y-top, .content-y-top-s {@include flex-align(start, flex-start);}
-.content-y-bottom, .content-y-bottom-s {@include flex-align(end, flex-end);}
-.content-y-center, .content-y-center-s {@include flex-align(center, center);}
-.content-y-baseline, .content-y-baseline-s {@include flex-align(baseline, baseline);}
-.content-y-stretch, .content-y-stretch-s {@include flex-align(stretch, stretch);}
+.align-start {@include flex-align(start, flex-start);}
+.align-end {@include flex-align(end, flex-end);}
+.align-center {@include flex-align(center, center);}
+.align-baseline {@include flex-align(baseline, baseline);}
+.align-stretch {@include flex-align(stretch, stretch);}
 @media #{$m-and-up} {
-    .content-y-top-m {@include flex-align(start, flex-start);}
-    .content-y-bottom-m {@include flex-align(end, flex-end);}
-    .content-y-center-m {@include flex-align(center, center);}
-    .content-y-baseline-m {@include flex-align(baseline, baseline);}
-    .content-y-stretch-m {@include flex-align(stretch, stretch);}
+    .align-start-m {@include flex-align(start, flex-start);}
+    .align-end-m {@include flex-align(end, flex-end);}
+    .align-center-m {@include flex-align(center, center);}
+    .align-baseline-m {@include flex-align(baseline, baseline);}
+    .align-stretch-m {@include flex-align(stretch, stretch);}
 }
 @media #{$l-and-up} {
-    .content-y-top-l {@include flex-align(start, flex-start);}
-    .content-y-bottom-l {@include flex-align(end, flex-end);}
-    .content-y-center-l {@include flex-align(center, center);}
-    .content-y-baseline-l {@include flex-align(baseline, baseline);}
-    .content-y-stretch-l {@include flex-align(stretch, stretch);}
+    .align-start-l {@include flex-align(start, flex-start);}
+    .align-end-l {@include flex-align(end, flex-end);}
+    .align-center-l {@include flex-align(center, center);}
+    .align-baseline-l {@include flex-align(baseline, baseline);}
+    .align-stretch-l {@include flex-align(stretch, stretch);}
 }
 @media #{$xl-and-up} {
-    .content-y-top-xl {@include flex-align(start, flex-start);}
-    .content-y-bottom-xl {@include flex-align(end, flex-end);}
-    .content-y-center-xl {@include flex-align(center, center);}
-    .content-y-baseline-xl {@include flex-align(baseline, baseline);}
-    .content-y-stretch-xl {@include flex-align(stretch, stretch);}
+    .align-start-xl {@include flex-align(start, flex-start);}
+    .align-end-xl {@include flex-align(end, flex-end);}
+    .align-center-xl {@include flex-align(center, center);}
+    .align-baseline-xl {@include flex-align(baseline, baseline);}
+    .align-stretch-xl {@include flex-align(stretch, stretch);}
 }
 @media #{$xxl-and-up} {
-    .content-y-top-xxl {@include flex-align(start, flex-start);}
-    .content-y-bottom-xxl {@include flex-align(end, flex-end);}
-    .content-y-center-xxl {@include flex-align(center, center);}
-    .content-y-baseline-xxl {@include flex-align(baseline, baseline);}
-    .content-y-stretch-xxl {@include flex-align(stretch, stretch);}
+    .align-start-xxl {@include flex-align(start, flex-start);}
+    .align-end-xxl {@include flex-align(end, flex-end);}
+    .align-center-xxl {@include flex-align(center, center);}
+    .align-baseline-xxl {@include flex-align(baseline, baseline);}
+    .align-stretch-xxl {@include flex-align(stretch, stretch);}
 }
 
 
@@ -169,35 +169,35 @@
     -ms-flex-item-align: $value-1;
     align-self: $value-2;
 }
-.align-self-top, .align-self-top-s {@include flex-align-self(start, flex-start);}
-.align-self-bottom, .align-self-bottom-s {@include flex-align-self(end, flex-end);}
-.align-self-center, .align-self-center-s {@include flex-align-self(center, center);}
-.align-self-baseline, .align-self-baseline-s {@include flex-align-self(baseline, baseline);}
-.align-self-stretch, .align-self-stretch-s {@include flex-align-self(stretch, stretch);}
+.align-self-start {@include flex-align-self(start, flex-start);}
+.align-self-end {@include flex-align-self(end, flex-end);}
+.align-self-center {@include flex-align-self(center, center);}
+.align-self-baseline {@include flex-align-self(baseline, baseline);}
+.align-self-stretch {@include flex-align-self(stretch, stretch);}
 @media #{$m-and-up} {
-    .align-self-top-m {@include flex-align-self(start, flex-start);}
-    .align-self-bottom-m {@include flex-align-self(end, flex-end);}
+    .align-self-start-m {@include flex-align-self(start, flex-start);}
+    .align-self-end-m {@include flex-align-self(end, flex-end);}
     .align-self-center-m {@include flex-align-self(center, center);}
     .align-self-baseline-m {@include flex-align-self(baseline, baseline);}
     .align-self-stretch-m {@include flex-align-self(stretch, stretch);}
 }
 @media #{$l-and-up} {
-    .align-self-top-l {@include flex-align-self(start, flex-start);}
-    .align-self-bottom-l {@include flex-align-self(end, flex-end);}
+    .align-self-start-l {@include flex-align-self(start, flex-start);}
+    .align-self-end-l {@include flex-align-self(end, flex-end);}
     .align-self-center-l {@include flex-align-self(center, center);}
     .align-self-baseline-l {@include flex-align-self(baseline, baseline);}
     .align-self-stretch-l {@include flex-align-self(stretch, stretch);}
 }
 @media #{$xl-and-up} {
-    .align-self-top-xl {@include flex-align-self(start, flex-start);}
-    .align-self-bottom-xl {@include flex-align-self(end, flex-end);}
+    .align-self-start-xl {@include flex-align-self(start, flex-start);}
+    .align-self-end-xl {@include flex-align-self(end, flex-end);}
     .align-self-center-xl {@include flex-align-self(center, center);}
     .align-self-baseline-xl {@include flex-align-self(baseline, baseline);}
     .align-self-stretch-xl {@include flex-align-self(stretch, stretch);}
 }
 @media #{$xxl-and-up} {
-    .align-self-top-xxl {@include flex-align-self(start, flex-start);}
-    .align-self-bottom-xxl {@include flex-align-self(end, flex-end);}
+    .align-self-start-xxl {@include flex-align-self(start, flex-start);}
+    .align-self-end-xxl {@include flex-align-self(end, flex-end);}
     .align-self-center-xxl {@include flex-align-self(center, center);}
     .align-self-baseline-xxl {@include flex-align-self(baseline, baseline);}
     .align-self-stretch-xxl {@include flex-align-self(stretch, stretch);}
@@ -212,7 +212,7 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 }
-.fill, .fill-s {@include flex-fill;}
+.fill {@include flex-fill;}
 @media #{$m-and-up} {
     .fill-m {@include flex-fill;}
 }
@@ -231,10 +231,10 @@
 
 // 7) Grow & Shrink
 // ============================================================ //
-.flex-grow, .flex-grow-s {-ms-flex-positive: 1;flex-grow: 1;}
-.flex-grow-initial, .flex-grow-initial-s {-ms-flex-positive: 0;flex-grow: 0;}
-.flex-shrink, .flex-shrink-s {-ms-flex-negative: 1;flex-shrink: 1;}
-.flex-shrink-initial, .flex-shrink-initial-s {-ms-flex-negative: 0;flex-shrink: 0;}
+.flex-grow {-ms-flex-positive: 1;flex-grow: 1;}
+.flex-grow-initial {-ms-flex-positive: 0;flex-grow: 0;}
+.flex-shrink {-ms-flex-negative: 1;flex-shrink: 1;}
+.flex-shrink-initial {-ms-flex-negative: 0;flex-shrink: 0;}
 @media #{$m-and-up} {
     .flex-grow-m {-ms-flex-positive: 1;flex-grow: 1;}
     .flex-grow-initial-m {-ms-flex-positive: 0;flex-grow: 0;}
@@ -287,9 +287,9 @@
     -ms-flex-wrap: $wrap-type;
     flex-wrap: $wrap-type;
 }
-.wrap, .wrap-s {@include flex-wrap(wrap);}
-.wrap-none, .wrap-none-s {@include flex-wrap(nowrap);}
-.wrap-reverse, .wrap-reverse-s {@include flex-wrap(wrap-reverse);}
+.wrap {@include flex-wrap(wrap);}
+.wrap-none {@include flex-wrap(nowrap);}
+.wrap-reverse {@include flex-wrap(wrap-reverse);}
 @media #{$m-and-up} {
     .wrap-m {@include flex-wrap(wrap);}
     .wrap-none-m {@include flex-wrap(nowrap);}
@@ -313,16 +313,16 @@
 
 // 11) Order
 // ============================================================ //
-$i: 1;
+$i: 0;
 @while $i <= $num-cols {
-    .order-#{$i}, .order-#{$i}-s {
+    .order-#{$i} {
         -ms-flex-order: $i;
         order: $i;
     }
     $i: $i + 1;
 }
 @media #{$m-and-up} {
-    $i: 1;
+    $i: 0;
     @while $i <= $num-cols {
         .order-#{$i}-m {
             -ms-flex-order: $i;
@@ -332,7 +332,7 @@ $i: 1;
     }
 }
 @media #{$l-and-up} {
-    $i: 1;
+    $i: 0;
     @while $i <= $num-cols {
         .order-#{$i}-l {
             -ms-flex-order: $i;
@@ -342,7 +342,7 @@ $i: 1;
     }
 }
 @media #{$xl-and-up} {
-    $i: 1;
+    $i: 0;
     @while $i <= $num-cols {
         .order-#{$i}-xl {
             -ms-flex-order: $i;
@@ -353,7 +353,7 @@ $i: 1;
 }
 
 @media #{$xxl-and-up} {
-    $i: 1;
+    $i: 0;
     @while $i <= $num-cols {
         .order-#{$i}-xxl {
             -ms-flex-order: $i;
@@ -369,43 +369,43 @@ $i: 1;
     -ms-flex-line-pack: $value-1;
     align-content: $value-2;
 }
-.align-rows-start, .align-rows-start-s {@include align-rows(start, flex-start);}
-.align-rows-end, .align-rows-end-s {@include align-rows(end, flex-end);}
-.align-rows-center, .align-rows-center-s {@include align-rows(center, center)}
-.align-rows-between, .align-rows-between-s {@include align-rows(justify, space-between)}
-.align-rows-around, .align-rows-around-s {@include align-rows(distribute, space-around)}
-.align-rows-stretch, .align-rows-stretch-s {@include align-rows(stretch, stretch)}
+.align-content-start {@include align-rows(start, flex-start);}
+.align-content-end {@include align-rows(end, flex-end);}
+.align-content-center {@include align-rows(center, center)}
+.align-content-between {@include align-rows(justify, space-between)}
+.align-content-around {@include align-rows(distribute, space-around)}
+.align-content-stretch {@include align-rows(stretch, stretch)}
 @media #{$m-and-up} {
-    .align-rows-start-m {@include align-rows(start, flex-start);}
-    .align-rows-end-m {@include align-rows(end, flex-end);}
-    .align-rows-center-m {@include align-rows(center, center)}
-    .align-rows-between-m {@include align-rows(justify, space-between)}
-    .align-rows-around-m {@include align-rows(distribute, space-around)}
-    .align-rows-stretch-m {@include align-rows(stretch, stretch)}
+    .align-content-start-m {@include align-rows(start, flex-start);}
+    .align-content-end-m {@include align-rows(end, flex-end);}
+    .align-content-center-m {@include align-rows(center, center)}
+    .align-content-between-m {@include align-rows(justify, space-between)}
+    .align-content-around-m {@include align-rows(distribute, space-around)}
+    .align-content-stretch-m {@include align-rows(stretch, stretch)}
 }
 @media #{$l-and-up} {
-    .align-rows-start-l {@include align-rows(start, flex-start);}
-    .align-rows-end-l {@include align-rows(end, flex-end);}
-    .align-rows-center-l {@include align-rows(center, center)}
-    .align-rows-between-l {@include align-rows(justify, space-between)}
-    .align-rows-around-l {@include align-rows(distribute, space-around)}
-    .align-rows-stretch-l {@include align-rows(stretch, stretch)}
+    .align-content-start-l {@include align-rows(start, flex-start);}
+    .align-content-end-l {@include align-rows(end, flex-end);}
+    .align-content-center-l {@include align-rows(center, center)}
+    .align-content-between-l {@include align-rows(justify, space-between)}
+    .align-content-around-l {@include align-rows(distribute, space-around)}
+    .align-content-stretch-l {@include align-rows(stretch, stretch)}
 }
 @media #{$xl-and-up} {
-    .align-rows-start-xl {@include align-rows(start, flex-start);}
-    .align-rows-end-xl {@include align-rows(end, flex-end);}
-    .align-rows-center-xl {@include align-rows(center, center)}
-    .align-rows-between-xl {@include align-rows(justify, space-between)}
-    .align-rows-around-xl {@include align-rows(distribute, space-around)}
-    .align-rows-stretch-xl {@include align-rows(stretch, stretch)}
+    .align-content-start-xl {@include align-rows(start, flex-start);}
+    .align-content-end-xl {@include align-rows(end, flex-end);}
+    .align-content-center-xl {@include align-rows(center, center)}
+    .align-content-between-xl {@include align-rows(justify, space-between)}
+    .align-content-around-xl {@include align-rows(distribute, space-around)}
+    .align-content-stretch-xl {@include align-rows(stretch, stretch)}
 }
 @media #{$xxl-and-up} {
-    .align-rows-start-xxl {@include align-rows(start, flex-start);}
-    .align-rows-end-xxl {@include align-rows(end, flex-end);}
-    .align-rows-center-xxl {@include align-rows(center, center)}
-    .align-rows-between-xxl {@include align-rows(justify, space-between)}
-    .align-rows-around-xxl {@include align-rows(distribute, space-around)}
-    .align-rows-stretch-xxl {@include align-rows(stretch, stretch)}
+    .align-content-start-xxl {@include align-rows(start, flex-start);}
+    .align-content-end-xxl {@include align-rows(end, flex-end);}
+    .align-content-center-xxl {@include align-rows(center, center)}
+    .align-content-between-xxl {@include align-rows(justify, space-between)}
+    .align-content-around-xxl {@include align-rows(distribute, space-around)}
+    .align-content-stretch-xxl {@include align-rows(stretch, stretch)}
 }
 
 
@@ -416,7 +416,7 @@ $i: 1;
     -ms-flex-pack: center;
     justify-content: center;
 }
-.content-center, .content-center-s {
+.content-center {
     @include content-center;
 }
 @media #{$m-and-up} {

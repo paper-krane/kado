@@ -1,0 +1,21 @@
+// Miscellaneous Helpers
+
+// Float fix
+// ============================================================ //
+.float-fix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+// Positioning
+// ============================================================ //
+.relative {
+    position: relative;
+}
+
+// Display helpers
+// ============================================================ //
+.block {display: block;}
+.inline-block {display: inline-block;}
+.inline {display: inline;}

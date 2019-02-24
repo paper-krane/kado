@@ -62,8 +62,8 @@ gulp.task("default", gulp.series(["clean", "sassCompiler", "scriptCompiler"]), f
 });
 
 gulp.task("watchFiles", function(){
-    gulp.watch(["scss/**/*.scss", "scss/*.scss"], ["compileSass"]);
-    gulp.watch(["js/*.js"], ["concatScripts"]);
+    gulp.watch(["scss/**/*.scss", "scss/*.scss"], ["sassCompiler"]);
+    gulp.watch(["js/*.js"], ["scriptCompiler"]);
 });
 
 // Default setting of tasks

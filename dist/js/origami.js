@@ -40,15 +40,19 @@
         };
 
         // Check for datepicker elements
+        // --------------------------------------------------
         this.datepickerElements = document.querySelectorAll('.datepicker');
 
         // Generate calendar HTML if .datepicker elements are on page.
+        // --------------------------------------------------
         if(this.datepickerElements.length > 0) {
             this.createDatepicker(options, function() {
 
                 // Ensures form has been created and allows the creation of event listeners
+                // --------------------------------------------------
 
                 // Variables
+                // --------------------------------------------------
                 var selectedInput;
                 var selectedCalBox;
                 var selectedDate;
@@ -131,6 +135,7 @@
                 }
 
                 // Check date when button pushed
+                // --------------------------------------------------
                 for (var box = 0; box < calBox.length; box ++) {
                     calBox[box].addEventListener('click', function(e){
                         e.preventDefault();
@@ -166,7 +171,8 @@
                     }, false);
                 }
 
-                //Check for previous and next month spans being clicked
+                // Check for previous and next month spans being clicked
+                // --------------------------------------------------
                 prev.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -184,16 +190,17 @@
                 next.addEventListener('click', function(e) {
                     e.preventDefault();
                     currentMonth ++;
-                    var nextMonth = new Date(initialDate.getFullYear(), currentMonth);
+                    var nextMonth = new Date(currentYear, currentMonth);
 
                     if(nextMonth.getMonth() < 0) {
-                        nextMonth = new Date(initialDate.getFullYear() + 1, currentMonth - 1);
+                        nextMonth = new Date(currentYear + 1, currentMonth - 1);
                     }
                     if(document.querySelector('#origami-selected-date'))document.querySelector('#origami-selected-date').removeAttribute('id');
                     calendarLayout(nextMonth, options.disableDaysOfWeek);
                 }, false);
 
                 // Set new month from selection
+                // --------------------------------------------------
                 for (var m = 0; m < monthSelectListAnchors.length; m ++) {
                     monthSelectListAnchors[m].addEventListener('click', function(e) {
                         e.preventDefault();

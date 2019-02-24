@@ -1,0 +1,29 @@
+// HIDE HELPERS
+
+// Hide
+// ============================================================ //
+.hide {display: none !important;}
+@media #{$s-and-down} {
+    .hide-s-down {display: none !important;}
+}
+@media #{$m-and-down} {
+    .hide-m-down {display: none !important;}
+}
+@media #{$l-and-down} {
+    .hide-l-down {display: none !important;}
+}
+@media #{$xl-and-down} {
+    .hide-xl-down {display: none !important;}
+}
+@media #{$m-and-up} {
+    .hide-m-up {display: none !important;}
+}
+@media #{$l-and-up} {
+    .hide-l-up {display: none !important;}
+}
+@media #{$xl-and-up} {
+    .hide-xl-up {display: none !important;}
+}
+@media #{$xxl-and-up} {
+    .hide-xxl-up {display: none !important;}
+}

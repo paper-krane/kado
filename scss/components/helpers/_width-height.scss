@@ -1,0 +1,123 @@
+// WIDTH AND HEIGHT HELPERS
+
+// Height quick classes (using viewport height)
+// ============================================================ //
+.height-auto {
+    height: auto;
+}
+$i: 1;
+@while $i <= 10 {
+    .height-#{$i}0 {
+        height: #{$i}0vh;
+    }
+    $i: $i + 1;
+}
+@media #{$m-and-up} {
+    .height-auto-m {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-m {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$l-and-up} {
+    .height-auto-l {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-l {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .height-auto-xl {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-xl {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .height-auto-xxl {
+        height: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .height-#{$i}0-xxl {
+            height: #{$i}0vh;
+        }
+        $i: $i + 1;
+    }
+}
+
+// Width
+// ============================================================ //
+.width-auto {
+    width: auto;
+}
+$i: 1;
+@while $i <= 10 {
+    .width-#{$i}0 {
+        width: #{$i}0%;
+    }
+    $i: $i + 1;
+}
+@media #{$m-and-up} {
+    .width-auto-m {
+        width: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .width-#{$i}0-m {
+            width: #{$i}0%;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$l-and-up} {
+    .width-auto-l {
+        width: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .width-#{$i}0-l {
+            width: #{$i}0%;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .width-auto-xl {
+        width: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .width-#{$i}0-xl {
+            width: #{$i}0%;
+        }
+        $i: $i + 1;
+    }
+}
+@media #{$xl-and-up} {
+    .width-auto-xxl {
+        width: auto;
+    }
+    $i: 1;
+    @while $i <= 10 {
+        .width-#{$i}0-xxl {
+            width: #{$i}0%;
+        }
+        $i: $i + 1;
+    }
+}

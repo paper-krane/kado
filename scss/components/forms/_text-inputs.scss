@@ -38,7 +38,6 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     transition: $transition-speed-fast;
-    -webkit-transition: $transition-speed-fast;
 }
 select::-ms-expand {
     display: none;
@@ -54,7 +53,6 @@ select::-ms-expand {
     font-weight: 300;
     color: $label-color;
     transition: $transition-speed-fast;
-    -webkit-transition: $transition-speed-fast;
 }
 .col {
     &.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,

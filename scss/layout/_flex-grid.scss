@@ -7,19 +7,19 @@
 
 .container {
     margin: 0 auto;
-    max-width: 1080px;
+    max-width: $container;
     width: 90%;
     &.s {
-        max-width: 600px;
+        max-width: $container-s;
     }
     &.m {
-        max-width: 800px;
+        max-width: $container-m;
     }
     &.xl {
-        max-width: 1280px;
+        max-width: $container-xl;
     }
     &.xxl {
-        max-width: 1600px;
+        max-width: $container-xxl;
     }
     &.full-width {
         max-width: 100%;
@@ -78,6 +78,13 @@
             width: auto;
             max-width: 100%;
         }
+        &.s-fluid {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+        }
 
         $i: 1;
         @while $i <= $num-cols {
@@ -103,6 +110,13 @@
                 -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
                 width: auto;
+                max-width: 100%;
+            }
+            &.m-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
                 max-width: 100%;
             }
 
@@ -134,6 +148,13 @@
                 width: auto;
                 max-width: 100%;
             }
+            &.l-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
 
             $i: 1;
             @while $i <= $num-cols {
@@ -163,6 +184,13 @@
                 width: auto;
                 max-width: 100%;
             }
+            &.xl-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
 
             $i: 1;
             @while $i <= $num-cols {
@@ -190,6 +218,13 @@
                 -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
                 width: auto;
+                max-width: 100%;
+            }
+            &.xxl-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
                 max-width: 100%;
             }
 
