@@ -14,12 +14,12 @@
         options = options || {};
 
         // Selectors
-        this.labeledElements = document.querySelectorAll('.form-element input[type=text], .form-element input[type=email], .form-element input[type=password], .form-element input[type=url], .form-element input[type=number], .form-element input[type=date], .form-element input[type=datetime], .form-element input[type=datetime-local], .form-element input[type=number], .form-element input[type=time], .form-element input[type=tel], .form-element textarea, .form-element select');
-        this.selectElements = document.querySelectorAll('.form-element select');
-        this.selectLabels = document.querySelectorAll('.form-element select-label');
-        this.textArea = document.querySelectorAll('.form-element textarea');
-        this.selectInput = document.querySelectorAll('.form-element select');
-        this.fileInput = document.querySelectorAll('.form-element input[type=file]');
+        this.labeledElements = document.querySelectorAll('.form-element input[type=text]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=email]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=password]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=url]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=number]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=date]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=datetime]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=datetime-local]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=time]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=tel]:not(:disabled):not(.disabled):not([readonly]), .form-element textarea:not(:disabled):not(.disabled):not([readonly]), .form-element select:not(:disabled):not(.disabled):not([readonly])');
+        this.selectElements = document.querySelectorAll('.form-element select:not(:disabled):not(.disabled):not([readonly])');
+        this.selectLabels = document.querySelectorAll('.form-element select-label:not(:disabled):not(.disabled):not([readonly])');
+        this.textArea = document.querySelectorAll('.form-element textarea:not(:disabled):not(.disabled):not([readonly])');
+        this.selectInput = document.querySelectorAll('.form-element select:not(:disabled):not(.disabled):not([readonly])');
+        this.fileInput = document.querySelectorAll('.form-element input[type=file]:not(:disabled):not(.disabled):not([readonly])');
 
         // Append event listeners
             // Check elements associated with labels

@@ -336,7 +336,7 @@ a, a:visited {
   transition: all 0.4s ease; }
 
 a:hover, a:focus {
-  color: #f76697; }
+  color: #e63700; }
 
 a * {
   pointer-events: none; }
@@ -1856,10 +1856,16 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-  transition: color 0.4s ease; }
+  transition: all 0.4s ease; }
   .btn.btn-light, .btn:visited.btn-light, .btn:focus.btn-light {
     background-color: #FFFFFF;
     color: #000000; }
+  .btn.btn-standard, .btn:visited.btn-standard, .btn:focus.btn-standard {
+    background-color: #ff612f; }
+    .btn.btn-standard::before, .btn.btn-standard::after, .btn:visited.btn-standard::before, .btn:visited.btn-standard::after, .btn:focus.btn-standard::before, .btn:focus.btn-standard::after {
+      content: none; }
+    .btn.btn-standard:hover, .btn:visited.btn-standard:hover, .btn:focus.btn-standard:hover {
+      background-color: #e63700; }
   .btn::before, .btn::after, .btn:visited::before, .btn:visited::after, .btn:focus::before, .btn:focus::after {
     content: '';
     background: #ff612f;
@@ -1984,7 +1990,7 @@ select::-ms-expand {
 .no-js .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label,
 .no-js .form-element textarea + label,
 .no-js .form-element select + label {
-  top: 8px !important;
+  top: 6px !important;
   font-size: 10px !important; }
 
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus,
@@ -2048,18 +2054,31 @@ select::-ms-expand {
   resize: vertical !important; }
 
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
-.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):read-only,
+.form-element input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
 .form-element textarea:disabled,
 .form-element select:disabled {
   background-color: #f2f2f2;
   opacity: .4;
   cursor: not-allowed; }
   .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled + label,
-  .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):read-only + label,
+  .form-element input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]) + label,
   .form-element textarea:disabled + label,
   .form-element select:disabled + label {
     opacity: .4;
     cursor: not-allowed; }
+  .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled:focus,
+  .form-element input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus,
+  .form-element textarea:disabled:focus,
+  .form-element select:disabled:focus {
+    border-color: #d6d6d6; }
+    .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled:focus + label,
+    .form-element input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus + label,
+    .form-element textarea:disabled:focus + label,
+    .form-element select:disabled:focus + label {
+      top: 16px;
+      opacity: .4;
+      font-size: 1rem;
+      color: #8a8a8a !important; }
 
 .origamiCheckbox, .origamiRadio {
   position: relative;

@@ -27,12 +27,25 @@
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-	transition: color $transition-speed-time ease;
+	transition: all $transition-speed-time ease;
 
     // Light button variation
     &.btn-light {
         background-color: $white;
         color: $black;
+    }
+
+    &.btn-standard {
+        background-color: $primary-color;
+
+        &::before,
+        &::after {
+        	content: none;
+        }
+
+        &:hover {
+            background-color: $primary-accent-color;
+        }
     }
 
     // Psuedo elements

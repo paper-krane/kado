@@ -65,7 +65,7 @@ select::-ms-expand {
     .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
     .form-element textarea+label,
     .form-element select+label {
-        top: 8px !important;
+        top: 6px !important;
         font-size: 10px !important;
     }
 }
@@ -140,7 +140,7 @@ select::-ms-expand {
 
 // Disabled styles
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
-.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):read-only,
+.form-element input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
 .form-element textarea:disabled,
 .form-element select:disabled {
     background-color: $light-grey;
@@ -149,5 +149,16 @@ select::-ms-expand {
     &+label {
         opacity: .4;
         cursor: not-allowed;
+    }
+
+    &:focus {
+        border-color: $form-border-color;
+
+        &+label {
+            top: 16px;
+            opacity: .4;
+            font-size: 1rem;
+            color: $label-color !important;
+        }
     }
 }
