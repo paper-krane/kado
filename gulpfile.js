@@ -19,8 +19,7 @@ gulp.task("clean", function(done){
 // Concatinate scripts
 gulp.task("concatScripts", function() {
     // Add '.pipe(babel({presets: ['env']}))' for Babel if need be.
-    return gulp.src([
-    'js/*.js'])
+    return gulp.src('js/*.js')
     .pipe(maps.init())
     .pipe(concat('origami.js'))
     .pipe(maps.write('./'))
@@ -46,7 +45,7 @@ gulp.task("sass", function(){
     .pipe(gulp.dest('dist/css'));
 });
 
-// Minify class
+// Minify css
 gulp.task("miniCSS", function(done) {
     gulp.src('dist/css/origami.css')
     .pipe(cleanCSS())
@@ -61,10 +60,6 @@ gulp.task("default", gulp.series(["clean", "sassCompiler", "scriptCompiler"]), f
     done();
 });
 
-gulp.task("watchFiles", function(){
-    gulp.watch(["scss/**/*.scss", "scss/*.scss"], ["sassCompiler"]);
-    gulp.watch(["js/*.js"], ["scriptCompiler"]);
+gulp.task("watch", function(){
+    gulp.watch(["scss/**/**/*.scss", "js/*.js"], gulp.series(["clean", "sassCompiler", "scriptCompiler"]));
 });
-
-// Default setting of tasks
-// gulp.task("default", ["clean", "sass", "scripts", "watchFiles"], function(){});

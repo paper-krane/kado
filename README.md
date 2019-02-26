@@ -12,12 +12,14 @@
 
 ## 1. Features
 
-- 12 column flexbox grid
+- 12 column Flexbox Grid
     -  offset
 - Flexbox
     - Rows & columns
     - Justify, alignment, & align-self
     - Ordering
+    - Wrapping
+    - Grow, Shrink & Fill
     - etc.
 - Basic element styles
     - Buttons
@@ -29,15 +31,22 @@
         - Checkboxes and radios
         - Range selector
         - Datepicker
+            - Custom Datepicker plugin (vanilla JS)
         - File upload
+    - Navs
+    - Modals (in the works)
+    - Mouse animation (installable module, cheesy but used a lot by myself personally)
 - Helpers
     - Spacing (margins, padding)
     - Height (set vh heights)
+    - Width (set % widths)
     - Text alignment
     - Text size
-    - Material shadows
+    - Shadows
     - Hide classes
     - Responsive iframes / ratio containers
+    - Corners
+    - Borders
 - Quick toggle using HTML5 data attributes (build your own modals, navs, etc.)
 - ie11 + support
 - Fallbacks styles for browsers without JavaScript

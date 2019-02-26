@@ -1,6 +1,6 @@
 // Mobile Navbar
 // ============================================================ //
-.mobile-navbar-default {
+.mobile-navbar {
     position: relative;
     display: flex;
     width: 100%;
@@ -50,7 +50,7 @@
 
 // Nav Toggle - Used in both mobile navbar and off canvas nav
 
-.nav-toggle-default {
+.nav-toggle {
     display: block;
     position: relative;
     outline: none;
@@ -112,7 +112,7 @@
 
 // Primary Navbar
 // ============================================================ //
-.navbar-default {
+.navbar {
 
     // Mobile Styles
     position: fixed;
@@ -120,6 +120,10 @@
     left: 0;
     width: 100%;
     height: 100vh;
+    padding-top: 106px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 20;
@@ -130,71 +134,72 @@
     opacity: 0;
     transition: opacity $transition-speed-time ease, visibility $transition-speed-time ease $transition-speed-time;
 
-    .navbar-default-logo {
+    .navbar-logo {
         display: none;
     }
 
-    .navbar-default-inner {
+    .container {
         position: relative;
-        padding: 106px 5% 50px;
+        width: inherit;
+        max-width: inherit;
+    }
 
-        .nav, ul {
+    .nav, ul {
 
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            perspective: 1000px;
-            -webkit-perspective: 1000px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
 
-            li {
+        li {
 
-                position: relative;
-                opacity: 0;
-                filter: blur(5px);
-                -webkit-filter: blur(5px);
-                transform-origin: 0 0;
-                -webkit-transform-origin:  0 0;
-                transform: translate(4rem) rotatey(45deg);
-                -webkit-transform: translate(4rem) rotatey(45deg);
-                transition: all #{$nav-transition-speed-time * 1.5}s ease;
-                -webkit-transition: all #{$nav-transition-speed-time * 1.5}s ease;
+            position: relative;
+            opacity: 0;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            transform-origin: 0 0;
+            -webkit-transform-origin:  0 0;
+            transform: translate(4rem) rotatey(45deg);
+            -webkit-transform: translate(4rem) rotatey(45deg);
+            transition: all #{$nav-transition-speed-time * 1.5}s ease;
+            -webkit-transition: all #{$nav-transition-speed-time * 1.5}s ease;
 
-                $i: 2;
-                $delay: .09;
-                @while $i <= 10 {
-                    &:nth-child(#{$i}) {
-                        transition-delay: #{$delay}s;
-                        -webkit-transition-delay: #{$delay}s;
-                    }
-
-                    $i: $i + 1;
-                    $delay: $delay + .09;
+            $i: 2;
+            $delay: .09;
+            @while $i <= 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$delay}s;
+                    -webkit-transition-delay: #{$delay}s;
                 }
 
-                &.nav-spacer {
-                    height: 32px;
-                }
-
-                &.text-small {
-                    a, a:visited, a:focus {
-                        font-size: $nav-font-size;
-                    }
-                }
-
+                $i: $i + 1;
+                $delay: $delay + .09;
             }
 
-            a:not(.btn), a:not(.btn):visited, a:not(.btn):focus {
-                font-size: $nav-font-size;
-                color: $nav-font-color;
+            &.nav-spacer {
+                height: 32px;
+            }
+
+            &.text-small {
+                a, a:visited, a:focus {
+                    font-size: $nav-font-size;
+                }
             }
 
         }
 
-        .nav {
+        a:not(.btn), a:not(.btn):visited, a:not(.btn):focus {
+            font-size: $nav-font-size;
+            color: $nav-font-color;
+        }
 
-            a:not(.btn), a:not(.btn):visited, a:not(.btn):focus {
-                font-size: $nav-font-size * 2;
-            }
+    }
+
+    .nav {
+
+        a:not(.btn), a:not(.btn):visited, a:not(.btn):focus {
+            font-size: $nav-font-size * 2;
         }
 
     }
@@ -204,21 +209,19 @@
         opacity: 1;
         transition: opacity #{$nav-transition-speed-time}s ease, visibility #{$nav-transition-speed-time}s ease;
 
-        .navbar-default-inner {
-            .nav, ul {
-                li {
-                    opacity: 1;
-                    filter: blur(0);
-                    -webkit-filter: blur(0);
-                    transform: none;
-                    -webkit-transform: none;
-                }
+        .nav, ul {
+            li {
+                opacity: 1;
+                filter: blur(0);
+                -webkit-filter: blur(0);
+                transform: none;
+                -webkit-transform: none;
             }
         }
 
     }
 
-    .nav-toggle-default {
+    .nav-toggle {
         position: absolute;
         top: 0;
         right: calc(5% - 17px);
@@ -230,8 +233,13 @@
     @media #{$l-and-up} {
 
         position: relative;
+        display: flex;
+        height: 5rem;
+        -ms-flex-align: center;
+        align-items: center;
         width: 100%;
         height: 5rem;
+        padding: 0 2rem;
         overflow: visible;
         z-index: 20;
         visibility: visible;
@@ -244,7 +252,7 @@
             left: 0;
         }
 
-        .navbar-default-logo, .navbar-default-logo:visited, .navbar-default-logo:focus, .navbar-default-logo:hover {
+        .navbar-logo, .navbar-logo:visited, .navbar-logo:focus, .navbar-logo:hover {
             display: block;
             padding: 1.5rem 0;
             height: 5rem;
@@ -257,11 +265,10 @@
 
         }
 
-        .navbar-default-inner {
+        .container {
             display: flex;
             position: relative;
             padding: 0;
-            margin: 0 auto;
             width: 85%;
             max-width: $container;
             height: 5rem;
@@ -280,52 +287,47 @@
             &.xxl {
                 max-width: $container-xxl;
             }
-            &.full-width {
-                max-width: 100%;
-                width: 100%;
-            }
+        }
 
-            .nav, ul {
+        .nav, ul {
 
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
 
-                li {
+            li {
 
-                    position: relative;
-                    opacity: 1;
+                position: relative;
+                opacity: 1;
+                -ms-flex-item-align: center;
+                align-self: center;
+                filter: blur(0);
+                -webkit-filter: blur(0);
+                transform-origin: 50% 50%;
+                -webkit-transform-origin:  50% 50%;
+                transform: none;
+                -webkit-transform: none;
+                transition: all 0 ease;
+                -webkit-transition: all 0 ease;
+
+                &.nav-spacer {
                     -ms-flex-item-align: center;
                     align-self: center;
-                    filter: blur(0);
-                    -webkit-filter: blur(0);
-                    transform-origin: 50% 50%;
-                    -webkit-transform-origin:  50% 50%;
-                    transform: none;
-                    -webkit-transform: none;
-                    transition: all 0 ease;
-                    -webkit-transition: all 0 ease;
-
-                    &.nav-spacer {
-                        -ms-flex-item-align: center;
-                        align-self: center;
-                        height: auto;
-                        width: 32px;
-                    }
-
+                    height: auto;
+                    width: 32px;
                 }
 
-                a:not(.btn), a:not(.btn):visited, a:not(.btn):focus {
-                    font-size: $nav-font-size;
-                    padding: 0 .75rem;
-                    display: block;
-                }
+            }
 
+            a:not(.btn), a:not(.btn):visited, a:not(.btn):focus {
+                font-size: $nav-font-size;
+                padding: 0 .75rem;
+                display: block;
             }
 
         }
 
-        .nav-toggle-default {
+        .nav-toggle {
             display: none;
         }
 
