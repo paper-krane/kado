@@ -2,6 +2,7 @@
 .DS_Store
 index.html
 demo.html
+gulpfile.js
 
 # folders
 site
