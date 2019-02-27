@@ -2,7 +2,7 @@
     <h1 align="center">Origami</h1>
 </p>
 <p align="center">
-    A mobile-first front-end framework for written for minimal, elegant web design.
+    A mobile-first CSS framework for written for minimal, elegant web design.
 </p>
 <p align="center">
     Documentation coming soon...

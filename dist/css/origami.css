@@ -2767,56 +2767,6 @@ a.origami-calendar-box:hover {
       .navbar .nav-toggle {
         display: none; } }
 
-@keyframes scrollwheel {
-  0% {
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0); }
-  80% {
-    transform: translate(-50%, 6px);
-    -webkit-transform: translate(-50%, 6px); }
-  100% {
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0); } }
-
-.mouse {
-  position: absolute;
-  display: block;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 24px;
-  height: 40px;
-  border-radius: 20px;
-  border: 1px solid #FFFFFF; }
-  .mouse .mouse-wheel {
-    position: absolute;
-    display: block;
-    width: 2px;
-    height: 6px;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    top: 8px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
-    animation: scrollwheel 2s infinite;
-    -webkit-animation: scrollwheel 2s infinite; }
-  .mouse.mouse-dark {
-    border: 1px solid #000000; }
-    .mouse.mouse-dark .mouse-wheel {
-      background-color: #000000; }
-  .mouse.bottom-left {
-    bottom: 20px;
-    left: 20px; }
-  .mouse.bottom-center {
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0); }
-  .mouse.bottom-right {
-    bottom: 20px;
-    right: 20px; }
-
 .float-fix:after {
   content: '';
   display: table;
