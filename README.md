@@ -6,7 +6,7 @@
 </p>
 <p align="center">
     <a href="https://origamicss.com/">Documentation</a>
-    <p style="font-size:.75rem; color: #aaa;">(Please excuse the mess, sections of the documentation are still being written)</p>
+    <p align="center">(Please excuse the mess, sections of the documentation are still being written)</p>
 </p>
 <br/>
 <br/>
