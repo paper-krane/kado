@@ -77,7 +77,7 @@
         background: $form-border-color !important;
         color: $label-color;
         opacity: .7;
-        cursor: not-allowed;
+        cursor: not-allowed !important;
         &::before,
         &::after {
             display: none;
@@ -87,6 +87,10 @@
             opacity: .7;
             cursor: not-allowed;
         }
+    }
+
+    &.disabled {
+        pointer-events: none;
     }
 
     // Large button styles

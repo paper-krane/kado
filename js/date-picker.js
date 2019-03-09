@@ -359,9 +359,13 @@
 
         // Add classes / ID's
         createCalBg.id = 'origami-calendar-bg';
-        createCalBg.classList.add('flex-l', 'align-center-s', 'justify-center-s');
+        createCalBg.classList.add('flex-l');
+        createCalBg.classList.add('align-center-s');
+        createCalBg.classList.add('justify-center-s');
         createCal.id = 'origami-calendar';
-        createCal.classList.add('depth-5', 'ml-auto', 'mr-auto');
+        createCal.classList.add('depth-5');
+        createCal.classList.add('ml-auto');
+        createCal.classList.add('mr-auto');
 
         // Create sub element layers
         createCalSecondLevelArray.forEach(function(createCalSecondLevelArray) {

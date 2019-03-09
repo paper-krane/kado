@@ -1,0 +1,30 @@
+<html lang="en" dir="ltr" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }} | {{ site.title }}</title>
+        {% include 0.8/doc-css.html %}
+    </head>
+    <body>
+        <header>
+            {% include 0.8/doc-navigation.html %}
+        </header>
+        <div class="page-body">
+            <div class="my-3 my-5-l container xl">
+                <div class="row no-margin">
+                    <div class="col s12 l8 xl9">
+                        <div class="">
+                            {{ content }}
+                        </div>
+                    </div>
+                    <div class="col s12 l4 xl3 hide-m-down">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/assets/0.8/js/origami.min.js"></script>
+        <script type="text/javascript" src="/assets/0.8/js/prism.js"></script>
+        <script type="text/javascript" src="/assets/0.8/js/origami-docs.js"></script>
+    </body>
+</html>

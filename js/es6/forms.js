@@ -8,11 +8,6 @@
             return _self;
         },
         init: function(options) {
-            const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-            if (isIE11) {
-                document.querySelector('html').classList.add('ie11');
-                return
-            }
             return _self || new FormElements(options);
         },
     };
@@ -20,25 +15,29 @@
     class FormElements {
         constructor(options) {
             options = options || {};
-            this.labeledElements = document.querySelectorAll('.form-element input[type=text], .form-element input[type=email], .form-element input[type=password], .form-element input[type=url], .form-element input[type=number], .form-element input[type=date], .form-element input[type=datetime], .form-element input[type=datetime-local], .form-element input[type=number], .form-element input[type=time], .form-element input[type=tel], .form-element textarea, .form-element select');
-            this.selectElements = document.querySelectorAll('.form-element select');
-            this.selectLabels = document.querySelectorAll('.form-element select-label');
-            this.textArea = document.querySelectorAll('.form-element textarea');
-            this.selectInput = document.querySelectorAll('.form-element select');
+            // Selectors
+            this.labeledElements = document.querySelectorAll('.form-element input[type=text]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=email]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=password]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=url]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=number]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=date]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=datetime]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=datetime-local]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=time]:not(:disabled):not(.disabled):not([readonly]), .form-element input[type=tel]:not(:disabled):not(.disabled):not([readonly]), .form-element textarea:not(:disabled):not(.disabled):not([readonly]), .form-element select:not(:disabled):not(.disabled):not([readonly])');
+            this.selectElements = document.querySelectorAll('.form-element select:not(:disabled):not(.disabled):not([readonly])');
+            this.selectLabels = document.querySelectorAll('.form-element select-label:not(:disabled):not(.disabled):not([readonly])');
+            this.textArea = document.querySelectorAll('.form-element textarea:not(:disabled):not(.disabled):not([readonly])');
+            this.selectInput = document.querySelectorAll('.form-element select:not(:disabled):not(.disabled):not([readonly])');
+            this.fileInput = document.querySelectorAll('.form-element input[type=file]:not(:disabled):not(.disabled):not([readonly])');
 
             // Append event listeners
                 // Check elements associated with labels
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'keyup');
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'input');
-            this.cycleAppendLabel(this.labeledElements, this.checkSiblingValue, 'change');
+            this.cycleAppend(this.labeledElements, this.checkSiblingValue, 'keyup');
+            this.cycleAppend(this.labeledElements, this.checkSiblingValue, 'input');
+            this.cycleAppend(this.labeledElements, this.checkSiblingValue, 'change');
                 // Select element labels - add class 'select-label'
             this.selectLabelClass(this.selectElements, options);
                 // Textarea resizing
-            this.cycleAppendTextarea(this.textArea, this.resize, 'change');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'cut');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'paste');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'drop');
-            this.cycleAppendTextarea(this.textArea, this.resize, 'keyup');
+            this.cycleAppend(this.textArea, this.resize, 'change');
+            this.cycleAppend(this.textArea, this.resize, 'cut');
+            this.cycleAppend(this.textArea, this.resize, 'paste');
+            this.cycleAppend(this.textArea, this.resize, 'drop');
+            this.cycleAppend(this.textArea, this.resize, 'keyup');
+                // Check file input value
+            this.fileValues(this.fileInput);
 
             // Check elements on load
             this.checkFormElements(this.labeledElements);
@@ -46,13 +45,7 @@
 
         // Utilities / Construction functions
         // ============================================================ //
-        cycleAppendLabel(collection, handler, event) {
-            for (let item of collection) {
-                item.addEventListener(event, handler.bind(this, item));
-            }
-        }
-
-        cycleAppendTextarea(collection, handler, event) {
+        cycleAppend(collection, handler, event) {
             for (let item of collection) {
                 item.addEventListener(event, handler.bind(this, item));
             }
@@ -63,10 +56,12 @@
         checkSiblingValue(element) {
             const elementForVal = element.id;
             const labelQuery = document.querySelector(`label[for=${elementForVal}]`);
-            if((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
-                labelQuery.classList.add('active');
-            } else {
-                labelQuery.classList.remove('active');
+            if (labelQuery) {
+                if((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
+                    labelQuery.classList.add('active');
+                } else {
+                    labelQuery.classList.remove('active');
+                }
             }
         }
 
@@ -77,7 +72,7 @@
                 element.style.overflow = 'hidden';
                 element.style.minHeight = '112px';
                 element.style.height = 'auto';
-                element.style.height = element.scrollHeight + 'px';
+                element.style.height = `${element.scrollHeight}px`;
             }, 0);
         }
 
@@ -87,20 +82,37 @@
             for (let select of selectList) {
                 const selectID = select.id;
                 const selectLabel = document.querySelector(`label[for=${selectID}]`);
-                selectLabel.classList.add('select-label');
+                if (selectLabel) selectLabel.classList.add('select-label');
             }
         }
 
         // Grab file upload value for aesthetics.
         // ============================================================ //
-
+        fileValues(fileList) {
+            for (let fileInput of fileList) {
+                fileInput.addEventListener('change', function() {
+                    if (this.files.length > 0) {
+                        const fileVal = this.parentNode.querySelector('.file-value');
+                        let fileValue = '';
+                        for (let i = 0; i < this.files.length; i++) {
+                            if (i + 1 != this.files.length) {
+                                fileValue += this.files[i].name + ' , '
+                            } else {
+                                fileValue += this.files[i].name
+                            }
+                        }
+                        fileVal.innerText = fileValue;
+                    }
+                });
+            }
+        }
 
         // Mass initialization load (check for fields already filled out etc.)
         // ============================================================ //
         checkFormElements(elementList) {
             for (let element of elementList) {
                 if ((element.nodeName === 'SELECT' && element.firstElementChild.innerText !== '') || element.value !== '') {
-                    element.nextElementSibling.classList.add('active');
+                    if (elementList[element].nextElementSibling) element.nextElementSibling.classList.add('active');
                 }
             }
         }

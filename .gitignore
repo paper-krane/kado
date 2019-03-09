@@ -5,7 +5,6 @@ demo.html
 gulpfile.js
 
 # folders
-site
 _site
 node_modules
 site/Gemfile

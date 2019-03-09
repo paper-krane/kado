@@ -1,0 +1,44 @@
+
+title: Origami
+email: your-email@example.com
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: "https://origamicss.com"
+twitter_username:
+github_username:  paper-krane
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "post"
+
+    -
+        scope:
+            path: "docs"
+            type: "pages"
+        values:
+            layout: "documentation"
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
