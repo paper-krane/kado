@@ -5,7 +5,8 @@
     A mobile-first CSS framework for written for minimal, elegant web design.
 </p>
 <p align="center">
-    Documentation coming soon...
+    <a href="https://origamicss.com/">Documentation</a>
+    <p style="font-size:.75rem; color: #aaa;">(Please excuse the mess, sections of the documentation are still being written)</p>
 </p>
 <br/>
 <br/>
