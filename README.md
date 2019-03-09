@@ -23,7 +23,6 @@
     - etc.
 - Basic element styles
     - Buttons
-    - Cards
     - Form elements
         - Text inputs
         - Textareas
@@ -34,7 +33,7 @@
             - Custom Datepicker plugin (vanilla JS)
         - File upload
     - Navs
-    - Modals (in the works)
+    - Modals
     - Mouse animation (installable module, cheesy but used a lot by myself personally)
 - Helpers
     - Spacing (margins, padding)
