@@ -3,13 +3,14 @@ layout: "0.8/documentation"
 title: "JavaScript Class Toggler"
 ---
 
-# Class Toggler
+<div class="col s12 l8 xl9">
+<h1>Class Toggler</h1>
 <p class="text-large">The tiny javascript engine that powers the animated Origami components such as modals & mobile navs. This small plugin will allow you to create your own custom animations with ease.</p>
 <div class="mt-3 mt-5-l"></div>
 
 
 
-#### How It Works
+<h4 id="how-it-works">How It Works <a href="#how-it-works">#</a></h4>
 <p>To start, you do need to include <span class="highlight">origami.min.js</span> in your project file (if you do not want all Origami modules, you can easily just use the data-toggle.js library). No initialization is necessary. Just link to the proper JavaScript assets and the class toggler will automatically listen.</p>
 <pre><code class="language-html">&lt;script type="text/javascript" src="/your/path/to/origami.min.js"&gt;&lt;/script&gt;</code></pre>
 <p>There are two roles, <span class="italic">togglers</span> and <span class="italic">targets</span>, and two different data attributes to your elements based upon what you want the element to do. For <span class="bold">toggle</span> elements, you will require two data attributes:</p>
@@ -23,14 +24,14 @@ title: "JavaScript Class Toggler"
 
 
 
-#### Under The Hood
+<h4 id="under-the-hood">Under The Hood <a href="#under-the-hood">#</a></h4>
 <p>The reason this plugin works is it first listens for a click event on the <span class="highlight">data-toggle="true"</span> and once the input is received, it then searches all other <span class="highlight">data-toggle-class</span> attributes to look for matching values. For every matching value, it will then add the <span class="highlight">data-toggle-class</span> value to the elements class list allowing you to use CSS specificity to animate your elements. With this approach, you can make complex animations that effect multiple HTML elements with ease.</p>
 <p>So rather than dedicating a small plugin for each and every modal, navigation, or even dropdown, you can now use one plugin and influence all components the same way with much less scripting.</p>
 <div class="mt-3 mt-5-l"></div>
 
 
 
-#### Example
+<h4 id="example">Example <a href="#example">#</a></h4>
 <p>Here is an example of the class toggler plugin in action:</p>
 <div class="demo-container text-center">
     <style>
@@ -80,3 +81,11 @@ title: "JavaScript Class Toggler"
 &lt;div class="demo-content target-2" data-toggle-class="example"&gt;
     I'm The Second Target
 &lt;/div&gt;</code></pre>
+</div>
+<div class="col s12 l4 xl3 hide-m-down" id="side-nav">
+    <ul class="sub-nav">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#under-the-hood">Under The Hood</a></li>
+        <li><a href="#example">Example</a></li>
+    </ul>
+</div>

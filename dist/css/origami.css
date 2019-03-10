@@ -320,8 +320,7 @@ html {
   width: 100%;
   overflow-x: hidden; }
   html body {
-    overflow-x: hidden;
-    overflow-y: auto; }
+    overflow-x: hidden; }
 
 button,
 input,

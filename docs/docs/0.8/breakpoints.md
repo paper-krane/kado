@@ -3,7 +3,8 @@ layout: "0.8/documentation"
 title: "Responsive Breakpoints"
 ---
 
-<h1>Responsive Breakpoints</h1>
+<div class="col s12 l8 xl9">
+<h1 id="breakpoints">Responsive Breakpoints</h1>
 <p>Since Origami is designed to be mobile first, we use a handful of media queries to create breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements and layouts as the viewport changes. Their sizes are as follows:</p>
 <pre><code class="language-scss">// Small devices such as portrait mobile devices etc.
 // Will affect devices <= 599px
@@ -20,7 +21,10 @@ title: "Responsive Breakpoints"
 // And last but not least, the mega screens such as iMac's, 27" PC monitors etc.
 @media screen and (min-width: 1600px) {...}</code></pre>
 <div class="mt-3 mt-5-l"></div>
-<h4>Min-Width SASS Variables</h4>
+
+
+
+<h4 id="min-width-sass-variables">Min-Width SASS Variables <a href="#min-width-sass-variables">#</a></h4>
 <p>Since Origami is written in SASS and further compiled to CSS, you can customize these breakpoints easily in the <span class="highlight">"/scss/components/_variables.scss"</span> file. The file will give you the following variables which you can easily change and have effect all other Origami components.</p>
 <pre><code class="language-scss">// Media Queries
 $mobile-landscape-screen-up: 600px !default; // Used for min-width cases
@@ -29,14 +33,20 @@ $desktop-screen-up: 1280px !default; // Used for min-width cases
 $desktop-large-screen-up: 1600px !default; // Used for min-width cases</code></pre>
 <p>Please also note that we do also include 'max-width' breakpoint values. While not used often, we do have them for some features such as hiding/revealing elements based upon screen size. When editing the 'min-width' media queries, make sure to edit the 'max-width' media query breakpoints as well.</p>
 <div class="mt-3 mt-5-l"></div>
-<h4>Max-Width SASS Variables</h4>
+
+
+
+<h4 id="max-width-sass-variables">Max-Width SASS Variables <a href="#max-width-sass-variables">#</a></h4>
 <pre><code class="language-scss">// Media Queries
 $mobile-screen: 599.98px !default; // Used for max-width cases
 $tablet-screen-down: 991.98px !default; // Used for max-width cases
 $desktop-screen-down: 1279.98px !default; // Used for max-width cases
 $desktop-large-screen-down: 1599.98px !default; // Used for max-width cases</code></pre>
 <div class="mt-3 mt-5-l"></div>
-<h4>Breakpoint Naming For Utilities, Grid Layouts &amp; More</h4>
+
+
+
+<h4 id="breakpoint-naming">Breakpoint Naming For Utilities, Grid Layouts &amp; More <a href="#breakpoint-naming">#</a></h4>
 <p>Origami was designed with the idea in mind that components, such as spacing, text alignment and much more, may need to be adjusted depending on the screen size. So, we decided to create a simple breakpoint naming convention that will allow you adjust a vast amount of utility classes to adjust based upon the viewport size.</p>
 <p>The breakpoint names are pretty simple:</p>
 <ul>
@@ -57,3 +67,12 @@ $desktop-large-screen-down: 1599.98px !default; // Used for max-width cases</cod
 <blockquote>
     Since Origami was designed mobile first, if you declare a particular style on the <span class="highlight">s</span> (small) device size <em>OR</em> use the unprefixed version (not declaring a breakpoint size), it will affect every device size unless another sizing declaration is made for a larger breakpoint.
 </blockquote>
+</div>
+<div class="col s12 l4 xl3 hide-m-down" id="side-nav">
+    <ul class="sub-nav">
+        <li><a href="#breakpoints">Breakpoints</a></li>
+        <li><a href="#min-width-sass-variables">Min Width SASS Variables</a></li>
+        <li><a href="#max-width-sass-variables">Max Width SASS Variables</a></li>
+        <li><a href="#breakpoint-naming">Breakpoint Naming</a></li>
+    </ul>
+</div>

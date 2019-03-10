@@ -3,13 +3,14 @@ layout: "0.8/documentation"
 title: "Buttons"
 ---
 
+<div class="col s12 l8 xl9">
 <h1>Buttons</h1>
 <p class="text-large">Unique button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
 <div class="mt-3 mt-5-l"></div>
 
 
 
-#### Button Example
+<h4 id="default-button">Default Button <a href="#default-button">#</a></h4>
 <div class="demo-container">
     <a href="#" class="btn">Default Button</a>
 </div>
@@ -21,7 +22,7 @@ title: "Buttons"
 
 
 
-#### Usable Button Tags
+<h4 id="usable-button-tags">Usable Button Tags <a href="#usable-button-tags">#</a></h4>
 <div class="demo-container">
     <a href="#" class="btn">Anchor Element</a>
     <button type="submit" class="btn">Button Element</button>
@@ -44,7 +45,7 @@ title: "Buttons"
 
 
 
-#### Outlined Buttons
+<h4 id="outlined-buttons">Outlined Buttons <a href="#outlined-buttons">#</a></h4>
 <div class="demo-container">
     <a href="#" class="btn btn-outline">Outlined Button</a>
 </div>
@@ -55,7 +56,7 @@ title: "Buttons"
 
 
 
-#### Standard Buttons
+<h4 id="standard-buttons">Standard Buttons <a href="#standard-buttons">#</a></h4>
 <div class="demo-container">
     <a href="#" class="btn btn-standard">Standard (Boring) Button</a>
 </div>
@@ -66,7 +67,7 @@ title: "Buttons"
 
 
 
-#### Button Sizes
+<h4 id="button-sizes">Button Sizes <a href="#button-sizes">#</a></h4>
 <div class="demo-container">
     <a href="#" class="btn btn-small mb-1">Small Button</a>
     <a href="#" class="btn mb-1">Default Button</a>
@@ -85,7 +86,7 @@ title: "Buttons"
 
 
 
-#### Inline Button Usage
+<h4 id="inline-button-usage">Inline Button Usage <a href="#inline-button-usage">#</a></h4>
 <div class="demo-container">
     <p>This is a piece of a paragraph with a <a href="#" class="btn btn-small">Button</a> to click right in the middle!</p>
 </div>
@@ -96,7 +97,7 @@ title: "Buttons"
 
 
 
-#### Disabled Button State
+<h4 id="disabled-button-state">Disabled Button State <a href="#disabled-button-state">#</a></h4>
 <p>Make buttons look and act inactive by adding the <span class="highlight">disabled</span> boolean attribute to any <span class="highlight">&lt;button&gt;</span> element.</p>
 <p>Disabled buttons using the <span class="highlight">&lt;a&gt;</span> element behave a bit different:</p>
 <ul>
@@ -119,3 +120,15 @@ title: "Buttons"
 The .disabled class uses pointer-events: none to try to disable the link functionality of <span class="highlight">&lt;a&gt;</span>s, but that CSS property is not yet standardized. In addition, even in browsers that do support <span class="highlight">pointer-events: none</span>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <span class="highlight">tabindex="-1"</span> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
 </blockquote>
 <div class="mt-3 mt-5-l"></div>
+</div>
+<div class="col s12 l4 xl3 hide-m-down" id="side-nav">
+    <ul class="sub-nav">
+        <li><a href="#default-button">Default Button</a></li>
+        <li><a href="#usable-button-tags">Usable Button Tags</a></li>
+        <li><a href="#outlined-buttons">Outlined Buttons</a></li>
+        <li><a href="#standard-buttons">Standard Buttons</a></li>
+        <li><a href="#button-sizes">Button Sizes</a></li>
+        <li><a href="#inline-button-usage">Inline Button Usage</a></li>
+        <li><a href="#disabled-button-state">Disabled Button State</a></li>
+    </ul>
+</div>

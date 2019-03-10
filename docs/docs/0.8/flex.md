@@ -2,15 +2,13 @@
 layout: "0.8/documentation"
 title: "Flexbox Layout Utilities"
 ---
-
+<div class="col s12 l8 xl9">
 <h1>Flexbox Layout Utilities</h1>
 <p class="text-large">Extend the functionality of the layout, alignment, sizing, & ordering of Origami's grid system by adding responsive flexbox utility classes. Or, you can use them on their own and create elegant layouts.</p>
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Flex Display Properties)
-
-<h4 id="flex-display">Setting Flex Display</h4>
+<h4 id="flex-display">Setting Flex Display <a href="#flex-display">#</a></h4>
 <p>Add flex classes to create a <span class="highlight">flexbox</span> container and transform direct children elements into flex items. Flex containers and items are able to be styled further with additional flex properties. Both displays of <span class="highlight">flex</span> and <span class="highlight">inline-flex</span> available.</p>
 <div class="demo-container text-small">
     <div class="demo-content flex mb-1">
@@ -46,9 +44,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Flex Direction)
 
-<h4 id="flex-direction">Flex Item Direction</h4>
+<h4 id="flex-direction">Flex Item Direction <a href="#flex-direction">#</a></h4>
 <p>You can set both the horizontal and vertical <span class="highlight">flex-direction</span> for flex items (direct children of the flex container) with directional utilities. In most cases you can omit the horizontal class here as the browser default is row. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).</p>
 <p>To set the <strong>horizontal</strong> direction (the browser default), you can use the <span class="highlight">row-normal</span> and <span class="highlight">row-reverse</span> classes on the flexbox container to affect the flex items.</p>
 <div class="demo-container text-small">
@@ -132,9 +129,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Justified Flex Content)
 
-<h4 id="justify-content">Justify Flex Content</h4>
+<h4 id="justify-content">Justify Flex Content <a href="#justify-content">#</a></h4>
 <p>Use <span class="highlight">justify-content</span> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start by browser default, y-axis if the <span class="highlight">flex-direction: column</span>). Choose from <span class="highlight">start</span> (browser default), <span class="highlight">end</span>, <span class="highlight">center</span>, <span class="highlight">between</span>, or <span class="highlight">around</span>.</p>
 <p>A quick definition for 'start' and 'end' alignment keywords:</p>
 <ul>
@@ -237,9 +233,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Aligned Flex Content)
 
-<h4 id="align-content">Aligned Flex Content</h4>
+<h4 id="align-content">Aligned Flex Content <a href="#align-content">#</a></h4>
 <p>Use <span class="highlight">align-items</span> utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if <span class="highlight">flex-direction: column</span>). Choose from <span class="highlight">start</span>, <span class="highlight">end</span>, <span class="highlight">center</span>, <span class="highlight">baseline</span>, or <span class="highlight">stretch</span> (browser default).</p>
 <p>A quick definition for 'start' and 'end' alignment keywords:</p>
 <ul>
@@ -343,9 +338,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Align Self)
 
-<h4 id="align-self">Flex Items Self Alignment</h4>
+<h4 id="align-self">Flex Items Self Alignment <a href="#align-self">#</a></h4>
 <p>Use <span class="highlight">align-self</span> utilities on flexbox items (direct child items of the flex container) to individually change their alignment on the cross axis (the y-axis to start, x-axis if <span class="highlight">flex-direction: column</span>). Choose from the same options as <span class="highlight">align-items</span>: <span class="highlight">start</span>, <span class="highlight">end</span>, <span class="highlight">center</span>, <span class="highlight">baseline</span>, or <span class="highlight">stretch</span> (browser default).</p>
 <div class="demo-container text-small">
     <div class="demo-content demo-tall flex mb-1">
@@ -443,9 +437,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Flex Fill)
 
-<h4 id="fill">Flex Item Fill</h4>
+<h4 id="fill">Flex Item Fill <a href="#fill">#</a></h4>
 <p>Use the <span class="highlight">fill</span> class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.</p>
 <div class="demo-container text-small">
     <div class="demo-content flex">
@@ -470,9 +463,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Flex Grow and Shrink)
 
-<h4 id="grow-and-shrink">Flex Item Grow &amp; Shrink</h4>
+<h4 id="grow-and-shrink">Flex Item Grow &amp; Shrink <a href="#grow-and-shrink">#</a></h4>
 <p>Use <span class="highlight">flex-grow</span> and <span class="highlight">flex-grow-initial</span> utilities to toggle a flex item’s ability to grow to fill available space. In the example below, the <span class="highlight">flex-grow</span> element uses all available space it can, while forcing the remaining two flex items to use only their necessary space.</p>
 <div class="demo-container text-small">
     <div class="demo-content flex">
@@ -535,9 +527,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Auto Margins)
 
-<h4 id="auto-margins">Auto Margins</h4>
+<h4 id="auto-margins">Auto Margins <a href="#auto-margins">#</a></h4>
 <p>When you mix flex alignments with auto margins, beautiful things happen. Shown below are four examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (<span class="highlight">mr-auto</span>), and pushing two items to the left (<span class="highlight">ml-auto</span>), and last but not least centering one element (<span class="highlight">mx-auto</span> but could also center multiple elements with the first element having <span class="highlight">ml-auto</span> and last having <span class="highlight">mr-auto</span>).</p>
 <p><strong>Please note, IE 10 & 11 render auto margins incorrectly if parent container uses the 'justify-content' properties. They prioritize the <span class="highlight">justify-{position keyword}</span> over auto-margins</strong>. <a href="https://stackoverflow.com/questions/37534254/flex-auto-margin-not-working-in-ie10-11/37535548#37535548" target="_blank">See this StackOverflow answer</a> for more details.</p>
 <div class="demo-container text-small">
@@ -584,7 +575,8 @@ title: "Flexbox Layout Utilities"
 &lt;/div&gt;</code></pre>
 <div class="mt-3 mt-5-l"></div>
 
-<h5 id="auto-margins-align-based">Auto Margins With 'Align' Based Items</h5>
+
+<h5 id="auto-margins-align-based">Auto Margins With 'Align' Based Items <a href="#auto-margins-align-based">#</a></h5>
 <p>Vertically move one flex item to the top or bottom of a container by mixing align-items, <span class="highlight">flex-direction: column</span>, and <span class="highlight">margin-top: auto</span> or <span class="highlight">margin-bottom: auto</span>.</p>
 <div class="demo-container text-small">
     <div class="demo-content demo-extra-tall flex column mb-1">
@@ -622,9 +614,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Flex Wrapping)
 
-<h4 id="flex-wrapping">Flex Item Wrapping</h4>
+<h4 id="flex-wrapping">Flex Item Wrapping <a href="#flex-wrapping">#</a></h4>
 <p>Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with <span class="highlight">wrap-none</span>, wrapping with <span class="highlight">wrap</span>, or reverse wrapping with <span class="highlight">wrap-reverse</span>.</p>
 <div class="demo-container text-small">
     <div class="demo-content container xs flex wrap-none">
@@ -702,9 +693,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Order)
 
-<h4 id="flex-order">Flex Item Order</h4>
+<h4 id="flex-order">Flex Item Order <a href="#flex-order">#</a></h4>
 <p>Change the visual order of specific flex items with Origami's <span class="highlight">order</span> utilities. Flexbox order takes any integer value (for Origami, you will have access to order integers spanning from 0 through 12). If you need to add more order values, custom CSS will be needed.</p>
 <p>When using flexbox order, you need to understand that all flex items order is by browser default <span class="highlight">0</span>. So, if you were to add the class <span class="highlight">order-1</span> to the first element in a group of three elements, since 1 comes after 0, it will rearrange itself to come last in the visual order. Dave Geddes has written a great <a href="https://gedd.ski/post/flexbox-order/" target="_blank" rel="nofollow">article</a> explaining flex order if you wish to learn more. But, let's go ahead and look at an example.</p>
 <div class="demo-container text-small">
@@ -734,9 +724,8 @@ title: "Flexbox Layout Utilities"
 <div class="mt-3 mt-5-l"></div>
 
 
-[comment]: <> (Content Alignment)
 
-<h4 id="content-alignment">Content Alignment</h4>
+<h4 id="content-alignment">Content Alignment <a href="#content-alignment">#</a></h4>
 <p>Use <span class="highlight">align-content</span> utilities on flexbox containers to align flex items together on the cross axis. Choose from <span class="highlight">start</span> (browser default), <span class="highlight">end</span>, <span class="highlight">center</span>, <span class="highlight">between</span>, <span class="highlight">around</span>, or <span class="highlight">stretch</span>. To demonstrate these utilities, we’ve enforced flex-wrap: wrap and increased the number of flex items.</p>
 <p>Please understand that this property has no effect on single rows of flex items.</p>
 <div class="demo-container text-small">
@@ -902,3 +891,24 @@ title: "Flexbox Layout Utilities"
     <li><span class="highlight">.align-content-stretch-xl</span></li>
     <li><span class="highlight">.align-content-stretch-xxl</span></li>
 </ul>
+</div>
+<div class="col s12 l4 xl3 hide-m-down" id="side-nav">
+    <ul class="sub-nav">
+        <li><a href="#flex-display">Flex Display</a></li>
+        <li><a href="#flex-direction">Flex Direction</a></li>
+        <li><a href="#justify-content">Justify Content</a></li>
+        <li><a href="#align-content">Align Content</a></li>
+        <li><a href="#align-self">Align Self</a></li>
+        <li><a href="#fill">Fill</a></li>
+        <li><a href="#grow-and-shrink">Grow &amp; Shrink</a></li>
+        <li>
+            <a href="#auto-margins">Auto Margins</a>
+            <ul>
+                <li><a href="#auto-margins-align-based">Auto Margins With Flex Align</a></li>
+            </ul>
+        </li>
+        <li><a href="#flex-wrapping">Wrapping</a></li>
+        <li><a href="#flex-order">Ordering</a></li>
+        <li><a href="#content-alignment">Content Alignment</a></li>
+    </ul>
+</div>

@@ -3,13 +3,17 @@ layout: "0.8/documentation"
 title: "Grid System"
 ---
 
+<div class="col s12 l8 xl9">
 <h1>Flexbox Grid System</h1>
 <p class="text-large">A simply named, mobile first, responsive 12 column flexbox grid system that will adjust to 5 different <a href="/docs/breakpoints" title="Responsive Break Points">breakpoints</a>.</p>
 <blockquote>
 Before we begin with the grid, please also know that if you do require a grid system that will hold up before IE10, we do still have our '<span class="highlight">old-school-grid</span>' system with identical class names (so upgrading in the future would be a breeze). To use it, simply go to the master <span class="highlight">origami.scss</span> file and import it.
 </blockquote>
 <div class="mt-3 mt-5-l"></div>
-<h4>How The Grid System Works</h4>
+
+
+
+<h4 id="how-it-works">How The Grid System Works <a href="#how-it-works">#</a></h4>
 <p>Grids are pretty simple. You have 3 major players. First, you have a <span class="highlight">container</span> to 'contain' all of your content to remain in the horizontal center of the page (unless you use a full width container). Next you have your <span class="highlight">row</span> elements that will be a child of the container and allow you to create horizontal rows of columns. Finally we have the <span class="highlight">columns</span>. Now, since Origami is by default a 12 column grid, you will have the control to specify how many columns you want your element to span. If you don't specify, no worries, Flexbox will do the work for you and calculate it automatically.</p>
 <p>To take this up a notch, Origami's grid system is fully responsive and can adjust to what you need based upon the viewport size. Let's take a look at a quick example to see a grid in action.</p>
 <div class="demo-container text-small">
@@ -55,5 +59,15 @@ while the columns are used for the primary content --&gt;
 </ul>
 <p>Be aware about potential <a href="https://github.com/philipwalton/flexbugs" target="_blank">flexbox bugs</a> and even <a href="https://github.com/philipwalton/flexbugs#flexbug-9" target="_blank">certain elements that do not work as flex containers</a>. Shout out to <a href="https://getbootstrap.com" target="_blank" rel="nofollow">Bootstrap</a> for finding awesome articles and <a href="https://github.com/philipwalton" target="_blank" rel="nofollow">Philip Walton</a> for writing these articles!</p>
 <div class="mt-3 mt-5-l"></div>
-<h4>Grid Breakpoint Size Options</h4>
+
+
+
+<h4 id="breakpoint-size-options">Grid Breakpoint Size Options <a href="#breakpoint-size-options">#</a></h4>
 <p>While most elements are sized using relative units (%, rem, em, etc.), breakpoints are not. They are set using the fixed pixel unit.</p>
+</div>
+<div class="col s12 l4 xl3 hide-m-down" id="side-nav">
+    <ul class="sub-nav">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#breakpoint-size-options">Breakpoint Size Options</a></li>
+    </ul>
+</div>
