@@ -54,8 +54,8 @@
 // ============================================================ //
 
     // Font family
-    $font-stack: "Roboto", Ubuntu, "Helvetica Neue", sans-serif !default;
-    $font-color: #333;
+    $font-stack: "Roboto", "Helvetica Neue", sans-serif !default;
+    $font-color: #363C44;
 
     // Heading Styles
     $h1-fontsize-mobile: 2rem !default;
@@ -76,12 +76,12 @@
     $heading-accent: 1.5rem !default;
 
 
-// 3) Colors
+// 3) Colors & Color Scheme
 // ============================================================ //
 
     // Default color scheme
-    $primary-color: #3ca55c !default;
-    $primary-accent-color: #308349 !default;
+    $primary-color: #4ec772 !default;
+    $primary-accent-color: #34ae58 !default;
     $secondary-color: #b5ac49 !default;
     $secondary-accent-color: #a49b42 !default;
 
@@ -96,21 +96,34 @@
 // 4) Buttons
 // ============================================================ //
 
-    $btn-height: 42px !default;
-    $btn-padding: 0 1.5rem !default;
-    $btn-large-padding: 0 2.5rem !default;
-    $btn-small-padding: 0 .75rem !default;
+    $btn-height: 46px !default;
+    $btn-padding: 1.5rem !default;
+    $btn-large-padding: 2.25rem !default;
+    $btn-small-padding: 1rem !default;
+    $btn-bg-dark-color: #363C44 !default;
+    $btn-bg-light-color: #ffffff !default;
+    // Standard button color is declared via the primary color in the color scheme variables
 
 
 // 5) Forms
 // ============================================================ //
 
     // Form colors
-    $label-color: #8a8a8a;
-    $form-element-bg: rgba(255,255,255,.8);
+    $label-color: #9a9a9a;
+    $placeholder-color: #9a9a9a;
+    $form-element-bg: transparent;
     $form-border-color: #d6d6d6;
 
     // Form Styles
+    $input-heights-normal: 54px; // Recommended to be an int divisible by 3 for form label
+    $input-heights-small: 32px;
+    $form-border-radius: $border-radius;
+    $form-element-side-padding: 16px; // This padding size is used to calculate label positions, and padding for smaller inputs
+    $form-border-top: 1px solid $form-border-color;
+    $form-border-right: 1px solid $form-border-color;
+    $form-border-bottom: 1px solid $form-border-color;
+    $form-border-left: 1px solid $form-border-color;
+
 
 // 6) Navbars
 // ============================================================ //
@@ -119,6 +132,6 @@
     $nav-bg-color: #000000;
     $nav-bg-secondary-color: #0a0a0a;
     $nav-bg-gradient: linear-gradient(45deg, $nav-bg-color, $nav-bg-secondary-color);
-    $nav-font-color: rgba(255,255,255,.6);
+    $nav-font-color: rgba(255,255,255,.8);
     $nav-font-size: .875rem;
     $nav-transition-speed-time: 0.4;

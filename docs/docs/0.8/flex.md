@@ -4,7 +4,7 @@ title: "Flexbox Layout Utilities"
 ---
 <div class="col s12 l8 xl9">
 <h1>Flexbox Layout Utilities</h1>
-<p class="text-large">Extend the functionality of the layout, alignment, sizing, & ordering of Origami's grid system by adding responsive flexbox utility classes. Or, you can use them on their own and create elegant layouts.</p>
+<p class="text-large">Extend the functionality of the layout, alignment, sizing, & ordering of {{ site.title }}'s grid system by adding responsive flexbox utility classes. Or, you can use them on their own and create elegant layouts.</p>
 <div class="mt-3 mt-5-l"></div>
 
 
@@ -695,7 +695,7 @@ title: "Flexbox Layout Utilities"
 
 
 <h4 id="flex-order">Flex Item Order <a href="#flex-order">#</a></h4>
-<p>Change the visual order of specific flex items with Origami's <span class="highlight">order</span> utilities. Flexbox order takes any integer value (for Origami, you will have access to order integers spanning from 0 through 12). If you need to add more order values, custom CSS will be needed.</p>
+<p>Change the visual order of specific flex items with {{ site.title }}'s <span class="highlight">order</span> utilities. Flexbox order takes any integer value (for {{ site.title }}, you will have access to order integers spanning from 0 through 12). If you need to add more order values, custom CSS will be needed.</p>
 <p>When using flexbox order, you need to understand that all flex items order is by browser default <span class="highlight">0</span>. So, if you were to add the class <span class="highlight">order-1</span> to the first element in a group of three elements, since 1 comes after 0, it will rearrange itself to come last in the visual order. Dave Geddes has written a great <a href="https://gedd.ski/post/flexbox-order/" target="_blank" rel="nofollow">article</a> explaining flex order if you wish to learn more. But, let's go ahead and look at an example.</p>
 <div class="demo-container text-small">
     <div class="demo-content flex wrap">

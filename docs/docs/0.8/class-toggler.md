@@ -5,14 +5,14 @@ title: "JavaScript Class Toggler"
 
 <div class="col s12 l8 xl9">
 <h1>Class Toggler</h1>
-<p class="text-large">The tiny javascript engine that powers the animated Origami components such as modals & mobile navs. This small plugin will allow you to create your own custom animations with ease.</p>
+<p class="text-large">The tiny javascript engine that powers the animated {{ site.title }} components such as modals & mobile navs. This small plugin will allow you to create your own custom animations with ease.</p>
 <div class="mt-3 mt-5-l"></div>
 
 
 
 <h4 id="how-it-works">How It Works <a href="#how-it-works">#</a></h4>
-<p>To start, you do need to include <span class="highlight">origami.min.js</span> in your project file (if you do not want all Origami modules, you can easily just use the data-toggle.js library). No initialization is necessary. Just link to the proper JavaScript assets and the class toggler will automatically listen.</p>
-<pre><code class="language-html">&lt;script type="text/javascript" src="/your/path/to/origami.min.js"&gt;&lt;/script&gt;</code></pre>
+<p>To start, you do need to include <span class="highlight">kado.min.js</span> in your project file (if you do not want all {{ site.title }} modules, you can easily just use the data-toggle.js library). No initialization is necessary. Just link to the proper JavaScript assets and the class toggler will automatically listen.</p>
+<pre><code class="language-html">&lt;script type="text/javascript" src="/your/path/to/kado.min.js"&gt;&lt;/script&gt;</code></pre>
 <p>There are two roles, <span class="italic">togglers</span> and <span class="italic">targets</span>, and two different data attributes to your elements based upon what you want the element to do. For <span class="bold">toggle</span> elements, you will require two data attributes:</p>
 <ul>
     <li><span class="highlight">data-toggle</span></li>

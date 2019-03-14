@@ -58,9 +58,12 @@ h4:hover a, h5:hover a {
     background-color: #ffffff;
 }
 .demo-content {
-    background-color: rgba(60, 165, 92, .2);
-    border: 1px solid rgba(60, 165, 92, .7);
+    background-color: rgba(78, 199, 114, .2);
+    border: 1px solid rgba(78, 199, 114, .7);
     padding: 1rem;
+}
+.demo-container.dark {
+    background-color: #f5f2f0;
 }
 .demo-tall {
     height: 160px;
@@ -242,9 +245,7 @@ h4:hover a, h5:hover a {
     left:0;
     width: 100%;
     height: 100vh;
-    background-color: #1a1a1a;
-    background-image: linear-gradient(45deg, #000000, #1a1a1a);
-    background-image: -webkit-linear-gradient(45deg, #000000, #1a1a1a);
+    background-color: #363c44;
     z-index: 11;
     overflow-x: hidden;
     overflow-y: auto;
@@ -374,8 +375,8 @@ h4:hover a, h5:hover a {
     font-size: .75rem;
 }
 .nav a:hover > span, .nav a:focus > span {
-    background-image: linear-gradient(-45deg,#3ca55c 0,#b5ac49 100%);
-    background-image: -webkit-linear-gradient(-45deg,#3ca55c 0,#b5ac49 100%);
+    background-image: linear-gradient(-45deg,#4ec772 0,#b5ac49 100%);
+    background-image: -webkit-linear-gradient(-45deg,#4ec772 0,#b5ac49 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -403,9 +404,7 @@ h4:hover a, h5:hover a {
         height: 100vh;
         visibility: visible;
         opacity: 1;
-        background-color: #000000;
-        background-image: linear-gradient(45deg, #000000, #0a0a0a);
-        background-image: -webkit-linear-gradient(45deg, #000000, #0a0a0a);
+        background-color: #363c44;
         background-image: none;
         -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.005, 1.255);
         -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.005, 1.255);
@@ -426,7 +425,7 @@ h4:hover a, h5:hover a {
         height: 48px;
         display: block;
         font-size: .875rem;
-        color: rgba(255,255,255,.85);
+        color: rgba(255,255,255,.9);
         padding-left: 60px;
         position: relative;
         opacity: .6;
@@ -490,8 +489,8 @@ h4:hover a, h5:hover a {
         line-height: 2.2;
     }
     .sub-nav a:hover {
-        background-image: linear-gradient(-45deg,#3ca55c 0,#b5ac49 100%);
-        background-image: -webkit-linear-gradient(-45deg,#3ca55c 0,#b5ac49 100%);
+        background-image: linear-gradient(-45deg,#4ec772 0,#b5ac49 100%);
+        background-image: -webkit-linear-gradient(-45deg,#4ec772 0,#b5ac49 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

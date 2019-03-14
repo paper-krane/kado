@@ -3,14 +3,40 @@
     var submenuToggles = document.querySelectorAll('.has-children > a');
 
     for (var toggle of submenuToggles) {
-        toggle.addEventListener('click', (e) => {
+        // toggle.addEventListener('focus', function(e) {
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //
+        //     const submenu = e.target.nextElementSibling;
+        //     const theChildren = submenu.children;
+        //     const currentActive = document.querySelector('.active')
+        //     let eleHeight = 0;
+        //
+        //     for (var child of theChildren) {
+        //         eleHeight += child.scrollHeight;
+        //     }
+        //
+        //     if (submenu.getAttribute('style')) {
+        //         submenu.classList.remove('active');
+        //         submenu.removeAttribute('style');
+        //     } else {
+        //         if (currentActive) {
+        //             currentActive.classList.remove('active');
+        //             currentActive.removeAttribute('style');
+        //         }
+        //         submenu.classList.add('active');
+        //         submenu.style.maxHeight = eleHeight + 'px';
+        //     }
+        // }, false);
+
+        toggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
 
-            var submenu = e.target.nextElementSibling;
-            var theChildren = submenu.children;
-            var currentActive = document.querySelector('.active')
-            var eleHeight = 0;
+            const submenu = e.target.nextElementSibling;
+            const theChildren = submenu.children;
+            const currentActive = document.querySelector('.active')
+            let eleHeight = 0;
 
             for (var child of theChildren) {
                 eleHeight += child.scrollHeight;

@@ -3,11 +3,17 @@
 // Corners
 // ============================================================ //
 .corners-circle {
-    border-radius: 50%;
+    border-radius: 50% !important;
+}
+.corners-semi-rounded {
+    border-radius: $border-radius / 2 !important;
 }
 .corners-rounded {
-    border-radius: $border-radius;
+    border-radius: $border-radius !important;
+}
+.corners-pill {
+    border-radius: $border-radius * 10 !important;
 }
 .corners-square {
-    border-radius: 0;
+    border-radius: 0 !important;
 }

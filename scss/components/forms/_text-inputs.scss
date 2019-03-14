@@ -3,6 +3,11 @@
     position: relative;
     margin-bottom: 1rem;
 }
+span.form-element {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 0;
+}
 .helper-text {
     font-size: .625rem;
     font-weight: 300;
@@ -11,6 +16,22 @@
     padding-top: 4px;
     padding-left: 2px;
 }
+::placeholder {
+    font-weight: inherit;
+    color: $placeholder-color;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    font-weight: inherit;
+    color: $placeholder-color;
+}
+::-ms-input-placeholder {
+    font-weight: inherit;
+    color: $placeholder-color;
+}
+
+
+
 
 // Text Input
 // ============================================================ //
@@ -19,19 +40,21 @@
 .form-element select {
     font-size: inherit;
     font-weight: inherit;
-    font-weight: 400;
     font-family: $font-stack;
     color: $font-color;
     line-height: 1.4em;
-    height: 56px;
+    height: $input-heights-normal;
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
     vertical-align: middle;
-    padding: 18px 16px 0;
+    padding: ($input-heights-normal / 3) $form-element-side-padding 0;
     text-align: left;
-    border: 1px solid $form-border-color;
-    border-radius: $border-radius;
+    border-top: $form-border-top;
+    border-right: $form-border-right;
+    border-bottom: $form-border-bottom;
+    border-left: $form-border-left;
+    border-radius: $form-border-radius;
     background: $form-element-bg;
     background-clip: padding-box;
     outline: none;
@@ -43,38 +66,87 @@ select::-ms-expand {
     display: none;
 }
 
+
+
+
 // label - non-active
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
 .form-element textarea+label,
 .form-element select+label {
     position: absolute;
-    top: 16px;
-    left: 17px;
+    top: 50%;
+    left: $form-element-side-padding;
     font-weight: 300;
     color: $label-color;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
     transition: $transition-speed-fast;
 }
+.form-element textarea+label {
+    top: $form-element-side-padding;
+    transform: none;
+    -webkit-transform: none;
+}
+
+
+
+
+// Corners Pill
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]).corners-pill,
+.form-element select.corners-pill {
+    padding: ($input-heights-normal / 3) ($form-element-side-padding * 1.5) 0;
+}
+
+// Corners Pill Label
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]).corners-pill+label,
+.form-element select.corners-pill+label {
+    left: ($form-element-side-padding * 1.5);
+}
+
+
+
+
+// .form-elements with .col
 .col {
     &.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
     &.form-element textarea+label,
     &.form-element select+label {
-        left: $gutter-size / 2 + 17;
+        left: ($gutter-size / 2) + $form-element-side-padding;
     }
 }
-.no-js {
-    .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
-    .form-element textarea+label,
-    .form-element select+label {
-        top: 6px !important;
-        font-size: 10px !important;
+.col {
+    &.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]).corners-pill+label,
+    &.form-element select.corners-pill+label {
+        left: ($gutter-size / 2) + ($form-element-side-padding * 1.5);
     }
 }
 
+
+
+// Small Form elements
+.form-element.small input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
+.form-element.small select {
+    min-width: 160px;
+    height: $input-heights-small;
+    padding: 0 ($form-element-side-padding * .75);
+}
+.form-element.small input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
+.form-element.small select+label {
+    left: $form-element-side-padding * .75;
+}
+
+
+
 // Active states
-.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus,
+@mixin rgba-box-shadow($color, $opacity: 0.5) {
+    box-shadow: 0 0 0 2px rgba($color, $opacity);
+}
+
+.form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus,,
 .form-element textarea:focus,
 .form-element select:focus {
     border-color: $primary-color;
+    @include rgba-box-shadow($primary-color, 0.4);
 }
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus+label,
 .form-element textarea:focus+label,
@@ -91,10 +163,15 @@ select::-ms-expand {
 .form-element textarea:focus+label.active,
 .form-element textarea+label.active,
 .form-element select:focus+label.active,
-.form-element select+label.active {
+.form-element select+label.active,
+.form-element input[placeholder]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
+.form-element textarea[placeholder]+label {
     top: 6px;
     font-size: 10px;
+    transform: none !important;
+    -webkit-transform: none !important;
 }
+
 // Override the previous active color
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label.active,
 .form-element textarea+label.active,
@@ -104,10 +181,10 @@ select::-ms-expand {
 .select-label {
     pointer-events: none;
 }
-.select-icon {
+.form-element select+label+.select-icon {
     position: absolute;
     top: 50%;
-    right: 17px;
+    right: $form-element-side-padding;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -119,18 +196,73 @@ select::-ms-expand {
     pointer-events: none;
     background: transparent;
 }
-.col.form-element .select-icon {
-    right: $gutter-size / 2 + 17;
+.form-element select:focus+label+.select-icon {
+    border-right: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
 }
+.col.form-element .select-icon {
+    right: ($gutter-size / 2) + $form-element-side-padding;
+}
+
+
+
+// Small Form elements (ACTIVE)
+.form-element.small input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus+label,
+.form-element.small textarea:focus+label,
+.form-element.small select:focus+label,
+.form-element.small input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label.active,
+.form-element.small textarea:focus+label.active,
+.form-element.small textarea+label.active,
+.form-element.small select:focus+label.active,
+.form-element.small select+label.active {
+    top: -16px;
+    left: 0;
+    transform: none;
+    -webkit-transform: none;
+}
+// With placeholder
+.form-element.small input[placeholder]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label {
+    top: -16px !important;
+    left: 0;
+    transform: none;
+    -webkit-transform: none;
+}
+
+
+
 
 // TextArea
 // ============================================================ //
 .form-element textarea {
-    padding: 24px 16px 16px;
+    padding: ($form-element-side-padding * 1.5) $form-element-side-padding $form-element-side-padding;
     height: 112px;
+    min-height: 112px;
     max-width: 100%;
     min-width: 100%;
     resize: none;
+}
+
+
+
+
+// No JS enabled fallbacks
+.no-js {
+    .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
+    .form-element textarea+label,
+    .form-element select+label {
+        top: 6px !important;
+        font-size: 10px !important;
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+    .form-element.small input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file])+label,
+    .form-element.small select+label {
+        top: -16px !important;
+        left: 0 !important;
+        font-size: 10px !important;
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
 }
 .no-js, .ie11 {
     .form-element textarea {
@@ -138,27 +270,65 @@ select::-ms-expand {
     }
 }
 
+
+
+
 // Disabled styles
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
 .form-element input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
 .form-element textarea:disabled,
+.form-element textarea[readonly],
 .form-element select:disabled {
     background-color: $light-grey;
-    opacity: .4;
-    cursor: not-allowed;
+    opacity: .6;
     &+label {
-        opacity: .4;
-        cursor: not-allowed;
+        opacity: .6;
+    }
+
+    &+label {
+        top: $form-element-side-padding;
+        transform: none !important;
+        -webkit-transform: none !important;
+        opacity: .6;
+        color: $label-color !important;
+    }
+
+    &+label.active {
+        top: 6px !important;
+        font-size: 10px !important;
+        transform: none !important;
+        -webkit-transform: none !important;
+        opacity: .6;
+        color: $label-color !important;
     }
 
     &:focus {
         border-color: $form-border-color;
 
-        &+label {
-            top: 16px;
-            opacity: .4;
-            font-size: 1rem;
+        &+label,
+        &+label.active {
+            top: 6px !important;
+            font-size: 10px !important;
+            transform: none !important;
+            -webkit-transform: none !important;
+            opacity: .6;
             color: $label-color !important;
+        }
+    }
+}
+
+.form-element.small input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):disabled,
+.form-element.small input[readonly]:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]),
+.form-element.small select:disabled {
+
+    &+label.active {
+        top: #{-$form-element-side-padding} !important;
+    }
+
+    &:focus {
+        &+label,
+        &+label.active {
+            top: #{-$form-element-side-padding} !important;
         }
     }
 }

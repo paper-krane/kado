@@ -4,8 +4,8 @@ title: "Modularity"
 ---
 <div class="col s12 l8 xl9">
     <h1 id="modularity">Modularity</h1>
-    <p>Maybe love some parts of Origami but dislike other aspects (but being completely transparent, I really hope you like <em>all</em> of Origami) but I get it. Origami was built with SASS and compiled with Gulp so you can take certain pieces from it and leave out the rest.</p>
-    <p>The easiest way would be to build your own <span class="highlight">.scss</span> file or even use the <span class="highlight">origami.scss</span> file and import only the modules you want. It can be done like so:</p>
+    <p>Maybe love some parts of {{ site.title }} but dislike other aspects (but being completely transparent, I really hope you like <em>all</em> of {{ site.title }}) but I get it. {{ site.title }} was built with SASS and compiled with Gulp so you can take certain pieces from it and leave out the rest.</p>
+    <p>The easiest way would be to build your own <span class="highlight">.scss</span> file or even use the <span class="highlight">kado.scss</span> file and import only the modules you want. It can be done like so:</p>
     <pre><code class="language-scss">@import "layout/flex-grid";
     @import "components/buttons";
     @import "components/forms";</code></pre>

@@ -1,38 +1,37 @@
-// Todo's
-// - Add rounded button corners
-
-// Overall button styles
-// ============================================================ //
-.btn, .btn:visited, .btn:focus {
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    height: $btn-height;
-    line-height: $btn-height;
-    background-color: $black;
+// Shared styles
+.btn-slide, .btn {
+    font-weight:inherit;
     border: none;
     border-radius: $border-radius * 10;
-    color: $white;
-    padding: $btn-padding;
     cursor: pointer;
     display: inline-block;
     min-width: 40px;
+    height: $btn-height;
+    line-height: $btn-height;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     outline: none;
 	position: relative;
-	z-index: 1;
+	z-index: 0;
     -webkit-tap-highlight-color: transparent;
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+// Default Button Styles
+// ============================================================ //
+.btn, .btn:visited {
+    background-color: $btn-bg-dark-color;
+    color: $white;
+    padding: 0 #{$btn-padding};
     overflow: hidden;
 	transition: all $transition-speed-time ease;
 
     // Light button variation
     &.btn-light {
-        background-color: $white;
-        color: $black;
+        background-color: $btn-bg-light-color;
+        color: $btn-bg-dark-color;
     }
 
     &.btn-standard {
@@ -43,7 +42,8 @@
         	content: none;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $primary-accent-color;
         }
     }
@@ -53,8 +53,8 @@
     &::after {
     	content: '';
         background: $primary-color;
-        background-image: linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
-        background-image: -webkit-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+        // background-image: linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+        // background-image: -webkit-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
     	position: absolute;
     	height: 100%;
     	width: 100%;
@@ -70,7 +70,6 @@
     }
 
     // Disabled styles
-
     &.disabled,
     &:disabled,
     &[disabled] {
@@ -82,7 +81,8 @@
         &::after {
             display: none;
         }
-        &:hover {
+        &:hover,
+        &:focus {
             color: $label-color;
             opacity: .7;
             cursor: not-allowed;
@@ -98,7 +98,7 @@
     &.btn-large {
         height: $btn-height + 18;
         line-height: $btn-height + 18;
-        padding: $btn-large-padding;
+        padding: 0 #{$btn-large-padding};
     }
 
     // Small button styles
@@ -107,23 +107,16 @@
         font-size: .875rem;
         height: $btn-height - 14;
         line-height: $btn-height - 14;
-        padding: $btn-small-padding;
+        padding: 0 #{$btn-small-padding};
     }
 
-    // Full width button styles
-
-    &.full-width {
-        display: block;
-        width: 100%;
-    }
 
     // Outline button styles
-
     &.btn-outline {
         background-color: transparent;
         background: transparent;
-        color: $black;
-        border: 1px solid $black;
+        color: $btn-bg-dark-color;
+        border: 1px solid $btn-bg-dark-color;
         height: $btn-height;
         line-height: $btn-height - 2;
         &.btn-small {
@@ -135,26 +128,358 @@
             line-height: $btn-height + 18;
         }
         &.btn-light {
-            border-color: $white;
-            color: $white;
+            border-color: $btn-bg-light-color;
+            color: $btn-bg-light-color;
+        }
+
+        &.btn-standard {
+            border-color: $primary-color;
+            color: $primary-color;
         }
     }
 
     // Hover
-    &:hover {
+    &:hover,
+    &:focus {
     	color: #fff;
     }
     &:hover::before,
-    &:hover::after {
+    &:hover::after,,
+    &:focus::before,
+    &:focus::after {
     	-webkit-transform: translate3d(0, 100%, 0);
     	transform: translate3d(0, 100%, 0);
     }
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
     	transition-delay: 0.175s;
     }
-    &.btn-outline:hover {
+    &.btn-outline:hover,
+    &.btn-outline:focus {
         color: $white;
         border-color: $primary-color;
         background-color: transparent;
     }
+    &.btn-outline.btn-standard:hover,
+    &.btn-outline.btn-standard:focus {
+        border-color: $primary-accent-color;
+        color: $primary-accent-color;
+    }
+}
+
+
+
+
+
+
+// Button Slide Styles
+// ============================================================ //
+.btn-slide, .btn-slide:visited {
+    padding-left: $btn-height + 10;
+    padding-right: $btn-padding;
+    color: $btn-bg-dark-color;
+    background-color: transparent;
+    transition: all $transition-speed-time ease;
+
+    // Inner slide that extends on hover
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: $btn-height;
+        height: $btn-height;
+        border-radius: $border-radius * 10;
+        background-color: $btn-bg-dark-color;
+        transition: all $transition-speed-time ease;
+    }
+
+    .btn-slide-icon {
+        width: 12px;
+        height: 2px;
+        position: absolute;
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: rgba(255,255,255,0);
+        left: 0;
+        top: 50%;
+        transform: translate($btn-height / 5.75 /* 8px */, -50%);
+        -webkit-transform: translate($btn-height / 5.75 /* 8px */, -50%);
+        transition: all $transition-speed-time ease;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -3px;
+            right: 1px;
+            width: 8px;
+            height: 8px;
+            border-top: 0.25rem solid $btn-bg-light-color;
+            border-right: 0.25rem solid $btn-bg-light-color;
+            border-bottom: 0.25rem solid transparent;
+            border-left: 0.25rem solid transparent;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            transition: all $transition-speed-time ease;
+        }
+
+    }
+
+
+
+    // Hover States - Default
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+    &:hover::before,
+    &:focus::before {
+        width: 100%;
+    }
+    &:hover .btn-slide-icon,
+    &:focus .btn-slide-icon {
+        background-color: $white;
+        transform: translate($btn-padding, -50%);
+        -webkit-transform: translate($btn-padding, -50%);
+        opacity: .5;
+    }
+
+
+    // Sizes
+    &.btn-large {
+        height: $btn-height + 18;
+        line-height: $btn-height + 18;
+        padding-left: $btn-height + 28;
+        padding-right: $btn-large-padding;
+
+        &::before {
+            width: $btn-height + 18;
+            height: $btn-height + 18;
+        }
+
+        .btn-slide-icon {
+            transform: translate(($btn-height + 18) / 3.75, -50%);
+            -webkit-transform: translate(($btn-height + 18) / 3.75, -50%);
+        }
+
+        &:hover,
+        &:focus {
+            &::before {
+                width: 100%;
+            }
+            .btn-slide-icon {
+                transform: translate($btn-large-padding, -50%);
+                -webkit-transform: translate($btn-large-padding, -50%);
+            }
+        }
+
+    }
+
+    &.btn-small {
+        height: $btn-height - 14;
+        line-height: $btn-height - 14;
+        padding-left: $btn-height - 2;
+        padding-right: $btn-small-padding;
+        font-size: .875rem;
+
+        &::before {
+            width: $btn-height - 14;
+            height: $btn-height - 14;
+        }
+
+        .btn-slide-icon {
+            transform: translate(($btn-height - 45), -50%);
+            -webkit-transform: translate(($btn-height - 45), -50%);
+        }
+
+        &:hover,
+        &:focus {
+            &::before {
+                width: 100%;
+            }
+            .btn-slide-icon {
+                transform: translate($btn-small-padding, -50%);
+                -webkit-transform: translate($btn-small-padding, -50%);
+            }
+        }
+
+    }
+
+
+    // Outline Variation
+    &.btn-outline {
+        color: $btn-bg-dark-color;
+
+        &::before {
+            background-color: transparent;
+            border: 1px solid $btn-bg-dark-color;
+        }
+
+        .btn-slide-icon::before {
+                border-top: 0.25rem solid $btn-bg-dark-color;
+                border-right: 0.25rem solid $btn-bg-dark-color;
+        }
+
+        &:hover .btn-slide-icon,
+        &:focus .btn-slide-icon {
+            background-color: $btn-bg-dark-color;
+        }
+        &:hover,
+        &:focus {
+            color: $btn-bg-dark-color;
+        }
+
+    }
+
+
+    // Light Button Variation
+    &.btn-light {
+        color: $btn-bg-light-color;
+
+        &::before {
+            background-color: $btn-bg-light-color;
+        }
+
+        .btn-slide-icon::before {
+                border-top: 0.25rem solid $btn-bg-dark-color;
+                border-right: 0.25rem solid $btn-bg-dark-color;
+        }
+
+        &:hover .btn-slide-icon,
+        &:focus .btn-slide-icon {
+            background-color: $btn-bg-dark-color;
+        }
+        &:hover,
+        &:focus {
+            color: $btn-bg-dark-color;
+        }
+
+        // Outline Light Variation
+        &.btn-outline {
+            color: $btn-bg-light-color;
+
+            &::before {
+                background-color: transparent;
+                border: 1px solid $btn-bg-light-color;
+            }
+
+            .btn-slide-icon::before {
+                    border-top: 0.25rem solid $btn-bg-light-color;
+                    border-right: 0.25rem solid $btn-bg-light-color;
+            }
+
+            &:hover .btn-slide-icon,
+            &:focus .btn-slide-icon {
+                background-color: $btn-bg-light-color;
+            }
+            &:hover,
+            &:focus {
+                color: $btn-bg-light-color;
+            }
+
+        }
+
+    }
+
+
+    // Button Standard
+    &.btn-standard {
+        color: $primary-color;
+
+        &::before {
+            background-color: $primary-color;
+        }
+
+        &:hover .btn-slide-icon,
+        &:focus .btn-slide-icon {
+            background-color: $btn-bg-light-color;
+        }
+
+        &:hover::before,
+        &:focus::before {
+            background-color: $primary-accent-color;
+        }
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+
+        &.btn-outline {
+            color: $primary-color;
+
+            &::before {
+                background-color: transparent;
+                border: 1px solid $primary-color;
+            }
+
+            .btn-slide-icon::before {
+                    border-top: 0.25rem solid $primary-color;
+                    border-right: 0.25rem solid $primary-color;
+            }
+
+            &:hover::before,
+            &:focus::before {
+                border: 1px solid $primary-accent-color;
+            }
+            &:hover .btn-slide-icon,
+            &:focus .btn-slide-icon {
+                background-color: $primary-accent-color;
+            }
+            &:hover,
+            &:focus {
+                color: $primary-accent-color;
+            }
+
+        }
+
+    }
+
+    // Disabled styles
+    &.disabled,
+    &:disabled,
+    &[disabled] {
+        color: $label-color !important;
+
+        &::before {
+            background-color: $form-border-color !important;
+        }
+
+        .btn-slide-icon::before {
+                border-top: 0.25rem solid $label-color !important;
+                border-right: 0.25rem solid $label-color !important;
+        }
+
+        &:hover .btn-slide-icon,
+        &:focus .btn-slide-icon {
+            transform: translate($btn-height / 5.75 /* 8px */, -50%);
+            -webkit-transform: translate($btn-height / 5.75 /* 8px */, -50%);
+            background-color: transparent !important;
+            opacity: 1;
+
+            &::before {
+                    border-top: 0.25rem solid $label-color !important;
+                    border-right: 0.25rem solid $label-color !important;
+            }
+        }
+        &:hover::before,
+        &:focus::before {
+            background-color: $form-border-color !important;
+            width: $btn-height;
+            color: $label-color !important;
+        }
+        &:hover,
+        &:focus {
+            color: $label-color;
+            cursor: not-allowed;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+
 }

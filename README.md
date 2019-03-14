@@ -1,11 +1,12 @@
 <p align="center">
-    <h1 align="center">Origami</h1>
+    Digital Ikebana
+    <h1 align="center">Kado</h1>
 </p>
 <p align="center">
-    A mobile-first CSS framework for written for minimal, elegant web design.
+    A mobile-first CSS, HTML, & JavaScript library written for minimal, elegant web design.
 </p>
 <p align="center">
-    <a href="https://origamicss.com/">Documentation</a>
+    <a href="https://kadocss.com/">Documentation</a>
     <p align="center">(Please excuse the mess, sections of the documentation are still being written)</p>
 </p>
 <br/>
@@ -24,6 +25,7 @@
     - etc.
 - Basic element styles
     - Buttons
+        - Accent Buttons (Design Variation)
     - Form elements
         - Text inputs
         - Textareas
@@ -47,7 +49,7 @@
     - Responsive iframes / ratio containers
     - Corners
     - Borders
-- Quick toggle using HTML5 data attributes (build your own modals, navs, etc.)
+- Quick class toggle using HTML5 data attributes (build your own modals, navs, etc.)
 - ie11 + support
 - Fallbacks styles for browsers without JavaScript
 

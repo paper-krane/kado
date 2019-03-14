@@ -5,8 +5,8 @@ title: "Grid Containers"
 
 <div class="col s12 l8 xl9">
 <h1 id="containers">Containers</h1>
-<p>Containers are a core part of any web layout and can be found in almost every website and with Origami, are <strong>essential in order to use the built in grid system</strong>. All containers are designed to be fluid.</p>
-<p>Using Origami containers is pretty straight forward. Just add the <code class="language-markup">container</code> class.</p>
+<p>Containers are a core part of any web layout and can be found in almost every website and with {{ site.title }}, are <strong>essential in order to use the built in grid system</strong>. All containers are designed to be fluid.</p>
+<p>Using {{ site.title }} containers is pretty straight forward. Just add the <code class="language-markup">container</code> class.</p>
 <div class="demo-container text-small">
     <div class="demo-content my-2-m container">
         <div class="p-2-s text-center">
