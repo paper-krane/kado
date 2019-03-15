@@ -10,7 +10,7 @@ title: "Grid Containers"
 <div class="demo-container text-small">
     <div class="demo-content my-2-m container">
         <div class="p-2-s text-center">
-            The default container size is 1080px
+            The default container size has a max width of 1080px
         </div>
     </div>
 </div>

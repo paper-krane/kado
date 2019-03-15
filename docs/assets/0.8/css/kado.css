@@ -3,9 +3,9 @@
     MIT License
     github.com/necolas/normalize.css
 
-    Origami v0.0.3
+    Kado v0.8.0
     MIT License
-    https://github.com/paper-krane/origami
+    https://github.com/paper-krane/kado
  */
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -397,6 +397,12 @@ video {
     -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%; }
+    .row .col.m, .row .col.l, .row .col.xl, .row .col.xxl {
+      -ms-flex-preferred-size: 1;
+      flex-basis: auto;
+      -ms-flex-positive: 2;
+      flex-grow: 2;
+      max-width: none; }
     .row .col.no-padding {
       padding: 0; }
     .row .col.no-margin {
@@ -485,6 +491,12 @@ video {
     .row .col.offset-s12 {
       margin-left: 100%; }
     @media only screen and (min-width: 600px) {
+      .row .col.m {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%; }
       .row .col.m-auto {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -569,6 +581,12 @@ video {
       .row .col.offset-m12 {
         margin-left: 100%; } }
     @media only screen and (min-width: 992px) {
+      .row .col.l {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%; }
       .row .col.l-auto {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -653,6 +671,12 @@ video {
       .row .col.offset-l12 {
         margin-left: 100%; } }
     @media only screen and (min-width: 1280px) {
+      .row .col.xl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%; }
       .row .col.xl-auto {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -737,6 +761,12 @@ video {
       .row .col.offset-xl12 {
         margin-left: 100%; } }
     @media only screen and (min-width: 1600px) {
+      .row .col.xxl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%; }
       .row .col.xxl-auto {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -1801,12 +1831,12 @@ h3 {
   line-height: 1.3; }
   @media only screen and (min-width: 992px) {
     h3 {
-      font-size: 2.5rem; }
+      font-size: 2.25rem; }
       h3 .heading-accent {
         font-size: 1.5rem; } }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.3; }
   @media only screen and (min-width: 992px) {
     h4 {
@@ -1819,7 +1849,7 @@ h5 {
   line-height: 1.3; }
   @media only screen and (min-width: 992px) {
     h5 {
-      font-size: 1.75rem; } }
+      font-size: 1.5rem; } }
 
 h6 {
   font-size: 1rem;
@@ -2237,7 +2267,7 @@ select::-ms-expand {
 .form-element textarea:focus,
 .form-element select:focus {
   border-color: #4ec772;
-  box-shadow: 0 0 0 2px rgba(78, 199, 114, 0.4); }
+  box-shadow: 0 0 0 2px rgba(78, 199, 114, 0.25); }
 
 .form-element input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):not([type=file]):focus + label,
 .form-element textarea:focus + label,
@@ -4804,4 +4834,4 @@ a.origami-calendar-box:hover {
 .primary-bg {
   background-color: #4ec772; }
 
-/*# sourceMappingURL=origami.css.map */
+/*# sourceMappingURL=kado.css.map */

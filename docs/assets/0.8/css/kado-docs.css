@@ -1,12 +1,12 @@
 html {
     font-weight: 300;
 }
-h4 a, h5 a {
+h1 a, h4 a, h5 a, h6 a {
     padding: 0 .5rem;
     display: inline-block;
     opacity: 0;
 }
-h4:hover a, h5:hover a {
+h1:hover a, h4:hover a, h5:hover a, h6:hover a {
     opacity: .7;
 }
 .mouse {

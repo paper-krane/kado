@@ -65,6 +65,19 @@
         -ms-flex-positive: 1;
         flex-grow: 1;
         max-width: 100%;
+
+        // Declaring Columns on larger breakpoints
+        &.m,
+        &.l,
+        &.xl,
+        &.xxl {
+            -ms-flex-preferred-size: 1;
+            flex-basis: auto;
+            -ms-flex-positive: 2;
+            flex-grow: 2;
+            max-width: none;
+        }
+
         &.no-padding {
             padding: 0;
         }
@@ -106,6 +119,15 @@
 
         @media #{$m-and-up} {
 
+            // Declaring Columns on larger breakpoints
+            &.m {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
             &.m-auto {
                 -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
@@ -141,6 +163,15 @@
         }
 
         @media #{$l-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.l {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
 
             &.l-auto {
                 -ms-flex: 0 0 auto;
@@ -178,6 +209,15 @@
 
         @media #{$xl-and-up} {
 
+            // Declaring Columns on larger breakpoints
+            &.xl {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
             &.xl-auto {
                 -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
@@ -213,6 +253,15 @@
         }
 
         @media #{$xxl-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.xxl {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
 
             &.xxl-auto {
                 -ms-flex: 0 0 auto;
