@@ -27,7 +27,7 @@ a, a:visited {
 a:hover, a:focus {
     color: $primary-accent-color;
 }
-a * {
+a *, button * {
     pointer-events: none;
 }
 

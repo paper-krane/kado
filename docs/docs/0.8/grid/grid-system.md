@@ -132,7 +132,7 @@ while the columns are used for the primary content --&gt;
 <div class="mt-3 mt-5-l"></div>
 
 
-<h5 id="equal-width-multi-row">Equal-Width With Multi-Row <a href="#equal-width-multi-row">#</a></h5>
+<h6 id="equal-width-multi-row">Equal-Width With Multi-Row <a href="#equal-width-multi-row">#</a></h6>
 <p>Create equal-width columns that span multiple rows by inserting a .w-100 where you want the columns to break to a new line. Make the breaks responsive by mixing the <span class="highlight">width-100</span> with responsive display helpers.</p>
 <div class="demo-container">
     <div class="container my-1">
@@ -174,13 +174,64 @@ while the columns are used for the primary content --&gt;
 
 
 
-<h5 id="set-column-widths">Set Column Widths <a href="#setting-column-widths">#</a></h5>
-<p>With Kado, <span class="highlight">col</span> on its own will turn the element in to a responsive fluid element that adapts to its sibling elements. But when using <span class="highlight">col</span> with an additional sizing class, for example <span class="highlight">s8</span>, the column class will now adapt to spanning 8/12 columns from the small breakpoint and up (affecting all breakpoints). Then, if on the same element, you were to add an additional class to be <span class="highlight">l4</span>, your element would then adapt to span 4/12 columns on the large breakpoint and up.</p>
+<h5 id="set-column-widths">Set-Width Columns <a href="#setting-column-widths">#</a></h5>
+<p>With Kado, <span class="highlight">col</span> on its own will turn the element in to a responsive fluid element that adapts to its sibling elements. But when using <span class="highlight">col</span> with an additional sizing class, for example <span class="highlight">s8</span>, the column class will now adapt to spanning 8/12 columns from the small breakpoint and up (affecting all breakpoints). Then, if on the same element, you were to add an additional class of <span class="highlight">l4</span>, your element would then adapt to span 4/12 columns on the large breakpoint and up. Here is an example of a grid that adapts to different layouts upon different breakpoints:</p>
+<div class="demo-container text-small text-center">
+    <div class="container my-1">
+        <div class="row">
+            <div class="col s6 l3">
+                <div class="demo-content">.col .s6 .l3</div>
+            </div>
+            <div class="col s6 l3">
+                <div class="demo-content">.col .s6 .l3</div>
+            </div>
+            <div class="col s12 l6">
+                <div class="demo-content">.col .s12 .l6</div>
+            </div>
+            <div class="col s12 m4">
+                <div class="demo-content">.col .s12 .m4</div>
+            </div>
+            <div class="col s5 m8 mb-0 mb-1-m">
+                <div class="demo-content">.col .s5 .m8</div>
+            </div>
+            <div class="col s7 m12 no-margin">
+                <div class="demo-content">.col .s7 .m12</div>
+            </div>
+        </div>
+    </div>
+</div>
+<pre class="mt-0"><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col s6 l3"&gt;
+            &lt;div&gt;.col .s6 .l3&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col s6 l3"&gt;
+            &lt;div&gt;.col .s6 .l3&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col s12 l6"&gt;
+            &lt;div&gt;.col .s12 .l6&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col s12 m4"&gt;
+            &lt;div&gt;.col .s12 .m4&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col s5 m8"&gt;
+            &lt;div&gt;.col .s5 .m8&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col s7 m12"&gt;
+            &lt;div&gt;.col .s7 .m12&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 <div class="mt-3 mt-5-l"></div>
 
 
 
-<h5 id="mixing-set-and-equal-width">Mixing Set Column Widths With Equal-Width <a href="#mixing-set-and-equal-width">#</a></h5>
+<h6 id="set-width-responsive-classes">Set-Width Responsive Classes <a href="#set-width-responsive-classes">#</a></h6>
+<div class="mt-3 mt-5-l"></div>
+
+
+
+<h6 id="mixing-set-and-equal-width">Mixing Set Column Widths With Equal-Width <a href="#mixing-set-and-equal-width">#</a></h6>
 <p>The great thing about a flexbox grid system is that you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below) or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
 <div class="demo-container text-small text-center">
     <div class="container my-1">
@@ -230,11 +281,16 @@ while the columns are used for the primary content --&gt;
                     <a href="#equal-width">Equal-Width Columns</a>
                     <ul>
                         <li><a href="#equal-width-responsive-classes">Equal Width Responsive Classes</a></li>
+                        <li><a href="#equal-width-multi-row">Equal-Width & Multi-Row</a></li>
                     </ul>
                 </li>
-                <li><a href="#equal-width-multi-row">Equal-Width & Multi-Row</a></li>
-                <li><a href="#set-column-widths">Set Column Widths</a></li>
-                <li><a href="#mixing-set-and-equal-width">Set Column Widths With Equal-Width</a></li>
+                <li>
+                    <a href="#set-column-widths">Set Column Widths</a>
+                    <ul>
+                        <li><a href="#set-width-responsive-classes">Set-Width Responsive Classes</a></li>
+                        <li><a href="#mixing-set-and-equal-width">Set Column Widths With Equal-Width</a></li>
+                    </ul>
+                </li>
                 <li><a href="#variable-width-columns">Variable Width Columns</a></li>
             </ul>
         </li>

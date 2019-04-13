@@ -84,14 +84,14 @@ title: "Buttons"
     <a href="#" class="btn">Default Button</a>
     <a href="#" class="btn btn-small">Small Button</a>
 </div>
-<pre class="mt-0"><code class="language-html">&lt;a href="#" class="btn btn-small"&gt;
-    Small Button
+<pre class="mt-0"><code class="language-html">&lt;a href="#" class="btn btn-large"&gt;
+    Large Button
 &lt;/a&gt;
 &lt;a href="#" class="btn"&gt;
     Default Button
 &lt;/a&gt;
-&lt;a href="#" class="btn btn-large"&gt;
-    Large Button
+&lt;a href="#" class="btn btn-small"&gt;
+    Small Button
 &lt;/a&gt;</code></pre>
 <div class="mt-3 mt-5-l"></div>
 
