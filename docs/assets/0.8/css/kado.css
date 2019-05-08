@@ -2700,11 +2700,11 @@ input[type=file]:disabled + .btn {
     opacity: .6;
     cursor: not-allowed; }
 
-#origami-calendar, #origami-calendar-bg {
+#kado-calendar, #kado-calendar-bg {
   position: fixed;
   font-weight: 300; }
 
-#origami-calendar-bg {
+#kado-calendar-bg {
   background-color: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
@@ -2714,12 +2714,12 @@ input[type=file]:disabled + .btn {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease 0.4s; }
-  #origami-calendar-bg.origami-date-select-active {
+  #kado-calendar-bg.kado-date-select-active {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease, visibility 0.4s ease; }
 
-#origami-calendar {
+#kado-calendar {
   width: 280px;
   border-radius: 0.5rem;
   background-color: #FFFFFF;
@@ -2733,7 +2733,7 @@ input[type=file]:disabled + .btn {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease 0.4s; }
-  #origami-calendar.origami-date-select-active {
+  #kado-calendar.kado-date-select-active {
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, -50%);
@@ -2741,25 +2741,25 @@ input[type=file]:disabled + .btn {
     -ms-transform: translate(-50%, -50%);
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease; }
 
-#origami-calendar-header {
+#kado-calendar-header {
   padding: 2rem 1rem;
   background-color: #4ec772;
   color: #FFFFFF;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 0.5rem 0.5rem 0 0; }
-  #origami-calendar-header #origami-current-selected-year {
+  #kado-calendar-header #kado-current-selected-year {
     display: block; }
 
-#origami-calendar-selection div {
+#kado-calendar-selection div {
   float: left; }
 
-#origami-calendar-selection #origami-previous-month, #origami-calendar-selection #origami-next-month {
+#kado-calendar-selection #kado-previous-month, #kado-calendar-selection #kado-next-month {
   width: 20%;
   height: 36px;
   position: relative;
   cursor: pointer; }
-  #origami-calendar-selection #origami-previous-month:before, #origami-calendar-selection #origami-next-month:before {
+  #kado-calendar-selection #kado-previous-month:before, #kado-calendar-selection #kado-next-month:before {
     content: '';
     position: absolute;
     width: 8px;
@@ -2769,34 +2769,34 @@ input[type=file]:disabled + .btn {
     top: 14px;
     left: .875rem; }
 
-#origami-calendar-selection #origami-previous-month:before {
+#kado-calendar-selection #kado-previous-month:before {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg); }
 
-#origami-calendar-selection #origami-next-month:before {
+#kado-calendar-selection #kado-next-month:before {
   left: auto;
   right: .875rem;
   transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
   -ms-transform: rotate(225deg); }
 
-#origami-calendar-selection #origami-calendar-listed-date {
+#kado-calendar-selection #kado-calendar-listed-date {
   width: 60%;
   height: 36px;
   line-height: 36px;
   text-align: center;
   color: #aaaaaa; }
 
-#origami-calendar-selection #origami-calendar-listed-date span {
+#kado-calendar-selection #kado-calendar-listed-date span {
   cursor: pointer; }
 
-.origami-calendar-box, .origami-calendar-box:visited, #origami-calendar-listed-date, #origami-current-selected-year, #origami-calendar-footer a {
+.kado-calendar-box, .kado-calendar-box:visited, #kado-calendar-listed-date, #kado-current-selected-year, #kado-calendar-footer a {
   font-size: .875rem; }
 
-#origami-calendar-wrap {
+#kado-calendar-wrap {
   position: relative; }
-  #origami-calendar-wrap #origami-calendar-select-months, #origami-calendar-wrap #origami-calendar-select-years {
+  #kado-calendar-wrap #kado-calendar-select-months, #kado-calendar-wrap #kado-calendar-select-years {
     position: absolute;
     top: 0;
     left: 0;
@@ -2813,22 +2813,22 @@ input[type=file]:disabled + .btn {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease 0.4s; }
-    #origami-calendar-wrap #origami-calendar-select-months a, #origami-calendar-wrap #origami-calendar-select-months a:visited, #origami-calendar-wrap #origami-calendar-select-months a:focus, #origami-calendar-wrap #origami-calendar-select-years a, #origami-calendar-wrap #origami-calendar-select-years a:visited, #origami-calendar-wrap #origami-calendar-select-years a:focus {
+    #kado-calendar-wrap #kado-calendar-select-months a, #kado-calendar-wrap #kado-calendar-select-months a:visited, #kado-calendar-wrap #kado-calendar-select-months a:focus, #kado-calendar-wrap #kado-calendar-select-years a, #kado-calendar-wrap #kado-calendar-select-years a:visited, #kado-calendar-wrap #kado-calendar-select-years a:focus {
       color: #363C44;
       display: block; }
-    #origami-calendar-wrap #origami-calendar-select-months a:hover, #origami-calendar-wrap #origami-calendar-select-years a:hover {
+    #kado-calendar-wrap #kado-calendar-select-months a:hover, #kado-calendar-wrap #kado-calendar-select-years a:hover {
       color: #4ec772; }
-  #origami-calendar-wrap #origami-calendar-select-months.origami-select-month, #origami-calendar-wrap #origami-calendar-select-years.origami-select-year {
+  #kado-calendar-wrap #kado-calendar-select-months.kado-select-month, #kado-calendar-wrap #kado-calendar-select-years.kado-select-year {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease, visibility 0.4s ease; }
 
-#origami-calendar-days .origami-calendar-box {
+#kado-calendar-days .kado-calendar-box {
   font-size: .65rem;
   font-weight: 400;
   cursor: text; }
 
-.origami-calendar-box, .origami-calendar-box:visited {
+.kado-calendar-box, .kado-calendar-box:visited {
   width: 14.2857142857%;
   float: left;
   min-height: 36px;
@@ -2839,41 +2839,41 @@ input[type=file]:disabled + .btn {
   cursor: pointer;
   color: #363C44;
   outline: none; }
-  .origami-calendar-box#origami-selected-date, .origami-calendar-box:visited#origami-selected-date {
+  .kado-calendar-box#kado-selected-date, .kado-calendar-box:visited#kado-selected-date {
     background-color: #4ec772;
     color: #FFFFFF; }
-  .origami-calendar-box[data-available=false], .origami-calendar-box:visited[data-available=false] {
+  .kado-calendar-box[data-available=false], .kado-calendar-box:visited[data-available=false] {
     background-color: #f2f3f3;
     cursor: not-allowed !important; }
 
-a.origami-calendar-box:focus {
+a.kado-calendar-box:focus {
   color: #4ec772;
   outline: none; }
 
-a.origami-calendar-box:hover {
+a.kado-calendar-box:hover {
   color: #4ec772; }
 
-#origami-calendar-footer {
+#kado-calendar-footer {
   display: flex;
   border-top: 1px solid #f2f2f2; }
-  #origami-calendar-footer a, #origami-calendar-footer a:visited {
+  #kado-calendar-footer a, #kado-calendar-footer a:visited {
     line-height: 36px;
     color: #aaaaaa;
     display: block;
     padding: 0 .875rem; }
-  #origami-calendar-footer #origami-calendar-clear {
+  #kado-calendar-footer #kado-calendar-clear {
     margin-left: auto; }
 
 @media only screen and (min-width: 992px) {
-  #origami-calendar {
+  #kado-calendar {
     width: 520px; }
-  #origami-calendar-header {
+  #kado-calendar-header {
     padding: 3rem 1rem;
     font-size: 1.75rem; }
-  #origami-calendar #origami-calendar-select-months a, #origami-calendar #origami-calendar-select-years a, #origami-calendar #origami-previous-month, #origami-calendar #origami-next-month, #origami-calendar #origami-calendar-listed-date, #origami-calendar .origami-calendar-box, #origami-calendar #origami-calendar-footer a, #origami-calendar #origami-calendar-footer a:visited {
+  #kado-calendar #kado-calendar-select-months a, #kado-calendar #kado-calendar-select-years a, #kado-calendar #kado-previous-month, #kado-calendar #kado-next-month, #kado-calendar #kado-calendar-listed-date, #kado-calendar .kado-calendar-box, #kado-calendar #kado-calendar-footer a, #kado-calendar #kado-calendar-footer a:visited {
     line-height: 48px;
     height: 48px; }
-  #origami-calendar #origami-previous-month:before, #origami-calendar #origami-next-month:before {
+  #kado-calendar #kado-previous-month:before, #kado-calendar #kado-next-month:before {
     top: 20px; } }
 
 .float-fix:after {
