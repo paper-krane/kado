@@ -12,6 +12,20 @@
         -webkit-transform: translate(-50%, 0);
     }
 }
+@-webkit-keyframes scrollwheel {
+    0% {
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+    }
+    80% {
+        transform: translate(-50%, 6px);
+        -webkit-transform: translate(-50%, 6px);
+    }
+    100% {
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+    }
+}
 
 .mouse {
     position: absolute;

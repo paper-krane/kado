@@ -3,8 +3,8 @@
   "version": "0.8.1",
   "description": "Yet another design framework.",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/paper-krane/kado"
+    "type": "git",
+    "url": "https://github.com/paper-krane/kado"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,18 @@
   "author": "Ben Farnham",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^3.0.0",
+    "grunt": "^1.0.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
   },
   "dependencies": {}
 }
