@@ -1,7 +1,7 @@
 // Check box / Radio elements
 // ============================================================ //
 // hide original input elements
-.origamiCheckbox, .origamiRadio {
+.kadoCheckbox, .kadoRadio {
     position: relative;
     padding-left: 2rem;
     line-height: 24px;
@@ -20,7 +20,7 @@
 }
 
 // Checkboxes
-.origamiCheckbox:before, .origamiCheckbox span:before, .origamiRadio:before, .origamiRadio span:before {
+.kadoCheckbox:before, .kadoCheckbox span:before, .kadoRadio:before, .kadoRadio span:before {
     content: '';
     position: absolute;
     top: 4px;
@@ -32,11 +32,11 @@
     cursor: pointer;
     transition: $transition-speed-fast;
 }
-.origamiCheckbox span:before, .origamiRadio span:before {
+.kadoCheckbox span:before, .kadoRadio span:before {
     background: $primary-color;
     opacity: 0;
 }
-.origamiCheckbox span:after {
+.kadoCheckbox span:after {
     content: '';
     position: absolute;
     width: 5px;
@@ -54,13 +54,13 @@
 }
 
 // Active styles
-.origamiCheckbox input[type=checkbox]:checked + span:before, .origamiCheckbox input[type=checkbox]:checked + span:after, .origamiRadio input[type=radio]:checked + span:before, .origamiRadio input[type=radio]:checked + span:after {
+.kadoCheckbox input[type=checkbox]:checked + span:before, .kadoCheckbox input[type=checkbox]:checked + span:after, .kadoRadio input[type=radio]:checked + span:before, .kadoRadio input[type=radio]:checked + span:after {
     opacity: 1;
 }
 
 // Disabled styles
 
-.origamiCheckbox input[type=checkbox]:disabled + span, .origamiRadio input[type=radio]:disabled + span {
+.kadoCheckbox input[type=checkbox]:disabled + span, .kadoRadio input[type=radio]:disabled + span {
     opacity: .4;
     color: $label-color;
     cursor: not-allowed;
@@ -75,10 +75,10 @@
 }
 
 // Radio buttons
-.origamiRadio:before, .origamiRadio span:before {
+.kadoRadio:before, .kadoRadio span:before {
     border-radius: 50%;
 }
-.origamiRadio span:after {
+.kadoRadio span:after {
     content: '';
     position: absolute;
     width: 4px;
@@ -99,7 +99,7 @@
 
 
 // Switches
-.origamiSwitch {
+.kadoSwitch {
     position: relative;
     line-height: 24px;
     font-weight: 300;
@@ -113,7 +113,7 @@
         left: 0;
     }
 }
-.origamiSwitch span.lever {
+.kadoSwitch span.lever {
     vertical-align: middle;
     display: inline-block;
     position: relative;
@@ -149,10 +149,10 @@
 }
 
 // Active styles
-.origamiSwitch input[type=checkbox]:checked + span:before {
+.kadoSwitch input[type=checkbox]:checked + span:before {
     opacity: 1;
 }
-.origamiSwitch input[type=checkbox]:checked + span:after {
+.kadoSwitch input[type=checkbox]:checked + span:after {
     left: 19px;
 }
 
